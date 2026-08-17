@@ -1,0 +1,155 @@
+(footprint "23A256-SRAM-PDIP"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Through hole straight socket strip, 2x04, 2.54mm pitch, double rows (from Kicad 4.0.7), script generated")
+	(tags "Through hole socket strip THT 2x04 2.54mm double row")
+	(property "Reference" "REF**"
+		(at -1.27 -2.77 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "c0b6ca0a-f68e-4ece-82d2-e66adc285ad7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "23A256-SRAM-PDIP"
+		(at -1.27 10.39 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2aabc237-5651-42a4-9fee-3d8faacefea7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3d8c2316-fb08-4d98-90fe-6d17203eac6b")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b1021471-45c3-4b36-8331-bbe40c34681b")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "KiLib_Generator" "connector/pin_header_socket"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "b3af3a58-658e-4ffe-bce5-d06179eb2adf")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start -4.5 -5)
+		(end 4 5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "06459c9a-dcc9-442e-bae4-9ee55bce67e1")
+	)
+	(pad "1" thru_hole circle
+		(at -3.175 -3.81)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "71a4b1dd-36aa-4a47-8a0b-a90bd38c6e22")
+	)
+	(pad "2" thru_hole circle
+		(at -3.175 -1.27)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "d80ee774-187c-4b07-bc55-fe3d9b599251")
+	)
+	(pad "3" thru_hole circle
+		(at -3.175 1.27)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "00b8a79e-96af-4677-90fa-5fa8eb2740bb")
+	)
+	(pad "4" thru_hole circle
+		(at -3.175 3.81)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "d6ce8193-9010-4d54-94e8-539550753f7f")
+	)
+	(pad "5" thru_hole circle
+		(at 2.825 3.81 180)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "ca97384c-800d-4a9b-ac0a-a22f378379cd")
+	)
+	(pad "6" thru_hole circle
+		(at 2.825 1.27 180)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "10127098-127d-4c61-9abe-8854e4379438")
+	)
+	(pad "7" thru_hole circle
+		(at 2.825 -1.27 180)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "8f2d0dbe-f462-4fbd-8caf-05c89d7f5619")
+	)
+	(pad "8" thru_hole circle
+		(at 2.825 -3.81 180)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "8a1284e9-8d37-4c58-9158-a23c3956c2fe")
+	)
+	(embedded_fonts no)
+	(model "${KICAD10_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_2x04_P2.54mm_Vertical.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
