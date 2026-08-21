@@ -1,0 +1,2 @@
+.segment "RESET"
+  .word ""
