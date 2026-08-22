@@ -12623,6 +12623,217 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "PCM_SparkFun-Capacitor:470uF_10x10_25V_20%"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "470uF"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "PCM_SparkFun-Capacitor:Electrolytic_10.3x10.3mm"
+				(at 0 -17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.nichicon.co.jp/english/series_items/catalog_pdf/e-uud.pdf"
+				(at 1.27 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Polarized capacitor, US symbol"
+				(at 0 -20.32 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "PROD_ID" ""
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Voltage" "25V"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Tolerance" "20%"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "SparkFun cap capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "CP_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "470uF_10x10_25V_20%_0_1"
+				(polyline
+					(pts
+						(xy -1.524 0.508) (xy 1.524 0.508)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 1.524) (xy -0.762 1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.016 1.27) (xy -1.016 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -1.524 -0.762)
+					(mid 0 -0.3734)
+					(end 1.524 -0.762)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "470uF_10x10_25V_20%_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 2.032)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.032)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Power_Management:MIC2025-2YM"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -14121,12 +14332,6 @@
 		(uuid "18b021d7-563f-4642-9345-e6a2de0f5710")
 	)
 	(junction
-		(at 588.01 205.74)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1b6a96bc-a817-40a6-9e81-0e6bf1799303")
-	)
-	(junction
 		(at 96.52 205.74)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -14815,12 +15020,6 @@
 		(diameter 0)
 		(color 255 0 0 1)
 		(uuid "c65e4c88-a35b-47be-9b39-f7f27688496e")
-	)
-	(junction
-		(at 580.39 205.74)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c672334c-cb7f-4c29-a92c-4d8108b8d561")
 	)
 	(junction
 		(at 452.12 210.82)
@@ -16099,17 +16298,6 @@
 	)
 	(wire
 		(pts
-			(xy 588.01 201.93) (xy 588.01 205.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 0 0 1)
-		)
-		(uuid "1b24beb3-01ba-452d-a46a-d1b03125dac9")
-	)
-	(wire
-		(pts
 			(xy 417.83 184.15) (xy 417.83 175.26)
 		)
 		(stroke
@@ -16383,6 +16571,17 @@
 			(type default)
 		)
 		(uuid "271963ea-98dd-43a7-aa3a-79884bbf3ce8")
+	)
+	(wire
+		(pts
+			(xy 579.12 205.74) (xy 596.9 205.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 0 1)
+		)
+		(uuid "27737719-72cc-4120-84d5-4963a1d567ec")
 	)
 	(wire
 		(pts
@@ -18526,17 +18725,6 @@
 	)
 	(wire
 		(pts
-			(xy 580.39 205.74) (xy 588.01 205.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 0 0 1)
-		)
-		(uuid "6d6ae1e5-d0c9-445b-9b50-3566bc1529cb")
-	)
-	(wire
-		(pts
 			(xy 454.66 134.62) (xy 459.74 134.62)
 		)
 		(stroke
@@ -19846,17 +20034,6 @@
 	)
 	(wire
 		(pts
-			(xy 588.01 205.74) (xy 596.9 205.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 0 0 1)
-		)
-		(uuid "97224497-758d-4a02-99e9-ab7222b4df40")
-	)
-	(wire
-		(pts
 			(xy 518.16 96.52) (xy 518.16 146.05)
 		)
 		(stroke
@@ -21073,7 +21250,7 @@
 	)
 	(wire
 		(pts
-			(xy 557.53 205.74) (xy 580.39 205.74)
+			(xy 557.53 205.74) (xy 574.04 205.74)
 		)
 		(stroke
 			(width 0)
@@ -21432,17 +21609,6 @@
 			(type default)
 		)
 		(uuid "d264ac10-191b-4559-b728-2a568f4896ed")
-	)
-	(wire
-		(pts
-			(xy 580.39 201.93) (xy 580.39 205.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 0 0 1)
-		)
-		(uuid "d2bf86d2-8732-410e-bab8-55b660ce1653")
 	)
 	(wire
 		(pts
@@ -23600,6 +23766,16 @@
 			(justify left bottom)
 		)
 		(uuid "9603934b-d5f1-4061-b58a-1353130d19f0")
+	)
+	(label "RST"
+		(at 379.73 369.57 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "971648a3-9252-462d-a4a3-fffd0e5bffe6")
 	)
 	(label "D5"
 		(at 430.53 449.58 180)
@@ -26338,86 +26514,6 @@
 			(project "Cykomputer"
 				(path "/7319cfd4-b54a-49cd-84bf-92265ba5acc0"
 					(reference "J13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 584.2 201.93 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "50c46353-925f-4632-a4b8-6fc56d51dbbc")
-		(property "Reference" "C1"
-			(at 584.2 194.31 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "C"
-			(at 584.2 196.85 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 580.39 202.8952 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 584.2 201.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 584.2 201.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "819aeb3b-431f-4c0f-a4cd-fea1ade07723")
-		)
-		(pin "2"
-			(uuid "e1659780-5ab7-4071-af63-c2f9d8aaf7c3")
-		)
-		(instances
-			(project "Cykomputer"
-				(path "/7319cfd4-b54a-49cd-84bf-92265ba5acc0"
-					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -29827,6 +29923,117 @@
 			(project "Cykomputer"
 				(path "/7319cfd4-b54a-49cd-84bf-92265ba5acc0"
 					(reference "5V 5A Wall AC/DC Adapter1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_SparkFun-Capacitor:470uF_10x10_25V_20%")
+		(at 576.58 205.74 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "97564e60-a669-48ea-aa90-9323c25712e2")
+		(property "Reference" "C1"
+			(at 577.0118 194.31 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "470uF"
+			(at 577.0118 196.85 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "PCM_SparkFun-Capacitor:Electrolytic_10.3x10.3mm"
+			(at 558.8 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.nichicon.co.jp/english/series_items/catalog_pdf/e-uud.pdf"
+			(at 561.34 207.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Polarized capacitor, US symbol"
+			(at 556.26 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PROD_ID" ""
+			(at 563.88 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage" "25V"
+			(at 577.0118 199.39 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "20%"
+			(at 577.0118 201.93 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "e7b0aea2-a353-431f-a367-74085987187f")
+		)
+		(pin "1"
+			(uuid "c593b44f-1352-4e71-b87a-65716130a49a")
+		)
+		(instances
+			(project "Cykomputer"
+				(path "/7319cfd4-b54a-49cd-84bf-92265ba5acc0"
+					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -33881,7 +34088,7 @@
 				(justify left top)
 			)
 		)
-		(pin "H0" input
+		(pin "H0" output
 			(at 359.41 36.83 0)
 			(uuid "350048ea-8a75-42fc-bca6-f8185f94ca51")
 			(effects
@@ -33891,7 +34098,7 @@
 				(justify right)
 			)
 		)
-		(pin "H1" input
+		(pin "H1" output
 			(at 359.41 38.1 0)
 			(uuid "2b1ca640-f6a8-4333-a5f6-9ad3d76e05d8")
 			(effects
@@ -33901,7 +34108,7 @@
 				(justify right)
 			)
 		)
-		(pin "H2" input
+		(pin "H2" output
 			(at 359.41 39.37 0)
 			(uuid "3649afde-d612-4f87-ae98-75cc96849eff")
 			(effects
@@ -33911,7 +34118,7 @@
 				(justify right)
 			)
 		)
-		(pin "H3" input
+		(pin "H3" output
 			(at 359.41 40.64 0)
 			(uuid "04ad8039-14d7-4510-8f45-3ad5ebca26e5")
 			(effects
@@ -33921,7 +34128,7 @@
 				(justify right)
 			)
 		)
-		(pin "H4" input
+		(pin "H4" output
 			(at 359.41 41.91 0)
 			(uuid "a763d599-103d-424c-a0e3-7a2bcfde9fdd")
 			(effects
@@ -33931,7 +34138,7 @@
 				(justify right)
 			)
 		)
-		(pin "H5" input
+		(pin "H5" output
 			(at 359.41 43.18 0)
 			(uuid "9cee4ccf-c6fc-4bb6-848e-ae8ad053d075")
 			(effects
@@ -33941,7 +34148,7 @@
 				(justify right)
 			)
 		)
-		(pin "H6" input
+		(pin "H6" output
 			(at 359.41 44.45 0)
 			(uuid "da7abf56-e237-46c1-8304-256ac485c172")
 			(effects
@@ -33951,7 +34158,7 @@
 				(justify right)
 			)
 		)
-		(pin "H7" input
+		(pin "H7" output
 			(at 359.41 45.72 0)
 			(uuid "655612dd-38c5-460e-9d25-f07c76f623a7")
 			(effects
@@ -33961,7 +34168,7 @@
 				(justify right)
 			)
 		)
-		(pin "V0" input
+		(pin "V0" output
 			(at 359.41 46.99 0)
 			(uuid "3eacf0e0-34fa-4b68-b54c-11479675ac97")
 			(effects
@@ -33971,7 +34178,7 @@
 				(justify right)
 			)
 		)
-		(pin "V1" input
+		(pin "V1" output
 			(at 359.41 48.26 0)
 			(uuid "5deabae7-fd93-4b90-9737-3f62be6c94e2")
 			(effects
@@ -33981,7 +34188,7 @@
 				(justify right)
 			)
 		)
-		(pin "V2" input
+		(pin "V2" output
 			(at 359.41 49.53 0)
 			(uuid "2ccbfb08-cfa3-4ef3-a3df-5521f39d2c84")
 			(effects
@@ -33991,7 +34198,7 @@
 				(justify right)
 			)
 		)
-		(pin "V3" input
+		(pin "V3" output
 			(at 359.41 50.8 0)
 			(uuid "f904b3b1-543d-4946-95f9-0662032308f8")
 			(effects
@@ -34001,7 +34208,7 @@
 				(justify right)
 			)
 		)
-		(pin "V4" input
+		(pin "V4" output
 			(at 359.41 52.07 0)
 			(uuid "82fa0c6d-cca2-4629-bc07-99419a6f8c4c")
 			(effects
@@ -34011,7 +34218,7 @@
 				(justify right)
 			)
 		)
-		(pin "V5" input
+		(pin "V5" output
 			(at 359.41 53.34 0)
 			(uuid "de1ba077-8d5c-47ae-a46b-07a4bb578e37")
 			(effects
@@ -34021,7 +34228,7 @@
 				(justify right)
 			)
 		)
-		(pin "V6" input
+		(pin "V6" output
 			(at 359.41 54.61 0)
 			(uuid "8ece9d0d-2e7b-4aff-982e-71fecf435887")
 			(effects
@@ -34031,7 +34238,7 @@
 				(justify right)
 			)
 		)
-		(pin "V7" input
+		(pin "V7" output
 			(at 359.41 55.88 0)
 			(uuid "8c33a7ec-128a-457a-800e-885c0fabed1d")
 			(effects
