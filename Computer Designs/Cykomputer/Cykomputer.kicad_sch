@@ -13081,6 +13081,158 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Power_Supervisor:LM809"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 2.54 12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LM809"
+				(at 5.08 10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+				(at 7.62 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm809.pdf"
+				(at 7.62 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Microprocessor Reset (active-low) Circuit, SOT-23"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "reset supervisor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SOT?23*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "LM809_0_1"
+				(rectangle
+					(start 5.08 7.62)
+					(end -5.08 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "LM809_1_1"
+				(pin power_in line
+					(at 0 -10.16 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~{RESET}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 10.16 270)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Switch:SW_Rotary_1x7_MP"
 			(pin_names
 				(offset 0.002)
@@ -14506,6 +14658,12 @@
 		(uuid "46fa1587-dd7e-4551-b877-9feb66be6eae")
 	)
 	(junction
+		(at 360.68 389.89)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "47a00ef8-e858-4460-9e7c-10052af39288")
+	)
+	(junction
 		(at 123.19 389.89)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -14866,6 +15024,12 @@
 		(uuid "9c741a2d-f60b-4767-80d0-4ecf07c6ea70")
 	)
 	(junction
+		(at 353.06 379.73)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a0468a9b-bd66-41d2-84bc-2f56579e1036")
+	)
+	(junction
 		(at 280.67 139.7)
 		(diameter 0)
 		(color 0 0 0 1)
@@ -15002,6 +15166,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bf407712-7a5f-47bd-85f0-c19fd9cf3401")
+	)
+	(junction
+		(at 335.28 400.05)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bf453f81-354d-4b53-8399-c00178507a2e")
 	)
 	(junction
 		(at 455.93 189.23)
@@ -15984,6 +16154,17 @@
 			(type default)
 		)
 		(uuid "10e9b424-3fa7-40ac-a8ad-b04e3388ce6f")
+	)
+	(wire
+		(pts
+			(xy 335.28 400.05) (xy 350.52 400.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "10ed5160-c1fa-4f8a-a0b9-1fa79f50b9b8")
 	)
 	(wire
 		(pts
@@ -17019,7 +17200,7 @@
 	)
 	(wire
 		(pts
-			(xy 335.28 464.82) (xy 335.28 381)
+			(xy 335.28 464.82) (xy 335.28 400.05)
 		)
 		(stroke
 			(width 0)
@@ -19796,6 +19977,17 @@
 	)
 	(wire
 		(pts
+			(xy 353.06 379.73) (xy 353.06 381)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 0 1)
+		)
+		(uuid "8d916363-77be-4b55-ba32-fc7e51006568")
+	)
+	(wire
+		(pts
 			(xy 372.11 349.25) (xy 372.11 354.33)
 		)
 		(stroke
@@ -20550,6 +20742,17 @@
 	)
 	(wire
 		(pts
+			(xy 335.28 400.05) (xy 335.28 381)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "ac1a1d4e-ec93-4134-8594-28fdbffd77cc")
+	)
+	(wire
+		(pts
 			(xy 520.7 140.97) (xy 520.7 91.44)
 		)
 		(stroke
@@ -20969,6 +21172,16 @@
 	)
 	(wire
 		(pts
+			(xy 358.14 389.89) (xy 360.68 389.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba86903a-b3b2-42e9-8883-69c732266baf")
+	)
+	(wire
+		(pts
 			(xy 455.93 189.23) (xy 459.74 189.23)
 		)
 		(stroke
@@ -21145,7 +21358,7 @@
 	)
 	(wire
 		(pts
-			(xy 353.06 347.98) (xy 353.06 381)
+			(xy 353.06 347.98) (xy 353.06 379.73)
 		)
 		(stroke
 			(width 0)
@@ -21816,6 +22029,17 @@
 			(type default)
 		)
 		(uuid "d9687c5c-a7c1-4a75-9736-283b84163762")
+	)
+	(wire
+		(pts
+			(xy 350.52 379.73) (xy 353.06 379.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 0 1)
+		)
+		(uuid "d98c8695-efb9-4c9c-bba5-309dfa705db0")
 	)
 	(wire
 		(pts
@@ -33478,6 +33702,91 @@
 			(project "Cykomputer"
 				(path "/7319cfd4-b54a-49cd-84bf-92265ba5acc0"
 					(reference "U7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Power_Supervisor:LM809")
+		(at 350.52 389.89 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dae941bb-9e47-4db4-9a35-d337d9a6a108")
+		(property "Reference" "U28"
+			(at 344.17 388.6199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LM809"
+			(at 344.17 391.1599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 358.14 387.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm809.pdf"
+			(at 358.14 387.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Microprocessor Reset (active-low) Circuit, SOT-23"
+			(at 350.52 389.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0099b439-61ea-430f-8bca-04f2ecf8d9b1")
+		)
+		(pin "2"
+			(uuid "428e1a5a-21c1-4872-96c8-4f29caf29b7b")
+		)
+		(pin "3"
+			(uuid "cf5826bb-d255-48ee-83e8-7240691871e7")
+		)
+		(instances
+			(project "Cykomputer"
+				(path "/7319cfd4-b54a-49cd-84bf-92265ba5acc0"
+					(reference "U28")
 					(unit 1)
 				)
 			)
