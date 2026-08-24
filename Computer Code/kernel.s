@@ -7,4 +7,5 @@
     BEQ COLD_START
     CMP bas
     BEQ WOZMON
-  
+  irq:
+    

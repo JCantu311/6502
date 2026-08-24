@@ -1,3 +1,4 @@
+.setcpu "65C02"
 .segment "ZEROPAGE"
   WRT_PTR: .res 1           ;Input Buffer Write Pointer
   READ_PTR: .res 1          ;Input Buffer Read Pointer
