@@ -379,12 +379,60 @@
           "label": "Datasheet",
           "name": "Datasheet",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Specifications",
+          "name": "Specifications",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Tolerance",
+          "name": "Tolerance",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Voltage",
+          "name": "Voltage",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Part Number",
+          "name": "Part Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "PROD_ID",
+          "name": "PROD_ID",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer",
+          "name": "Manufacturer",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
-      "name": "Default Editing",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },
@@ -429,7 +477,7 @@
         "uuid": "7319cfd4-b54a-49cd-84bf-92265ba5acc0"
       }
     ],
-    "used_designators": "D1-2,C1-12,5V 5A Wall AC/DC Adapter1,P1,#FLG1-2,R1-5,J1-17,Y1-9,SW1-2,U1-28",
+    "used_designators": "D1-2,C1-12,5V 5A Wall AC/DC Adapter1,P1,#FLG1-4,R1-5,J1-17,Y1-9,SW1-2,Q1,U1-30",
     "variants": []
   },
   "sheets": [

@@ -8,4 +8,4 @@
     CMP bas
     BEQ WOZMON
   irq:
-    
+    LDA 
