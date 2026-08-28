@@ -477,7 +477,7 @@
         "uuid": "7319cfd4-b54a-49cd-84bf-92265ba5acc0"
       }
     ],
-    "used_designators": "D1-2,C1-12,5V 5A Wall AC/DC Adapter1,P1,#FLG1-4,R1-5,J1-17,Y1-9,SW1-2,Q1,U1-30",
+    "used_designators": "D1-2,C1-12,5V 5A Wall AC/DC Adapter1-2,P1,#FLG1-6,R1-5,J1-20,Y1-9,SW1-3,Q1,U1-30",
     "variants": []
   },
   "sheets": [
