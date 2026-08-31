@@ -42,6 +42,7 @@
 .segment "ZEROPAGE"
   WRT_PTR: .res 1           ;Input Buffer Write Pointer
   READ_PTR: .res 1          ;Input Buffer Read Pointer
+  BUFFER_SIZE: .res 1       ;Input Buffer Size
   .include "zeropage.s"
 .segment "STACK"
 .segment "INPUT_BUFFER"

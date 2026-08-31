@@ -18753,10 +18753,6 @@
 		(uuid "5cb3b800-270c-4052-99ea-da1f48bf09e1")
 	)
 	(no_connect
-		(at 490.22 251.46)
-		(uuid "5d667847-58c9-456a-a01d-e4228b199c05")
-	)
-	(no_connect
 		(at 613.41 325.12)
 		(uuid "61f7d9ff-c49f-4b39-8dce-03b774510707")
 	)
@@ -29105,6 +29101,26 @@
 			(justify left bottom)
 		)
 		(uuid "ca839012-1e72-4943-bf69-853321e587b2")
+	)
+	(label "NMI"
+		(at 360.68 407.67 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "cbd88f40-8efe-4ff3-b342-1259cd6f32f5")
+	)
+	(label "NMI"
+		(at 490.22 251.46 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "cc71621c-3780-44c2-adf3-37f53617ea6a")
 	)
 	(label "D2"
 		(at 247.65 403.86 0)

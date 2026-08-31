@@ -6,7 +6,6 @@ STA_INST: .res 1
 ADDR_LOW: .res 1
 ADDR_HIGH: .res 1
 RETURN: .res 1
-.segment "IO"
 .segment "CODE"
 init:
     LDX #$8D
