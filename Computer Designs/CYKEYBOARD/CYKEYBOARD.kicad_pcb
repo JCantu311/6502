@@ -10761,7 +10761,7 @@
 				)
 			)
 		)
-		(property "Value" "HOLD"
+		(property "Value" "BAS"
 			(at -2.54 12.954 0)
 			(layer "F.SilkS")
 			(uuid "cd5431df-a3d7-4471-b089-6e9d28e8dca1")
@@ -16770,7 +16770,7 @@
 				)
 			)
 		)
-		(property "Value" "READY"
+		(property "Value" "PAUSE"
 			(at -2.54 12.954 0)
 			(layer "F.Fab")
 			(uuid "a2d44812-5a0d-4a1b-a64c-ee44c6fe5b9c")
@@ -20452,7 +20452,7 @@
 				)
 			)
 		)
-		(property "Value" "HOME"
+		(property "Value" "MON"
 			(at -2.54 12.954 0)
 			(layer "F.SilkS")
 			(uuid "2833ff0a-6936-46a4-bb62-46738fc0f5bc")
@@ -26433,7 +26433,7 @@
 				)
 			)
 		)
-		(property "Value" "INS"
+		(property "Value" "HOME"
 			(at -2.54 12.954 0)
 			(layer "F.SilkS")
 			(uuid "4e3c0a2c-6241-48f2-b23f-b340d614a308")
@@ -32873,7 +32873,7 @@
 			)
 		)
 		(property ki_fp_filters "DIP*W7.62mm*")
-		(path "/7939f8e4-4327-455e-afdf-776d0d633ff7")
+		(path "/863f603f-7592-469c-bf5f-88060f72d11a")
 		(sheetname "/")
 		(sheetfile "CYKEYBOARD.kicad_sch")
 		(units
@@ -54223,7 +54223,7 @@
 			)
 		)
 		(property ki_fp_filters "DIP*W7.62mm*")
-		(path "/99c32737-9fec-4ee8-904b-024e9dd22899")
+		(path "/95e817d2-0035-433c-a868-0574d362e546")
 		(sheetname "/")
 		(sheetfile "CYKEYBOARD.kicad_sch")
 		(units
@@ -91262,7 +91262,7 @@
 			)
 		)
 		(property ki_fp_filters "DIP*W7.62mm*")
-		(path "/8de50167-36b3-4ebb-b96d-7470b088612e")
+		(path "/74013a3d-a9a8-4205-8198-21e632eda9b8")
 		(sheetname "/")
 		(sheetfile "CYKEYBOARD.kicad_sch")
 		(units
@@ -94342,7 +94342,7 @@
 			)
 		)
 		(property ki_fp_filters "DIP*W7.62mm*")
-		(path "/9dd4fed0-20dd-419b-a781-6b21afa0416a")
+		(path "/731c706b-519a-482b-8698-6aab7b7759aa")
 		(sheetname "/")
 		(sheetfile "CYKEYBOARD.kicad_sch")
 		(units
