@@ -24,6 +24,9 @@
   11.  Expansion Slot 3:                              $BC17-$BFFF
   I/O Devices 1-3 are controlled by W65C22 VIA Chips, consult datasheet for exact addresses
   I/O Device 4 is a standard MOS Technology 6581 Chip or a pin-compatible replacement, consult datasheet for exact addresses
+      NOTE: The address space allocated to the 6581 is 3 bytes larger than the 6581 requires, this is to simplify address decoding logic. 
+            Avoid using addresses $B04D-$B04F as the chip does not use these and may cause issues with the chip or compatibles. 
+            Some compatibles may use these addresses, consult datasheet of your choice in sound chip for any information
   I/O Devices 5-7 are controlled by W65C51 ACIA Chips, consult datasheet for exact addresses
       NOTE: There is a known issue regarding the W65C51 ACIA Status register where the ready bit is always set to true, adjust code accordingly
   I/O Devices 8-11 are controlled by devices TBD by manufacturers, consult datasheets and/or contact manufacturers for any information.
