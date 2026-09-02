@@ -1,5 +1,13 @@
-.segment MONITOR
 WOZMON:
+XAML  = $24                            ; Last "opened" location Low
+XAMH  = $25                            ; Last "opened" location High
+STL   = $26                            ; Store address Low
+STH   = $27                            ; Store address High
+L     = $28                            ; Hex value parsing Low
+H     = $29                            ; Hex value parsing High
+YSAV  = $2A                            ; Used to see if hex value is given
+MODE  = $2B                            ; $00=XAM, $7F=STOR, $AE=BLOCK XAM
+BUFFER_IN = READ_PTR
 NOTCR:
                 CMP     #$08           ; Backspace key?
                 BEQ     BACKSPACE      ; Yes.
@@ -24,7 +32,7 @@ NEXTCHAR:
                 LDA     BUFFER_SIZE    ; Check status.
                 CMP     #0             ; Key ready?
                 BEQ     NEXTCHAR       ; Loop until ready.
-                LDA     ACIA_DATA      ; Load character. B7 will be '0'.
+                LDA     BUFFER_IN      ; Load character. B7 will be '0'.
                 STA     IN,Y           ; Add to text buffer.
                 JSR     ECHO           ; Display character.
                 CMP     #$0D           ; CR?
