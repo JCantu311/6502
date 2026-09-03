@@ -3558,6 +3558,202 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector:Conn_Receptacle_3P_Protected"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at -9.652 11.176 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_Receptacle_3P_Protected"
+				(at 0.254 -11.43 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -23.114 22.86 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "3 Pins protected generic receptacle"
+				(at 0.508 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "3P mains receptacle protected wall"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "CEE*7/2* CEE*7/16* CEE*7/17* NEMA*1?15* SN?441011?Type*11*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_Receptacle_3P_Protected_0_1"
+				(circle
+					(center 0 0)
+					(radius 5.715)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Conn_Receptacle_3P_Protected_1_1"
+				(rectangle
+					(start -10.16 10.16)
+					(end 10.16 -10.16)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(circle
+					(center -3.175 0)
+					(radius 0.635)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 0 3.175)
+					(radius 0.635)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 3.175 0)
+					(radius 0.635)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(pin power_out line
+					(at 12.7 -5.08 180)
+					(length 2.54)
+					(name "N"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 12.7 5.08 180)
+					(length 2.54)
+					(name "L"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 12.7 0 180)
+					(length 2.54)
+					(name "PE"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector:DE15_Socket_HighDensity_MountingHoles"
 			(pin_names
 				(offset 1.016)
@@ -16246,6 +16442,255 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "PCM_SparkFun-Connector:Barrel_Jack_PTH"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 5.334 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Barrel_Jack_PTH"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "PCM_SparkFun-Connector:Barrel_Jack_PTH"
+				(at 1.27 -8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.sparkfun.com/datasheets/Prototyping/Barrel-Connector-PJ-202A.pdf"
+				(at 1.27 -11.43 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "DC Barrel Jack with an internal switch"
+				(at 0 -13.97 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "PROD_ID" "CONN-08197"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "SparkFun DC power barrel jack connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "BarrelJack*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Barrel_Jack_PTH_0_1"
+				(rectangle
+					(start -5.08 3.81)
+					(end 5.08 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 -2.54) (xy -2.54 -2.54) (xy -1.27 -1.27) (xy 0 -2.54) (xy 2.54 -2.54) (xy 5.08 -2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -3.302 1.905)
+					(mid -3.9343 2.54)
+					(end -3.302 3.175)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -3.302 1.905)
+					(mid -3.9343 2.54)
+					(end -3.302 3.175)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -2.286) (xy 1.905 -1.651)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.683 3.175)
+					(end -3.302 1.905)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 2.54) (xy 3.81 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 0) (xy 1.27 0) (xy 1.27 -2.286) (xy 0.635 -1.651)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Barrel_Jack_PTH_1_1"
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "PWR"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "GNDBREAK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "PCM_SparkFun-Resistor:5.1k_0603"
 			(pin_numbers
 				(hide yes)
@@ -17821,6 +18266,16 @@
 		)
 		(uuid "bc829f12-ee7a-4f19-94e5-a7633eb9eb1c")
 	)
+	(text "+12v"
+		(exclude_from_sim no)
+		(at 723.9 236.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "c75022a2-3afb-4f83-800e-592d58a4d642")
+	)
 	(text "Video Firmware"
 		(exclude_from_sim no)
 		(at 454.152 117.348 0)
@@ -18136,6 +18591,12 @@
 		(uuid "2b4e569a-f7f7-4322-8540-7e5427376859")
 	)
 	(junction
+		(at 720.09 201.93)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2bc5fcd5-9ec9-4ad7-b492-7015dbe8ad23")
+	)
+	(junction
 		(at 615.95 339.09)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -18224,6 +18685,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3d4c0db5-d7e9-4f8a-83cf-af0dc2803cab")
+	)
+	(junction
+		(at 615.95 238.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "403348a1-a3f3-42a8-9840-4a2b5ba8d468")
 	)
 	(junction
 		(at 271.78 60.96)
@@ -18766,6 +19233,12 @@
 		(uuid "b95a43e9-5866-4958-8190-ee1029e0758a")
 	)
 	(junction
+		(at 725.17 196.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "babd5cbd-d27a-414d-92ad-5373113899c0")
+	)
+	(junction
 		(at 208.28 193.04)
 		(diameter 0)
 		(color 255 0 0 1)
@@ -18872,6 +19345,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d40a20e9-9cbf-4ecf-9600-65e9fc6c96fb")
+	)
+	(junction
+		(at 716.28 238.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d4268403-eeaa-437e-8e6a-95cafe964a3b")
 	)
 	(junction
 		(at 596.9 152.4)
@@ -19088,10 +19567,6 @@
 	(no_connect
 		(at 713.74 410.21)
 		(uuid "25883563-17bb-4910-a47b-d25171f0e424")
-	)
-	(no_connect
-		(at 722.63 93.98)
-		(uuid "27a1e987-4fca-42a6-ada4-0ecf0c090129")
 	)
 	(no_connect
 		(at 673.1 410.21)
@@ -19421,17 +19896,6 @@
 	)
 	(wire
 		(pts
-			(xy 720.09 157.48) (xy 720.09 196.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 0 0 0 1)
-		)
-		(uuid "05e59788-5210-46af-8472-dd277570129a")
-	)
-	(wire
-		(pts
 			(xy 267.97 53.34) (xy 267.97 52.07)
 		)
 		(stroke
@@ -19439,6 +19903,16 @@
 			(type default)
 		)
 		(uuid "0611433d-a240-4ea8-b44c-cbf1ef4a6f5b")
+	)
+	(wire
+		(pts
+			(xy 722.63 96.52) (xy 722.63 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "06be6c28-a916-4ff3-899a-3a3ab59969a6")
 	)
 	(wire
 		(pts
@@ -20228,6 +20702,16 @@
 	)
 	(wire
 		(pts
+			(xy 723.9 96.52) (xy 723.9 218.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1cdcbc64-d646-48bf-ad3e-40901e40455d")
+	)
+	(wire
+		(pts
 			(xy 212.09 121.92) (xy 223.52 121.92)
 		)
 		(stroke
@@ -20246,6 +20730,17 @@
 			(type default)
 		)
 		(uuid "1d363db9-aa0f-45e1-b129-b9e9dc2ae2a2")
+	)
+	(wire
+		(pts
+			(xy 725.17 196.85) (xy 725.17 223.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 0 1)
+		)
+		(uuid "1d3aa438-7125-4a4c-9872-340375b4f936")
 	)
 	(wire
 		(pts
@@ -20755,6 +21250,17 @@
 			(type default)
 		)
 		(uuid "3124d04b-7b2a-4695-b6a6-7be4c2e68cd7")
+	)
+	(wire
+		(pts
+			(xy 720.09 201.93) (xy 718.82 201.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "3221ff30-b7b5-40c6-919a-8cc594e6ffe4")
 	)
 	(wire
 		(pts
@@ -21300,7 +21806,7 @@
 	)
 	(wire
 		(pts
-			(xy 615.95 231.14) (xy 615.95 254)
+			(xy 615.95 231.14) (xy 615.95 238.76)
 		)
 		(stroke
 			(width 0)
@@ -21934,17 +22440,6 @@
 			(color 0 0 0 1)
 		)
 		(uuid "52fbe527-84a0-440f-b5a1-9f3553bf70f9")
-	)
-	(wire
-		(pts
-			(xy 720.09 196.85) (xy 718.82 196.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 0 0 0 1)
-		)
-		(uuid "530567c8-31c4-4703-a914-8ca22793b02e")
 	)
 	(wire
 		(pts
@@ -22852,6 +23347,17 @@
 	)
 	(wire
 		(pts
+			(xy 615.95 238.76) (xy 716.28 238.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "6ccfefec-461f-4e62-97b1-4b609c1255f1")
+	)
+	(wire
+		(pts
 			(xy 454.66 134.62) (xy 459.74 134.62)
 		)
 		(stroke
@@ -23017,7 +23523,7 @@
 	)
 	(wire
 		(pts
-			(xy 725.17 152.4) (xy 725.17 201.93)
+			(xy 725.17 152.4) (xy 725.17 196.85)
 		)
 		(stroke
 			(width 0)
@@ -23253,6 +23759,16 @@
 			(type default)
 		)
 		(uuid "77086ec1-ecdd-44f8-a1d8-26f23fcb4c7a")
+	)
+	(wire
+		(pts
+			(xy 723.9 96.52) (xy 722.63 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7764b8d9-b1c3-4079-9b5a-455a4ad96539")
 	)
 	(wire
 		(pts
@@ -24766,6 +25282,17 @@
 	)
 	(wire
 		(pts
+			(xy 718.82 196.85) (xy 725.17 196.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 0 1)
+		)
+		(uuid "a5c33d31-a48b-4cbf-9108-f52e720abae8")
+	)
+	(wire
+		(pts
 			(xy 723.9 383.54) (xy 723.9 389.89)
 		)
 		(stroke
@@ -25174,6 +25701,17 @@
 	)
 	(wire
 		(pts
+			(xy 725.17 223.52) (xy 726.44 223.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 0 1)
+		)
+		(uuid "b7058a0d-1497-43fc-a23f-2f8ed713342f")
+	)
+	(wire
+		(pts
 			(xy 454.66 250.19) (xy 427.99 250.19)
 		)
 		(stroke
@@ -25244,6 +25782,17 @@
 			(type default)
 		)
 		(uuid "b959f84e-f7b4-4d70-88d4-15fe6dd3b427")
+	)
+	(wire
+		(pts
+			(xy 720.09 213.36) (xy 726.44 213.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "b99f455a-86f9-4675-9797-b88d3d5234a0")
 	)
 	(wire
 		(pts
@@ -25402,6 +25951,17 @@
 			(type default)
 		)
 		(uuid "bedf3f9e-4e34-4a74-a39d-e7c566a6eecd")
+	)
+	(wire
+		(pts
+			(xy 615.95 238.76) (xy 615.95 254)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "bf2ed068-a2d7-4206-9abd-8bbc68527029")
 	)
 	(wire
 		(pts
@@ -26681,6 +27241,17 @@
 	)
 	(wire
 		(pts
+			(xy 720.09 201.93) (xy 720.09 213.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "e733bfcc-dae5-494a-a5ee-778adb37841c")
+	)
+	(wire
+		(pts
 			(xy 600.71 274.32) (xy 615.95 274.32)
 		)
 		(stroke
@@ -26711,6 +27282,16 @@
 			(color 0 0 0 1)
 		)
 		(uuid "e7ac6552-a853-4d68-922d-c8c1c82770bb")
+	)
+	(wire
+		(pts
+			(xy 726.44 218.44) (xy 723.9 218.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e8566190-532f-4421-8e97-6f55078b5241")
 	)
 	(wire
 		(pts
@@ -27212,14 +27793,14 @@
 	)
 	(wire
 		(pts
-			(xy 725.17 201.93) (xy 718.82 201.93)
+			(xy 720.09 157.48) (xy 720.09 201.93)
 		)
 		(stroke
 			(width 0)
 			(type default)
-			(color 255 0 0 1)
+			(color 0 0 0 1)
 		)
-		(uuid "f3b811d8-4f3e-4ced-bde2-d5604db759b7")
+		(uuid "f3b46e7e-10b3-43f1-8534-576852b0aa51")
 	)
 	(wire
 		(pts
@@ -27396,6 +27977,17 @@
 			(type default)
 		)
 		(uuid "f7b6d82e-cbf5-4f94-a1e9-b0ad41ef27fa")
+	)
+	(wire
+		(pts
+			(xy 716.28 238.76) (xy 716.28 241.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "f7b8ac1a-a393-4907-afe1-6501607b8720")
 	)
 	(wire
 		(pts
@@ -27932,6 +28524,16 @@
 			(justify left bottom)
 		)
 		(uuid "28a2da86-089b-448c-b431-742623d970f0")
+	)
+	(label "12v"
+		(at 151.13 142.24 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "297db4f8-3cad-47ad-8ec3-36d57978f1d5")
 	)
 	(label "D2"
 		(at 596.9 401.32 0)
@@ -28573,6 +29175,16 @@
 		)
 		(uuid "70dc9693-e458-4bbc-9fbb-89c7a867b82c")
 	)
+	(label "12v"
+		(at 716.28 243.84 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "71138a91-aa29-4e72-a682-9f2bd0d694c9")
+	)
 	(label "D1"
 		(at 306.07 60.96 0)
 		(effects
@@ -28602,6 +29214,16 @@
 			(justify left bottom)
 		)
 		(uuid "72410f58-0b55-4062-b7e9-2a83b1cfd899")
+	)
+	(label "12v"
+		(at 300.99 289.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7270a554-820a-47ba-980f-e4c2c3cf91ae")
 	)
 	(label "A6"
 		(at 186.69 182.88 0)
@@ -28793,6 +29415,16 @@
 		)
 		(uuid "864a02c7-c456-4bce-ae22-a7e5b55141d4")
 	)
+	(label "12v"
+		(at 67.31 49.53 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "877ebb40-c758-4055-9513-faced4cbd7f0")
+	)
 	(label "D0"
 		(at 381 433.07 0)
 		(effects
@@ -28962,6 +29594,16 @@
 			(justify right bottom)
 		)
 		(uuid "99503dc2-f2ba-4002-b9ba-e02b8cb47be7")
+	)
+	(label "12v"
+		(at 212.09 142.24 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9a4f896a-3d51-4ca4-9d7c-a165e2482cd2")
 	)
 	(label "D6"
 		(at 430.53 452.12 180)
@@ -29802,6 +30444,16 @@
 			(justify right bottom)
 		)
 		(uuid "e63e36e4-d378-4f70-9c70-a869b75ac51a")
+	)
+	(label "12v"
+		(at 273.05 142.24 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "e75c4f8c-f99d-4f19-a195-53920f764d90")
 	)
 	(label "D2"
 		(at 381 438.15 0)
@@ -31860,6 +32512,91 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Conn_Receptacle_3P_Protected")
+		(at 739.14 218.44 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4d4bbc70-d6fb-4fa9-ac08-f4c6501f5273")
+		(property "Reference" "J22"
+			(at 750.57 217.1699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Conn_Receptacle_3P_Protected"
+			(at 750.57 219.7099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "PCM_SparkFun-Connector:Barrel_Jack_PTH"
+			(at 762.254 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 739.14 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "3 Pins protected generic receptacle"
+			(at 738.632 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "7c11972e-baff-4974-989d-6f55944f0d31")
+		)
+		(pin "3"
+			(uuid "ba23ee7e-ef2f-4d84-be3b-79cebe8ff5a0")
+		)
+		(pin "1"
+			(uuid "5f920518-db44-4381-8dd6-95486621dd2f")
+		)
+		(instances
+			(project "Cykomputer"
+				(path "/7319cfd4-b54a-49cd-84bf-92265ba5acc0"
+					(reference "J22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_01x03")
 		(at 396.24 369.57 0)
 		(unit 1)
@@ -33494,6 +34231,102 @@
 			(project "Cykomputer"
 				(path "/7319cfd4-b54a-49cd-84bf-92265ba5acc0"
 					(reference "J18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_SparkFun-Connector:Barrel_Jack_PTH")
+		(at 723.9 241.3 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "78c480e4-86a9-4c47-8b62-f6c457285298")
+		(property "Reference" "J21"
+			(at 730.25 240.0299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Barrel_Jack_PTH"
+			(at 730.25 242.5699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "PCM_SparkFun-Connector:Barrel_Jack_PTH"
+			(at 722.63 232.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.sparkfun.com/datasheets/Prototyping/Barrel-Connector-PJ-202A.pdf"
+			(at 722.63 229.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "DC Barrel Jack with an internal switch"
+			(at 723.9 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PROD_ID" "CONN-08197"
+			(at 723.9 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f5b08637-6a23-4037-ad83-1a7efde1609d")
+		)
+		(pin "2"
+			(uuid "96941f6c-4048-4a98-96ca-d8c4b3846380")
+		)
+		(pin "3"
+			(uuid "9feed7ec-e7f6-4172-b5c3-bd0195c0d35d")
+		)
+		(instances
+			(project "Cykomputer"
+				(path "/7319cfd4-b54a-49cd-84bf-92265ba5acc0"
+					(reference "J21")
 					(unit 1)
 				)
 			)

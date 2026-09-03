@@ -2595,7 +2595,7 @@
 		)
 		(uuid "5d19d363-9118-46ef-b3e0-6c7c48a10784")
 	)
-	(text "23A256\nRAM"
+	(text "N01S830HAT22I\nRAM"
 		(exclude_from_sim no)
 		(at 154.686 154.94 0)
 		(effects
@@ -5031,46 +5031,46 @@
 			)
 		)
 		(pin "8"
-			(uuid "ab5e91ce-36e3-45db-bab7-25f1d547531b")
+			(uuid "ab5e91ce-36e3-45db-bab7-25f1d547531c")
 		)
 		(pin "10"
-			(uuid "1284ab1a-0889-451d-8764-24a89042d6d9")
+			(uuid "1284ab1a-0889-451d-8764-24a89042d6da")
 		)
 		(pin "5"
-			(uuid "2d6f13af-a18e-468d-abbf-0144231ea5e7")
+			(uuid "2d6f13af-a18e-468d-abbf-0144231ea5e8")
 		)
 		(pin "11"
-			(uuid "2027778a-c336-4030-ad83-2774ef900679")
+			(uuid "2027778a-c336-4030-ad83-2774ef90067a")
 		)
 		(pin "4"
-			(uuid "e752d318-4f6d-496e-9372-bffac0111b10")
+			(uuid "e752d318-4f6d-496e-9372-bffac0111b11")
 		)
 		(pin "13"
-			(uuid "45bb2756-1dd2-48bc-b094-9229849934ab")
+			(uuid "45bb2756-1dd2-48bc-b094-9229849934ac")
 		)
 		(pin "3"
-			(uuid "bb6aa97c-f945-4351-8abb-6b7f4a3e0d8c")
+			(uuid "bb6aa97c-f945-4351-8abb-6b7f4a3e0d8d")
 		)
 		(pin "9"
-			(uuid "df83b2cf-9219-4c04-8dad-194a3cd9cbc9")
+			(uuid "df83b2cf-9219-4c04-8dad-194a3cd9cbca")
 		)
 		(pin "2"
-			(uuid "c54b2e89-13a0-43f2-b727-d22581403c94")
+			(uuid "c54b2e89-13a0-43f2-b727-d22581403c95")
 		)
 		(pin "1"
-			(uuid "7acb4363-c2af-4b0f-9cf8-694b8f658750")
+			(uuid "7acb4363-c2af-4b0f-9cf8-694b8f658751")
 		)
 		(pin "14"
-			(uuid "eaaa29ff-af06-46c8-9718-83dcc026f810")
+			(uuid "eaaa29ff-af06-46c8-9718-83dcc026f811")
 		)
 		(pin "12"
-			(uuid "9efa043e-c4c1-409c-beba-5ed0d1efa851")
+			(uuid "9efa043e-c4c1-409c-beba-5ed0d1efa852")
 		)
 		(pin "6"
-			(uuid "cd4c35f7-c6f3-4814-b6b6-d657e1e3b544")
+			(uuid "cd4c35f7-c6f3-4814-b6b6-d657e1e3b545")
 		)
 		(pin "7"
-			(uuid "9a7a8722-f366-44dc-ac87-edaf42d03dd2")
+			(uuid "9a7a8722-f366-44dc-ac87-edaf42d03dd3")
 		)
 		(instances
 			(project "6502-Cartridge-Design"
@@ -5795,46 +5795,46 @@
 			)
 		)
 		(pin "8"
-			(uuid "ab5e91ce-36e3-45db-bab7-25f1d547531b")
+			(uuid "ab5e91ce-36e3-45db-bab7-25f1d547531d")
 		)
 		(pin "10"
-			(uuid "1284ab1a-0889-451d-8764-24a89042d6d9")
+			(uuid "1284ab1a-0889-451d-8764-24a89042d6db")
 		)
 		(pin "5"
-			(uuid "2d6f13af-a18e-468d-abbf-0144231ea5e7")
+			(uuid "2d6f13af-a18e-468d-abbf-0144231ea5e9")
 		)
 		(pin "11"
-			(uuid "2027778a-c336-4030-ad83-2774ef900679")
+			(uuid "2027778a-c336-4030-ad83-2774ef90067b")
 		)
 		(pin "4"
-			(uuid "e752d318-4f6d-496e-9372-bffac0111b10")
+			(uuid "e752d318-4f6d-496e-9372-bffac0111b12")
 		)
 		(pin "13"
-			(uuid "45bb2756-1dd2-48bc-b094-9229849934ab")
+			(uuid "45bb2756-1dd2-48bc-b094-9229849934ad")
 		)
 		(pin "3"
-			(uuid "bb6aa97c-f945-4351-8abb-6b7f4a3e0d8c")
+			(uuid "bb6aa97c-f945-4351-8abb-6b7f4a3e0d8e")
 		)
 		(pin "9"
-			(uuid "df83b2cf-9219-4c04-8dad-194a3cd9cbc9")
+			(uuid "df83b2cf-9219-4c04-8dad-194a3cd9cbcb")
 		)
 		(pin "2"
-			(uuid "c54b2e89-13a0-43f2-b727-d22581403c94")
+			(uuid "c54b2e89-13a0-43f2-b727-d22581403c96")
 		)
 		(pin "1"
-			(uuid "7acb4363-c2af-4b0f-9cf8-694b8f658750")
+			(uuid "7acb4363-c2af-4b0f-9cf8-694b8f658752")
 		)
 		(pin "14"
-			(uuid "eaaa29ff-af06-46c8-9718-83dcc026f810")
+			(uuid "eaaa29ff-af06-46c8-9718-83dcc026f812")
 		)
 		(pin "12"
-			(uuid "9efa043e-c4c1-409c-beba-5ed0d1efa851")
+			(uuid "9efa043e-c4c1-409c-beba-5ed0d1efa853")
 		)
 		(pin "6"
-			(uuid "cd4c35f7-c6f3-4814-b6b6-d657e1e3b544")
+			(uuid "cd4c35f7-c6f3-4814-b6b6-d657e1e3b546")
 		)
 		(pin "7"
-			(uuid "9a7a8722-f366-44dc-ac87-edaf42d03dd2")
+			(uuid "9a7a8722-f366-44dc-ac87-edaf42d03dd4")
 		)
 		(instances
 			(project "6502-Cartridge-Design"
@@ -6027,46 +6027,46 @@
 			)
 		)
 		(pin "8"
-			(uuid "ab5e91ce-36e3-45db-bab7-25f1d547531b")
+			(uuid "ab5e91ce-36e3-45db-bab7-25f1d547531e")
 		)
 		(pin "10"
-			(uuid "1284ab1a-0889-451d-8764-24a89042d6d9")
+			(uuid "1284ab1a-0889-451d-8764-24a89042d6dc")
 		)
 		(pin "5"
-			(uuid "2d6f13af-a18e-468d-abbf-0144231ea5e7")
+			(uuid "2d6f13af-a18e-468d-abbf-0144231ea5ea")
 		)
 		(pin "11"
-			(uuid "2027778a-c336-4030-ad83-2774ef900679")
+			(uuid "2027778a-c336-4030-ad83-2774ef90067c")
 		)
 		(pin "4"
-			(uuid "e752d318-4f6d-496e-9372-bffac0111b10")
+			(uuid "e752d318-4f6d-496e-9372-bffac0111b13")
 		)
 		(pin "13"
-			(uuid "45bb2756-1dd2-48bc-b094-9229849934ab")
+			(uuid "45bb2756-1dd2-48bc-b094-9229849934ae")
 		)
 		(pin "3"
-			(uuid "bb6aa97c-f945-4351-8abb-6b7f4a3e0d8c")
+			(uuid "bb6aa97c-f945-4351-8abb-6b7f4a3e0d8f")
 		)
 		(pin "9"
-			(uuid "df83b2cf-9219-4c04-8dad-194a3cd9cbc9")
+			(uuid "df83b2cf-9219-4c04-8dad-194a3cd9cbcc")
 		)
 		(pin "2"
-			(uuid "c54b2e89-13a0-43f2-b727-d22581403c94")
+			(uuid "c54b2e89-13a0-43f2-b727-d22581403c97")
 		)
 		(pin "1"
-			(uuid "7acb4363-c2af-4b0f-9cf8-694b8f658750")
+			(uuid "7acb4363-c2af-4b0f-9cf8-694b8f658753")
 		)
 		(pin "14"
-			(uuid "eaaa29ff-af06-46c8-9718-83dcc026f810")
+			(uuid "eaaa29ff-af06-46c8-9718-83dcc026f813")
 		)
 		(pin "12"
-			(uuid "9efa043e-c4c1-409c-beba-5ed0d1efa851")
+			(uuid "9efa043e-c4c1-409c-beba-5ed0d1efa854")
 		)
 		(pin "6"
-			(uuid "cd4c35f7-c6f3-4814-b6b6-d657e1e3b544")
+			(uuid "cd4c35f7-c6f3-4814-b6b6-d657e1e3b547")
 		)
 		(pin "7"
-			(uuid "9a7a8722-f366-44dc-ac87-edaf42d03dd2")
+			(uuid "9a7a8722-f366-44dc-ac87-edaf42d03dd5")
 		)
 		(instances
 			(project "6502-Cartridge-Design"
@@ -6109,7 +6109,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+		(property "Footprint" "Package_SO:TSSOP-8_4.4x3mm_P0.65mm"
 			(at 125.73 138.43 0)
 			(hide yes)
 			(show_name no)
