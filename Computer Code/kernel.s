@@ -6,10 +6,12 @@ VIA0IER = $B00E
 mon = %11100000
 bas = %11100010
 init:
-    LDA #%00000000
+    LDX #$FF
+    TXS
+    
+    LDA #%11111111
     STA DDRkeyboard1
     STA DDRps2
-    LDA #%11111111
     STA VIA0IER
     LDA #0
     STA READ_PTR
