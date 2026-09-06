@@ -2565,9 +2565,9 @@
 		)
 		(uuid "46c858dc-e983-48df-8e7c-cdaef6cd07e2")
 	)
-	(text "FM25CL64B"
+	(text "MB85RS64VYPNF-G-BCERE1\nSTORAGE\n"
 		(exclude_from_sim no)
-		(at 232.41 139.192 0)
+		(at 240.538 139.192 0)
 		(effects
 			(font
 				(size 1.27 1.27)
