@@ -1,1 +1,2 @@
+COLD_START:
   NOP

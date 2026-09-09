@@ -1,4 +1,5 @@
 keyboard1 = $B001
+keyboard2 = $B000
 DDRkeyboard1 = $B003
 DDRps2 = $B002
 VIA0IFR = $B00D
@@ -25,9 +26,13 @@ buffer_handle:
 monbas:
     LDA keyboard1
     CMP mon 
-    BEQ COLD_START
+    BEQ JMP_COLD_START
     CMP bas
-    BEQ WOZMON
+    BEQ JMP_WOZMON
+JMP_COLD_START:
+    JMP COLD_START
+JMP_WOZMON:
+    JMP WOZMON
 irq:
     LDA VIA0IFR
     AND #%00000010
@@ -38,6 +43,11 @@ KEYBOARD_1:
     LDA keyboard1
     TAX
     LDA kb1, x
+    RTI
+KEYBOARD_2:
+    LDA keyboard2
+    TAX
+    LDA kb2, x
     RTI
 kb1:
     .byte "????????????????"        ;00-0F

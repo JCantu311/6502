@@ -1,13 +1,15 @@
-WOZMON:
-XAML  = $24                            ; Last "opened" location Low
-XAMH  = $25                            ; Last "opened" location High
-STL   = $26                            ; Store address Low
-STH   = $27                            ; Store address High
-L     = $28                            ; Hex value parsing Low
-H     = $29                            ; Hex value parsing High
-YSAV  = $2A                            ; Used to see if hex value is given
-MODE  = $2B                            ; $00=XAM, $7F=STOR, $AE=BLOCK XAM
+XAML      = $24                        ; Last "opened" location Low
+XAMH      = $25                        ; Last "opened" location High
+STL       = $26                        ; Store address Low
+STH       = $27                        ; Store address High
+L         = $28                        ; Hex value parsing Low
+H         = $29                        ; Hex value parsing High
+YSAV      = $2A                        ; Used to see if hex value is given
+MODE      = $2B                        ; $00=XAM, $7F=STOR, $AE=BLOCK XAM
+KEYBOARD  = keyboard1
 BUFFER_IN = READ_PTR
+SCRN_OUT  = $B011
+WOZMON:
 NOTCR:
                 CMP     #$08           ; Backspace key?
                 BEQ     BACKSPACE      ; Yes.
@@ -32,8 +34,8 @@ NEXTCHAR:
                 LDA     BUFFER_SIZE    ; Check status.
                 CMP     #0             ; Key ready?
                 BEQ     NEXTCHAR       ; Loop until ready.
-                LDA     BUFFER_IN      ; Load character. B7 will be '0'.
-                STA     IN,Y           ; Add to text buffer.
+                LDA     KEYBOARD       ; Load character. B7 will be '0'.
+                STA     BUFFER_IN,Y    ; Add to text buffer.
                 JSR     ECHO           ; Display character.
                 CMP     #$0D           ; CR?
                 BNE     NOTCR          ; No.
@@ -49,7 +51,7 @@ SETSTOR:
 BLSKIP:
                 INY                    ; Advance text index.
 NEXTITEM:
-                LDA     IN,Y           ; Get character.
+                LDA     BUFFER_IN,Y     ; Get character.
                 CMP     #$0D           ; CR?
                 BEQ     GETLINE        ; Yes, done this line.
                 CMP     #$2E           ; "."?
@@ -64,7 +66,7 @@ NEXTITEM:
                 STY     YSAV           ; Save Y for comparison
 
 NEXTHEX:
-                LDA     IN,Y           ; Get character for hex test.
+                LDA     BUFFER_IN,Y           ; Get character for hex test.
                 EOR     #$30           ; Map digits to $0-9.
                 CMP     #$0A           ; Digit?
                 BCC     DIG            ; Yes.
@@ -164,7 +166,7 @@ PRHEX:
 
 ECHO:
                 PHA                    ; Save A.
-                STA     ACIA_DATA      ; Output character.
+                STA     SCRN_OUT       ; Output character.
                 LDA     #$FF           ; Initialize delay loop.
 TXDELAY:        DEC                    ; Decrement A.
                 BNE     TXDELAY        ; Until A gets to 0.
