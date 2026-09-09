@@ -3773,8 +3773,8 @@
 		(layer "Edge.Cuts")
 		(uuid "28d17d96-ee02-4654-9dd2-d0d8201539b9")
 	)
-	(gr_text "23A256\nRAM"
-		(at 67.81 83.81 0)
+	(gr_text "N01S830HAT22I - RAM"
+		(at 65 70 0)
 		(layer "F.SilkS")
 		(uuid "20fc39fe-35ca-45e2-8181-785ca363505c")
 		(effects
@@ -3821,8 +3821,8 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "FM25CL64B\nSTOR"
-		(at 128 95 0)
+	(gr_text "MB85RS64VYPNF-G-BCERE1\nSTOR"
+		(at 115.125 95.25 0)
 		(layer "F.SilkS")
 		(uuid "42af5968-25de-40aa-8416-46e5cf407e2f")
 		(effects
