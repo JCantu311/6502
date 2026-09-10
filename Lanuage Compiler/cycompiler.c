@@ -19,6 +19,10 @@ int main(int argc, char *argv[]) {
 
     char *file2 = argv[4];
 
+    printf(flag, "\n");
+    printf(file, "\n");
+    printf(flag2, "\n");
+    printf(file2, "\n");
     for(int i = 0; i < argc; i++) {
         if (strcmp(flag, "-i") == 0 || strcmp(flag, "--input") == 0) {
             printf("Yar har mateys here be the input screen\n");
@@ -33,4 +37,5 @@ int main(int argc, char *argv[]) {
             return 0;
         }
     }
+    
 }

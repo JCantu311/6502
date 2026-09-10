@@ -1,7 +1,0 @@
-INPUT var
-
-LABEL loop
-PRINT var
-GOTO loop
-
-/*COMMENT*/
