@@ -15,6 +15,10 @@ int main(int argc, char *argv[]) {
 
     char *file = argv[2];
 
+    char *flag2 = argv[3];
+
+    char *file2 = argv[4];
+
     for(int i = 0; i < argc; i++) {
         if (strcmp(flag, "-i") == 0 || strcmp(flag, "--input") == 0) {
             printf("Yar har mateys here be the input screen\n");
