@@ -28,6 +28,9 @@ int main(int argc, char *argv[]) {
     } else if ((strcmp(argv[1], "-i") == 0 || strcmp(argv[1], "--input") == 0) && (strcmp(argv[2], NULL) == 0)) {
         printf("No input file specified, aborted. \n Exit code: 2\n");
         return 2;
+    } else {
+        printf("Invalid argument, aborted. \n Exit code: 5\n");
+        return 5;
     }
 
     char *file = strdup(argv[2]);
