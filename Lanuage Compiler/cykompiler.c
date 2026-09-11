@@ -47,9 +47,12 @@ input_specified:
     if ((strcmp(argv[3], "-o") == 0 || strcmp(argv[3], "--output") == 0) && (argv[4] == NULL)) {
         printf("No output file specified, aborted. \n Exit code: 3\n");
         return 3;
-    } else if (argv[4] != NULL) {
+    } else if ((strcmp(argv[3], "-o") == 0 || strcmp(argv[3], "--output") == 0) && (argv[4] != NULL)) {
         printf(argv[4]);
         goto output_specified;
+    } else if (argv[3] != NULL) {
+        printf("Unrecognized input, aborted. \n Exit code: 5\n");
+        return 5;
     }
 
 output_specified:
