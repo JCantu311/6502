@@ -28,6 +28,8 @@ int main(int argc, char *argv[]) {
     } else if ((strcmp(argv[1], "-i") == 0 || strcmp(argv[1], "--input") == 0) && (argv[2] == NULL)) {
         printf("No input file specified, aborted. \n Exit code: 2\n");
         return 2;
+    } else if (argv[1] != NULL) {
+        printf("Unrecognized input, aborted. \n Exit code: 5\n");
     } else if (argv[2] != NULL) {
         goto input_specified;
     }
