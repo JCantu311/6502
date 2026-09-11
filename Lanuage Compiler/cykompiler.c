@@ -23,7 +23,12 @@ int main(int argc, char *argv[]) {
 
     char *flag = argv[1];
 
-    char *file = argv[2];
+    if (strcmp(argv[2], NULL) == 0) {
+        printf("No input file specified, aborted. \n Exit code: 2\n");
+        return 2;
+    }
+
+    char *file = strdup(argv[2]);
 
     char *flag2 = argv[3];
 
@@ -33,8 +38,12 @@ int main(int argc, char *argv[]) {
 
     char *arg3 = argv[6];
 
-    char *file_extension = '.cyk'; 
+    char *file_extension = ".cyk"; 
+
+    char *file_name_base = strremove(file, file_extension);
+
+    printf(strcat(file_name_base, " \n"));
 
 no_output_specified:
-
+    return 0;
 }
