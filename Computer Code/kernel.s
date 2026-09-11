@@ -4,8 +4,8 @@ DDRkeyboard1 = $B003
 DDRps2 = $B002
 VIA0IFR = $B00D
 VIA0IER = $B00E
-mon = %11100000
-bas = %11100010
+mon = %0
+bas = %0
 init:
     LDX #$FF
     TXS

@@ -32,9 +32,19 @@ int main(int argc, char *argv[]) {
 
     char *flag2 = argv[3];
 
+    if ((strcmp(argv[3], "-o") == 0 || strcmp(argv[3], "--output") == 0) && (strcmp(argv[4], NULL) == 0)) {
+        printf("No output file specified, aborted. \n Exit code: 3\n");
+        return 3;
+    }
+
     char *arg2 = argv[4];
 
     char *flag3 = argv[5];
+
+    if ((strcmp(argv[5], "-t") == 0 || strcmp(argv[5], "--type") == 0) && (strcmp(argv[6], NULL) == 0)) {
+        printf("No output file type specified, aborted. \n Exit code: 4\n");
+        return 4;
+    }
 
     char *arg3 = argv[6];
 
