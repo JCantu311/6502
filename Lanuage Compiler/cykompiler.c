@@ -21,6 +21,10 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
+    for(int i = 0; i < argc; i++) {
+        printf(argv[i]);    
+    }
+
     char *flag = argv[1];
 
     if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
