@@ -44,6 +44,8 @@ input_specified:
 
     char *flag2 = argv[3];
 
+    printf(argv[4]);
+
     if ((strcmp(argv[3], "-o") == 0 || strcmp(argv[3], "--output") == 0) && (argv[4] == NULL)) {
         printf("No output file specified, aborted. \n Exit code: 3\n");
         return 3;
