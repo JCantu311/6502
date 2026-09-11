@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
 
     if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
         helpscrn();
-    } else if ((strcmp(argv[1], "-i") == 0 || strcmp(argv[1], "--input") == 0) && (strcmp(argv[2], NULL) == 0)) {
+    } else if ((strcmp(argv[1], "-i") == 0 || strcmp(argv[1], "--input") == 0) && argv[2] == NULL)) {
         printf("No input file specified, aborted. \n Exit code: 2\n");
         return 2;
     } else {
@@ -37,7 +37,7 @@ int main(int argc, char *argv[]) {
 
     char *flag2 = argv[3];
 
-    if ((strcmp(argv[3], "-o") == 0 || strcmp(argv[3], "--output") == 0) && (strcmp(argv[4], NULL) == 0)) {
+    if ((strcmp(argv[3], "-o") == 0 || strcmp(argv[3], "--output") == 0) && (argv[4] == NULL)) {
         printf("No output file specified, aborted. \n Exit code: 3\n");
         return 3;
     }
@@ -46,7 +46,7 @@ int main(int argc, char *argv[]) {
 
     char *flag3 = argv[5];
 
-    if ((strcmp(argv[5], "-t") == 0 || strcmp(argv[5], "--type") == 0) && (strcmp(argv[6], NULL) == 0)) {
+    if ((strcmp(argv[5], "-t") == 0 || strcmp(argv[5], "--type") == 0) && (argv[6] == NULL)) {
         printf("No output file type specified, aborted. \n Exit code: 4\n");
         return 4;
     }
