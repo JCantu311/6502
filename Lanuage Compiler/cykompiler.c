@@ -30,6 +30,7 @@ int main(int argc, char *argv[]) {
         return 2;
     } else if (argv[1] != NULL) {
         printf("Unrecognized input, aborted. \n Exit code: 5\n");
+        return 5;
     } else if (argv[2] != NULL) {
         goto input_specified;
     }
