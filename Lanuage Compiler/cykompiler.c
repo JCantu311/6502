@@ -35,6 +35,10 @@ int main(int argc, char *argv[]) {
 input_specified:
     char *file = strdup(argv[2]);
 
+    if (argv[3] == NULL) {
+        goto no_output_specified;
+    }
+
     char *flag2 = argv[3];
 
     if ((strcmp(argv[3], "-o") == 0 || strcmp(argv[3], "--output") == 0) && (argv[4] == NULL)) {
