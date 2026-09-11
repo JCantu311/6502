@@ -44,19 +44,25 @@ input_specified:
     if ((strcmp(argv[3], "-o") == 0 || strcmp(argv[3], "--output") == 0) && (argv[4] == NULL)) {
         printf("No output file specified, aborted. \n Exit code: 3\n");
         return 3;
+    } else if (argv[4] != NULL) {
+        goto output_specified;
     }
 
     char *arg2 = argv[4];
 
+output_specified:
     char *flag3 = argv[5];
 
     if ((strcmp(argv[5], "-t") == 0 || strcmp(argv[5], "--type") == 0) && (argv[6] == NULL)) {
         printf("No output file type specified, aborted. \n Exit code: 4\n");
         return 4;
+    } else if (argv[6] != NULL) {
+        goto type_specified;
     }
 
     char *arg3 = argv[6];
 
+type_specified:
 no_output_specified:
     char *file_extension = ".cyk"; 
 
