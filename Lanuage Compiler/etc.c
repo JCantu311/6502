@@ -16,7 +16,7 @@ char *strremove(char *str, const char *sub) {
 
 void helpscrn() {
     printf("Usage: [options]\n");
-    printf("Cykompiler v0.1");
+    printf("Cykompiler v0.1\n");
     printf("Options:\n");
     printf("    --help      -h              Show help\n");
     printf("    --input     -i              Name input file (to compile)\n");
