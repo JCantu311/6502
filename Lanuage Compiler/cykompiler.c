@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
 
     if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
         helpscrn();
-    } else if ((strcmp(argv[1], "-i") == 0 || strcmp(argv[1], "--input") == 0) && argv[2] == NULL)) {
+    } else if ((strcmp(argv[1], "-i") == 0 || strcmp(argv[1], "--input") == 0) && (argv[2] == NULL)) {
         printf("No input file specified, aborted. \n Exit code: 2\n");
         return 2;
     } else {
