@@ -57,12 +57,12 @@ input_specified:
 
     char *arg3 = argv[6];
 
+no_output_specified:
     char *file_extension = ".cyk"; 
 
     char *file_name_base = strremove(file, file_extension);
 
     printf(strcat(file_name_base, " \n"));
 
-no_output_specified:
     return 0;
 }
