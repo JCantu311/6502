@@ -48,6 +48,7 @@ input_specified:
         printf("No output file specified, aborted. \n Exit code: 3\n");
         return 3;
     } else if (argv[4] != NULL) {
+        printf(argv[4]);
         goto output_specified;
     }
 
