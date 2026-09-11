@@ -3,4 +3,6 @@
 
 char *strremove(char *str, const char *sub);
 
+void helpscrn();
+
 #endif
