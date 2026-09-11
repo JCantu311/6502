@@ -21,67 +21,50 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
+    char *inputs_buffered[7] = {NULL};
+
+    char *inputs[8] = {NULL};
+
     for(int i = 0; i < argc; i++) {
-        printf(argv[i]);    
+        inputs_buffered[i] = argv[i];
     }
 
-    char *flag = argv[1];
+    for(int i = 0; i < 6; i++) {
+        inputs[i] = inputs_buffered[i + 1];
+    }
 
-    if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
+    int input_flag = (strcmp(inputs[0], "--input") == 0 || strcmp(inputs[0], "-i") == 0);
+
+    int help_flag = (strcmp(inputs[0], "--help") == 0 || strcmp(inputs[0], "-h") == 0);
+
+    int output_flag = (strcmp(inputs[2], "--output") == 0 || strcmp(inputs[2], "-o") == 0);
+
+    int type_flag = (strcmp(inputs[4], "--type") == 0 || strcmp(inputs[4], "-t") == 0);
+
+    if ((input_flag == 1) && (inputs[1] == NULL)) {
+        printf("No input file specified, aborted. \n Exit code: 1\n");
+        return 1;
+    } else if ((input_flag == 1) && (inputs[1] != NULL)) {
+        printf("%s\n\n", inputs[1]);
+    } else if ((input_flag != 1) && (help_flag != 1)) {
+        printf("Unknown argument, aborted. \n Exit code: 1\n");
+        return 1;
+    } else if ((input_flag != 1) && (help_flag == 1)) {
         helpscrn();
-    } else if ((strcmp(argv[1], "-i") == 0 || strcmp(argv[1], "--input") == 0) && (argv[2] == NULL)) {
-        printf("No input file specified, aborted. \n Exit code: 2\n");
-        return 2;
-    } else if ((strcmp(argv[1], "-i") == 0 || strcmp(argv[1], "--input") == 0) && (argv[2] != NULL)) {
-        goto input_specified;
-    } else if (argv[1] != NULL) {
-        printf("Unrecognized input, aborted. \n Exit code: 5\n");
-        return 5;
+    } else {
+        printf("Aborting.");
+        return 1;
     }
 
-input_specified:
-    char *file = strdup(argv[2]);
-
-    if (argv[3] == NULL) {
-        goto no_output_specified;
-    }
-
-    char *flag2 = argv[3];
-
-    printf(argv[4]);
-
-    if ((strcmp(argv[3], "-o") == 0 || strcmp(argv[3], "--output") == 0) && (argv[4] == NULL)) {
-        printf("No output file specified, aborted. \n Exit code: 3\n");
-        return 3;
-    } else if ((strcmp(argv[3], "-o") == 0 || strcmp(argv[3], "--output") == 0) && (argv[4] != NULL)) {
-        printf(argv[4]);
-        goto output_specified;
-    } else if (argv[3] != NULL) {
-        printf("Unrecognized input, aborted. \n Exit code: 5\n");
-        return 5;
-    }
-
-output_specified:
-    char *arg2 = argv[4];
-
-    char *flag3 = argv[5];
-
-    if ((strcmp(argv[5], "-t") == 0 || strcmp(argv[5], "--type") == 0) && (argv[6] == NULL)) {
-        printf("No output file type specified, aborted. \n Exit code: 4\n");
-        return 4;
-    } else if (argv[6] != NULL) {
-        goto type_specified;
-    }
-
-type_specified:
-    char *arg3 = argv[6];
-
-no_output_specified:
     char *file_extension = ".cyk"; 
 
-    char *file_name_base = strremove(file, file_extension);
+    inputs[6] = strremove(inputs[1], file_extension);
 
-    printf(strcat(file_name_base, " \n"));
+    printf("%s\n\n", inputs[6]);
+
+    for(int i = 0; i < 8; i++) {
+        printf("%s\n", inputs[i] ? inputs[i] : "NULL");
+    }
 
     return 0;
 }

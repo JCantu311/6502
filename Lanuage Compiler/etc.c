@@ -4,14 +4,16 @@
 #include <stdlib.h>
 
 char *strremove(char *str, const char *sub) {
+    char *buffer = malloc(strlen(str) + 1);
+    strcpy(buffer, str);
     size_t len = strlen(sub);
     if (len > 0) {
-        char *p = str;
+        char *p = buffer;
         while ((p = strstr(p, sub)) != NULL) {
             memmove(p, p + len, strlen(p + len) + 1);
         }
     }
-    return str;
+    return buffer;
 }
 
 void helpscrn() {
