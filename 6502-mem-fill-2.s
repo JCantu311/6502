@@ -29,10 +29,8 @@ next:
     CMP #$40
     BEQ exit
     JMP loop
-COLD_START:
-    WAI 
 exit:
-    JMP COLD_START
+    JMP exit
 .segment "RESET"
     .word init
     .word init
