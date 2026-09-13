@@ -119,5 +119,17 @@ no_output:
         printf("%s\n", inputs[i] ? inputs[i] : "NULL");
     }
 
+    char *necessary_values[4] = {NULL};
+
+    strcpy(necessary_values[0], inputs[1]);
+
+    strcpy(necessary_values[1], strcat(inputs[3], inputs[7]));
+
+    strcpy(necessary_values[2], inputs[5]);
+
+    for(int i = 0; i < 4; i++) {
+        printf("%s\n", necessary_values[i]);
+    }
+
     return 0;
 }
