@@ -97,7 +97,7 @@ no_output:
     if ((inputs[3] == NULL) && (output_flag != NULL)) {
         printf("No output file specified, assuming default output name: \n %s\n", inputs[6]);
     }
-    printf("%s", inputs[3]);
+    printf("%s\n", inputs[3] ? inputs[3] : "NULL");
 
     if ((inputs[5] == NULL) && (type_flag != NULL)) {
         printf("No output type specified, assuming default output type: \n .s.\n");
