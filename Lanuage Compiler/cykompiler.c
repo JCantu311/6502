@@ -83,7 +83,7 @@ int main(int argc, char *argv[]) {
 no_output:
     char *file_extension = ".cyk"; 
     char *file_name;
-
+    char *file_type;
     
     if (inputs[1] == NULL) {
         printf("No input file specified, aborting. \n Exit code: 2\n");
@@ -97,14 +97,13 @@ no_output:
     } else if (inputs[3] == NULL) {
         printf("No output specified, assigning default:\n %s", inputs[6]);
     }
-
-    if ((output_flag != NULL) && (inputs[3] == NULL)) {
-        printf("No output file specified, assuming default output name: \n %s\n", inputs[6]);
-    }
     printf("%s\n", inputs[3] ? inputs[3] : "NULL");
 
-    if ((inputs[5] == NULL) && (type_flag != NULL)) {
+    if(type_flag == 1 && inputs[5] != NULL) {
+        file_type = inputs[5];
+    } else if ((inputs[5] == NULL) && (type_flag != NULL)) {
         printf("No output type specified, assuming default output type: \n .s.\n");
+        file_type = ".s";
     }
 
     printf("%s\n\n", inputs[6]);
