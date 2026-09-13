@@ -47,7 +47,7 @@ int main(int argc, char *argv[]) {
     } else if (strcmp(inputs[0], "--help") == 0 || strcmp(inputs[0], "-h") == 0) {
         helpscrn();
         return 1;
-    } else if (inputs[0] != NULL && inputs[1] == NULL) {
+    } else if (inputs[0] != NULL) {
         input_flag = (strcmp(inputs[0], "--input") == 0 || strcmp(inputs[0], "-i") == 0);
         printf("Bleh\n");
     }
