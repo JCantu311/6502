@@ -97,7 +97,6 @@ no_output:
     } else if (inputs[3] == NULL) {
         printf("No output specified, assigning default:\n %s", inputs[6]);
     }
-    printf("%s\n", inputs[3] ? inputs[3] : "NULL");
 
     if(type_flag == 1 && inputs[5] != NULL) {
         file_type = inputs[5];
@@ -107,16 +106,14 @@ no_output:
         file_type = ".s";
         printf("bleh 1");
     }
-    if (inputs[5] == "asm") {
+    if (strcmp(inputs[5], "asm")) {
         inputs[7] = ".s";
-    } else if(inputs[5] == "bin") {
+    } else if(strcmp(inputs[5], "bin")) {
         inputs[7] = ".bin";
     } else if(inputs[5] == NULL) {
-        printf("No input specified, assigning default value: \n .s");
+        printf("No input specified, assigning default value: \n .s\n");
         inputs[7] = ".s";
     }
-
-    printf("%s\n\n", inputs[6]);
 
     for(int i = 0; i < 8; i++) {
         printf("%s\n", inputs[i] ? inputs[i] : "NULL");
