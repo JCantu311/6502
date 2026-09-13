@@ -87,17 +87,19 @@ no_output:
     char *file_extension = ".cyk"; 
     char *file_name;
 
-    if(output_flag == 1 && inputs[3] != NULL) {
-        file_name = inputs[3];
-    }
-
+    
     if (inputs[1] == NULL) {
         printf("No input file specified, aborting. \n Exit code: 2\n");
         return 2;
     } else if (inputs[1] != NULL) {
         inputs[6] = strremove(inputs[1], file_extension);
     }
-    printf("Bleh 4\n");
+
+    if(output_flag == 1 && inputs[3] != NULL) {
+        file_name = inputs[3];
+    } else if (inputs[3] == NULL) {
+        printf("No output specified, assigning default:\n %s", );
+    }
 
     if ((output_flag != NULL) && (inputs[3] == NULL)) {
         printf("No output file specified, assuming default output name: \n %s\n", inputs[6]);
