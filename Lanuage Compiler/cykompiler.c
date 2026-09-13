@@ -88,8 +88,10 @@ no_output:
     if (inputs[1] == NULL) {
         printf("No input file specified, aborting. \n Exit code: 2\n");
         return 2;
-    } else if (inputs[1] != NULL) {
+    } else if (inputs[1] != NULL && inputs[3] == NULL) {
         inputs[6] = strremove(inputs[1], file_extension);
+    } else if (inputs[3] != NULL) {
+        inputs[6] = inputs[3];
     }
 
     if(output_flag == 1 && inputs[3] != NULL) {
@@ -138,11 +140,8 @@ no_output:
         inputs_fin[3] = inputs[7];
     }
 
-    char *copy_buffer_inputs[2];
-
     if(inputs[6] != NULL && inputs[7] != NULL) {
-        copy_buffer_inputs[1] = strcat(inputs[6], inputs[7]);
-        strcpy(inputs_fin[4], copy_buffer_inputs[1]);
+        inputs_fin[4] = strcat()
     }
 
     printf("\n\n");
