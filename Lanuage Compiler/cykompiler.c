@@ -142,6 +142,8 @@ no_output:
         inputs_fin[4] = strcat(inputs[6], inputs[7]);
     }
 
+    printf("\n\n");
+
     for(int i = 0; i < 5; i++) {
         printf("%s\n", inputs_fin[i]);
     }
