@@ -49,14 +49,12 @@ int main(int argc, char *argv[]) {
         return 1;
     } else if (inputs[0] != NULL) {
         input_flag = (strcmp(inputs[0], "--input") == 0 || strcmp(inputs[0], "-i") == 0);
-        printf("Bleh\n");
     }
 
     if (inputs[2] == NULL) {
         goto no_output;
     } else if (inputs[2] != NULL) {
         int output_flag = (strcmp(inputs[2], "--output") == 0 || strcmp(inputs[2], "-o") == 0);
-        printf("Bleh 3\n");
     }
 
     if ((inputs[4] == NULL) && (output_flag != NULL)) {
@@ -64,7 +62,6 @@ int main(int argc, char *argv[]) {
         inputs[8] = ".s";
     } else if ((inputs[4] != NULL) && (output_flag != NULL)) {
         int type_flag = (strcmp(inputs[4], "--type") == 0 || strcmp(inputs[4], "-t") == 0);
-        printf("Bleh 4\n");
     }
 
     if ((input_flag == 1) && (inputs[1] == NULL)) {
@@ -109,7 +106,6 @@ no_output:
     if ((inputs[5] == NULL) && (type_flag != NULL)) {
         printf("No output type specified, assuming default output type: \n .s.\n");
     }
-    printf("Bleh 6\n");
 
     printf("%s\n\n", inputs[6]);
 
