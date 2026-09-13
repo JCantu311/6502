@@ -12,6 +12,7 @@ int main(int argc, char *argv[]) {
         printf("Too many arguments, aborted. \n Exit code: 1\n");
         return 1;
     } else if (argc < 2) {
+    no_args:
         printf("Usage: [options]\n");
         printf("Options:\n");
         printf("    --help      -h              Show help\n");
@@ -25,6 +26,14 @@ int main(int argc, char *argv[]) {
 
     char *inputs[8] = {NULL};
 
+    int input_flag = NULL;
+
+    int help_flag = NULL;
+
+    int output_flag = NULL;
+
+    int type_flag = NULL;
+
     for(int i = 0; i < argc; i++) {
         inputs_buffered[i] = argv[i];
     }
@@ -33,15 +42,32 @@ int main(int argc, char *argv[]) {
         inputs[i] = inputs_buffered[i + 1];
     }
 
-    int input_flag = (strcmp(inputs[0], "--input") == 0 || strcmp(inputs[0], "-i") == 0);
+    if (inputs[0] == NULL) {
+        goto no_args;
+    } else if (inputs[0] != NULL && inputs[1] == NULL) {
+        input_flag = (strcmp(inputs[0], "--input") == 0 || strcmp(inputs[0], "-i") == 0);
+    }
 
-    int help_flag = (strcmp(inputs[0], "--help") == 0 || strcmp(inputs[0], "-h") == 0);
+    if (inputs[0] == NULL) {
+        goto no_input;
+    } else if (inputs[0] != NULL) {
+        help_flag = (strcmp(inputs[0], "--help") == 0 || strcmp(inputs[0], "-h") == 0);
+    }
 
-    int output_flag = (strcmp(inputs[2], "--output") == 0 || strcmp(inputs[2], "-o") == 0);
+    if (inputs[2] == NULL) {
+        goto no_output;
+    } else if (inputs[2] != NULL) {
+        int output_flag = (strcmp(inputs[2], "--output") == 0 || strcmp(inputs[2], "-o") == 0);
+    }
 
+    if ((inputs[4] == NULL) && (output_flag != NULL) {
+        printf("No output type specified, assigning default value.\n");
+        inputs[8] = ".s";
+    }
     int type_flag = (strcmp(inputs[4], "--type") == 0 || strcmp(inputs[4], "-t") == 0);
 
     if ((input_flag == 1) && (inputs[1] == NULL)) {
+    no_input:
         printf("No input file specified, aborted. \n Exit code: 1\n");
         return 1;
     } else if ((input_flag == 1) && (inputs[1] != NULL)) {
@@ -65,6 +91,9 @@ int main(int argc, char *argv[]) {
     for(int i = 0; i < 8; i++) {
         printf("%s\n", inputs[i] ? inputs[i] : "NULL");
     }
+
+no_output:
+    
 
     return 0;
 }
