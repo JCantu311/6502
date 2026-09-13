@@ -66,8 +66,6 @@ int main(int argc, char *argv[]) {
     if ((inputs[4] == NULL) && (output_flag != NULL)) {
         printf("No output type specified, assigning default value.\n");
         inputs[8] = ".s";
-    } else if ((inputs[4] == NULL) && (output_flag == NULL)) {
-        goto no_output;
     } else if ((inputs[4] != NULL) && (output_flag != NULL)) {
         int type_flag = (strcmp(inputs[4], "--type") == 0 || strcmp(inputs[4], "-t") == 0);
         printf("Bleh 4\n");
