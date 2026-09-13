@@ -94,6 +94,7 @@ no_output:
 
     if(output_flag == 1 && inputs[3] != NULL) {
         file_name = inputs[3];
+        file_name = inputs[6];
     } else if (inputs[3] == NULL) {
         printf("No output specified, assigning default:\n %s", inputs[6]);
     }
@@ -119,17 +120,27 @@ no_output:
         printf("%s\n", inputs[i] ? inputs[i] : "NULL");
     }
 
-    // char *necessary_values[4] = {NULL};
+    char *inputs_fin[5] = {NULL};
 
-    // strcpy(necessary_values[0], inputs[1]);
+    if(inputs[1] != NULL) {
+        inputs_fin[0] = inputs[1];
+    }
 
-    // strcpy(necessary_values[1], strcat(inputs[3], inputs[7]));
+    if(inputs[6] != NULL) {
+        inputs_fin[1] = inputs[6];
+    }
 
-    // strcpy(necessary_values[2], inputs[5]);
+    if(inputs[5] != NULL) {
+        inputs_fin[2] = inputs[5];
+    }
 
-    // for(int i = 0; i < 4; i++) {
-    //     printf("%s\n", necessary_values[i] ? necessary_values[i] : "NULL");
-    // }
+    if(inputs[7] != NULL) {
+        inputs_fin[3] = inputs[7];
+    }
+
+    if(inputs[6] != NULL && inputs[7] != NULL) {
+        inputs[4] = strcat(inputs[6], inputs[7]);
+    }
 
     return 0;
 }
