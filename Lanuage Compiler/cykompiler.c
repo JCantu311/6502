@@ -99,6 +99,14 @@ no_output:
         inputs[6] = strremove(inputs[1], file_extension);
     }
 
+    if ((inputs[3] == NULL) && (output_flag != NULL)) {
+        printf("No output file specified, assuming default output name: \n %s\n", inputs[6]);
+    }
+
+    if ((inputs[5] == NULL) && (type_flag != NULL)) {
+        printf("No output type specified, assuming default output type: \n .s.\n");
+    }
+
     printf("%s\n\n", inputs[6]);
 
     for(int i = 0; i < 8; i++) {
