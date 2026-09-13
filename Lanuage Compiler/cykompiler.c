@@ -107,7 +107,14 @@ no_output:
         file_type = ".s";
         printf("bleh 1");
     }
-    inputs[7] = file_type;
+    if (inputs[5] == "asm") {
+        inputs[7] = ".s";
+    } else if(inputs[5] == "bin") {
+        inputs[7] = ".bin";
+    } else if(inputs[5] == NULL) {
+        printf("No input specified, assigning default value: \n .s");
+        inputs[7] = ".s";
+    }
 
     printf("%s\n\n", inputs[6]);
 
