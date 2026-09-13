@@ -94,7 +94,7 @@ no_output:
     }
     printf("Bleh 4\n");
 
-    if ((inputs[3] == NULL) && (output_flag != NULL)) {
+    if ((output_flag != NULL) && (inputs[3] == NULL)) {
         printf("No output file specified, assuming default output name: \n %s\n", inputs[6]);
     }
     printf("%s\n", inputs[3] ? inputs[3] : "NULL");
