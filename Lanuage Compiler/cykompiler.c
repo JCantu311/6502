@@ -146,5 +146,7 @@ no_output:
         printf("%s\n", inputs_fin[i] ? inputs_fin[i] : "NULL");
     }
 
+    lex(inputs_fin, 8);
+
     return 0;
 }
