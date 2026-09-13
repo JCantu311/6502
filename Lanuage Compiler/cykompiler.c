@@ -138,8 +138,11 @@ no_output:
         inputs_fin[3] = inputs[7];
     }
 
+    char *copy_buffer_inputs[2];
+
     if(inputs[6] != NULL && inputs[7] != NULL) {
-        strcpy(inputs_fin[6], strcat(inputs[6], inputs[7]));
+        copy_buffer_inputs[1] = strcat(inputs[6], inputs[7]);
+        strcpy(inputs_fin[4], copy_buffer_inputs[1]);
     }
 
     printf("\n\n");
