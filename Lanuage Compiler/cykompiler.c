@@ -46,21 +46,21 @@ int main(int argc, char *argv[]) {
         goto no_args;
     } else if (inputs[0] != NULL && inputs[1] == NULL) {
         input_flag = (strcmp(inputs[0], "--input") == 0 || strcmp(inputs[0], "-i") == 0);
-        printf("Bleh");
+        printf("Bleh\n");
     }
 
     if (inputs[0] == NULL) {
         goto no_input;
     } else if (inputs[0] != NULL) {
         help_flag = (strcmp(inputs[0], "--help") == 0 || strcmp(inputs[0], "-h") == 0);
-        printf("Bleh 2");
+        printf("Bleh 2\n");
     }
 
     if (inputs[2] == NULL) {
         goto no_output;
     } else if (inputs[2] != NULL) {
         int output_flag = (strcmp(inputs[2], "--output") == 0 || strcmp(inputs[2], "-o") == 0);
-        printf("Bleh 3");
+        printf("Bleh 3\n");
     }
 
     if ((inputs[4] == NULL) && (output_flag != NULL)) {
@@ -70,7 +70,7 @@ int main(int argc, char *argv[]) {
         goto no_output;
     } else if ((inputs[4] != NULL) && (output_flag != NULL)) {
         int type_flag = (strcmp(inputs[4], "--type") == 0 || strcmp(inputs[4], "-t") == 0);
-        printf("Bleh 4");
+        printf("Bleh 4\n");
     }
 
     if ((input_flag == 1) && (inputs[1] == NULL)) {
@@ -89,6 +89,7 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
+no_output:
     char *file_extension = ".cyk"; 
 
     inputs[6] = strremove(inputs[1], file_extension);
@@ -98,9 +99,6 @@ int main(int argc, char *argv[]) {
     for(int i = 0; i < 8; i++) {
         printf("%s\n", inputs[i] ? inputs[i] : "NULL");
     }
-
-no_output:
-    
 
     return 0;
 }
