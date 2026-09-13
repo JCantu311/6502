@@ -85,6 +85,11 @@ int main(int argc, char *argv[]) {
 
 no_output:
     char *file_extension = ".cyk"; 
+    char *file_name;
+
+    if(output_flag == 1 && inputs[3] != NULL) {
+        
+    }
 
     if (inputs[1] == NULL) {
         printf("No input file specified, aborting. \n Exit code: 2\n");

@@ -5,4 +5,6 @@ char *strremove(char *str, const char *sub);
 
 void helpscrn();
 
+void flag_allocations();
+
 #endif
