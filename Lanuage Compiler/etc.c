@@ -24,7 +24,7 @@ void helpscrn() {
     printf("    --input     -i              Name input file (to compile)\n");
     printf("                Input file must be .cyk file extension or compilation will fail.\n");
     printf("    --output    -o              Name output file (always .s or .bin)\n");
-    printf("                Output name must not have any file extension; the compiler will \nadd it for you");
+    printf("                Output name must not have any file extension; the compiler will \nadd it for you\n");
     printf("    --type      -t              Output File Type (Assembly or Binary)\n");
     printf("                Output file type must be either 'asm' or 'bin'; if not specified,\n the default output type is 'asm'.\n");
 }
