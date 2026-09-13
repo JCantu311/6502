@@ -40,14 +40,14 @@ void helpscrn() {
 }
 
 void flag_allocations(char *inputs[]) {
-    int input_flag = NULL;
+    input_flag = NULL;
 
-    int help_flag = NULL;
+    help_flag = NULL;
 
-    int output_flag = NULL;
+    output_flag = NULL;
 
-    int type_flag = NULL;
-
+    type_flag = NULL;
+    
     if (inputs[0] == NULL) {
         no_args_scrn();
     } else if (strcmp(inputs[0], "--help") == 0 || strcmp(inputs[0], "-h") == 0) {
