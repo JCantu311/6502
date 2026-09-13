@@ -3,6 +3,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void no_args_scrn() {
+    printf("Usage: [options]\n");
+    printf("Options:\n");
+    printf("    --help      -h              Show help\n");
+    printf("    --input     -i              Name input file (to compile)\n");
+    printf("    --output    -o              Name output file (always .s or .bin)\n");
+    printf("    --type      -t              Output File Type (Assembly or Binary)\n");
+    return 1;
+}
+
 char *strremove(char *str, const char *sub) {
     char *buffer = malloc(strlen(str) + 1);
     strcpy(buffer, str);
@@ -29,7 +39,7 @@ void helpscrn() {
     printf("                Output file type must be either 'asm' or 'bin'; if not specified,\n the default output type is 'asm'.\n");
 }
 
-void flag_allocations() {
+void flag_allocations(char *inputs[]) {
     int input_flag = NULL;
 
     int help_flag = NULL;
@@ -39,7 +49,7 @@ void flag_allocations() {
     int type_flag = NULL;
 
     if (inputs[0] == NULL) {
-        goto no_args;
+        no_args_scrn();
     } else if (strcmp(inputs[0], "--help") == 0 || strcmp(inputs[0], "-h") == 0) {
         helpscrn();
         return 1;
@@ -78,4 +88,6 @@ void flag_allocations() {
         printf("Aborting.");
         return 1;
     }
+
+    no_output:
 }

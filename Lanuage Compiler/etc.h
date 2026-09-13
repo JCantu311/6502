@@ -5,6 +5,8 @@ char *strremove(char *str, const char *sub);
 
 void helpscrn();
 
-void flag_allocations();
+void flag_allocations(char *inputs[]);
+
+void no_args_scrn();
 
 #endif
