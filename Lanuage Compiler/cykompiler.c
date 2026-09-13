@@ -143,7 +143,7 @@ no_output:
     }
 
     for(int i = 0; i < 5; i++) {
-        printf(inputs_fin[i]);
+        printf("%s\n", inputs_fin[i]);
     }
 
     return 0;
