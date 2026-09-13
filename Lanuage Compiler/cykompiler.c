@@ -128,7 +128,7 @@ no_output:
     strcpy(necessary_values[2], inputs[5]);
 
     for(int i = 0; i < 4; i++) {
-        printf("%s\n", necessary_values[i]);
+        printf("%s\n", necessary_values[i] ? necessary_values[i] : "NULL");
     }
 
     return 0;
