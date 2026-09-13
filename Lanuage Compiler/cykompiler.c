@@ -44,16 +44,12 @@ int main(int argc, char *argv[]) {
 
     if (inputs[0] == NULL) {
         goto no_args;
+    } else if (strcmp(inputs[0], "--help") == 0 || strcmp(inputs[0], "-h") == 0) {
+        help_flag = (strcmp(inputs[0], "--help") == 0 || strcmp(inputs[0], "-h") == 0);
+        printf("Bleh 2\n");
     } else if (inputs[0] != NULL && inputs[1] == NULL) {
         input_flag = (strcmp(inputs[0], "--input") == 0 || strcmp(inputs[0], "-i") == 0);
         printf("Bleh\n");
-    }
-
-    if (inputs[0] == NULL) {
-        goto no_input;
-    } else if (inputs[0] != NULL) {
-        help_flag = (strcmp(inputs[0], "--help") == 0 || strcmp(inputs[0], "-h") == 0);
-        printf("Bleh 2\n");
     }
 
     if (inputs[2] == NULL) {
