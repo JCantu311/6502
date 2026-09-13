@@ -60,11 +60,15 @@ int main(int argc, char *argv[]) {
         int output_flag = (strcmp(inputs[2], "--output") == 0 || strcmp(inputs[2], "-o") == 0);
     }
 
-    if ((inputs[4] == NULL) && (output_flag != NULL) {
+    if ((inputs[4] == NULL) && (output_flag != NULL)) {
         printf("No output type specified, assigning default value.\n");
         inputs[8] = ".s";
+    } else if ((inputs[4] == NULL) && (output_flag == NULL)) {
+        goto no_output;
+    } else if ((inputs[4] != NULL) && (output_flag != NULL)) {
+        int type_flag = (strcmp(inputs[4], "--type") == 0 || strcmp(inputs[4], "-t") == 0);
     }
-    int type_flag = (strcmp(inputs[4], "--type") == 0 || strcmp(inputs[4], "-t") == 0);
+
 
     if ((input_flag == 1) && (inputs[1] == NULL)) {
     no_input:
