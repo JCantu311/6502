@@ -139,7 +139,11 @@ no_output:
     }
 
     if(inputs[6] != NULL && inputs[7] != NULL) {
-        inputs[4] = strcat(inputs[6], inputs[7]);
+        inputs_fin[4] = strcat(inputs[6], inputs[7]);
+    }
+
+    for(int i = 0; i < 5; i++) {
+        printf(inputs_fin[i]);
     }
 
     return 0;
