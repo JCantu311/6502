@@ -107,7 +107,7 @@ no_output:
         file_type = ".s";
         printf("bleh 1");
     }
-    inputs[8] = file_type;
+    inputs[7] = file_type;
 
     printf("%s\n\n", inputs[6]);
 
