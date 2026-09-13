@@ -98,7 +98,7 @@ no_output:
     if(output_flag == 1 && inputs[3] != NULL) {
         file_name = inputs[3];
     } else if (inputs[3] == NULL) {
-        printf("No output specified, assigning default:\n %s", );
+        printf("No output specified, assigning default:\n %s", inputs[6]);
     }
 
     if ((output_flag != NULL) && (inputs[3] == NULL)) {
