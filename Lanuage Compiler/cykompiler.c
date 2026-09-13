@@ -140,11 +140,6 @@ no_output:
         inputs_fin[3] = inputs[7];
     }
 
-    if(inputs[6] != NULL && inputs[7] != NULL) {
-        strcpy(inputs_fin[4], inputs[6]);
-        strcat(inputs_fin[4], inputs[7]);
-    }
-
     printf("\n\n");
 
     for(int i = 0; i < 5; i++) {
