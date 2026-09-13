@@ -139,7 +139,7 @@ no_output:
     }
 
     if(inputs[6] != NULL && inputs[7] != NULL) {
-        inputs_fin[4] = strcat(inputs[6], inputs[7]);
+        strcpy(inputs[6], strcat(inputs[6], inputs[7]));
     }
 
     printf("\n\n");
