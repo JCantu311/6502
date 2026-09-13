@@ -92,7 +92,12 @@ int main(int argc, char *argv[]) {
 no_output:
     char *file_extension = ".cyk"; 
 
-    inputs[6] = strremove(inputs[1], file_extension);
+    if (inputs[1] == NULL) {
+        printf("No input file specified, aborting. \n Exit code: 2\n");
+        return 2;
+    } else if (inputs[1] != NULL) {
+        inputs[6] = strremove(inputs[1], file_extension);
+    }
 
     printf("%s\n\n", inputs[6]);
 
