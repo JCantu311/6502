@@ -77,10 +77,6 @@ int main(int argc, char *argv[]) {
     no_input:
         printf("No input file specified, aborting. \n Exit code: 1\n");
         return 1;
-    } else if ((input_flag == 1) && (inputs[1] != NULL)) {
-        
-    } else if ((input_flag != 1) && (help_flag != 1)) {
-        unknown_argument_error();
     } else if ((input_flag != 1) && (help_flag == 1)) {
         helpscrn();
     } else {
@@ -96,16 +92,19 @@ no_output:
 
     if (input_flag != 1 || help_flag != 1) {
         unknown_argument_error();
+        return 1;
     }
     printf("Bleh 5\n");
 
     if (output_flag != NULL && output_flag != 1){
         unknown_argument_error();
+        return 1;
     }
     printf("Bleh 6\n");
 
     if (type_flag != NULL && type_flag != 1) {
         unknown_argument_error();
+        return 1;
     }
     printf("Bleh 7\n");
     
