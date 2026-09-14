@@ -42,7 +42,7 @@ int main(int argc, char *argv[]) {
         inputs[i] = inputs_buffered[i + 1];
     }
 
-    for(int i = 0; i < 8; i++) {
+    for(int i = 0; i < 6; i++) {
         printf("%s\n", inputs[i]);
     }
 
