@@ -69,7 +69,7 @@ int main(int argc, char *argv[]) {
         printf("No input file specified, aborted. \n Exit code: 1\n");
         return 1;
     } else if ((input_flag == 1) && (inputs[1] != NULL)) {
-        printf("%s\n\n", inputs[1]);
+        
     } else if ((input_flag != 1) && (help_flag != 1)) {
         printf("Unknown argument, aborted. \n Exit code: 1\n");
         return 1;
