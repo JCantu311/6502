@@ -134,8 +134,6 @@ no_output:
         inputs_fin[3] = inputs[7];
     }
 
-    printf("\n\n");
-
     for(int i = 0; i < 5; i++) {
         printf("%s\n", inputs_fin[i] ? inputs_fin[i] : "NULL");
     }
