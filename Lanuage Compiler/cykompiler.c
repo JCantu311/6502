@@ -139,10 +139,6 @@ no_output:
         inputs[7] = ".s";
     }
 
-    for(int i = 0; i < 8; i++) {
-        printf("%s\n", inputs[i] ? inputs[i] : "NULL");
-    }
-
     char *inputs_fin[5] = {NULL};
 
     if(inputs[1] != NULL) {
@@ -161,11 +157,7 @@ no_output:
         inputs_fin[3] = inputs[7];
     }
 
-    if(strcmp(inputs_fin[2], "bin")) {
-        inputs_fin[3] = inputs_fin[2];
-    } else if (strcmp(inputs_fin[2], "asm")) {
-        inputs_fin[3] = inputs_fin[2];
-    }
+    inputs_fin[3] = inputs_fin[2];
 
     for(int i = 0; i < 5; i++) {
         printf("%s\n", inputs_fin[i] ? inputs_fin[i] : "NULL");
