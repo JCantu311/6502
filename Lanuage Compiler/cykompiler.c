@@ -26,13 +26,13 @@ int main(int argc, char *argv[]) {
 
     char *inputs[8] = {NULL};
 
-    int input_flag = NULL;
+    int input_flag = -1;
 
-    int help_flag = NULL;
+    int help_flag = -1;
 
-    int output_flag = NULL;
+    int output_flag = -1;
 
-    int type_flag = NULL;
+    int type_flag = -1;
 
     for(int i = 0; i < argc; i++) {
         inputs_buffered[i] = argv[i];
@@ -43,32 +43,38 @@ int main(int argc, char *argv[]) {
     }
 
     for(int i = 0; i < 6; i++) {
-        printf("%s\n", inputs[i]);
+        printf("%s\n", inputs[i] ? inputs[i] : "NULL");
     }
 
-    printf("Bleh 0");
+    printf("Bleh 0\n");
 
     if (inputs[0] == NULL) {
         goto no_args;
     } else if (strcmp(inputs[0], "--help") == 0 || strcmp(inputs[0], "-h") == 0) {
         helpscrn();
         return 1;
-    } else if (inputs[0] != NULL) {
+    } else if (inputs[0] != NULL && inputs[1] != NULL) {
         input_flag = (strcmp(inputs[0], "--input") == 0 || strcmp(inputs[0], "-i") == 0);
+    } else if (inputs[0] != NULL && inputs[1] == NULL) {
+        printf("No input file, aborting. \n Exit code: 1\n");
+        return 1;
     }
     printf("Bleh 1\n");
 
     if (inputs[2] == NULL) {
         goto no_output;
-    } else if (inputs[2] != NULL) {
+    } else if (inputs[2] != NULL && inputs[3] != NULL) {
+        int output_flag = (strcmp(inputs[2], "--output") == 0 || strcmp(inputs[2], "-o") == 0);
+    } else if (inputs[2] != NULL && inputs[3] == NULL) {
+        printf("No output name specified, assigning default value.\n");
         int output_flag = (strcmp(inputs[2], "--output") == 0 || strcmp(inputs[2], "-o") == 0);
     }
     printf("Bleh 2\n");
 
-    if ((inputs[4] == NULL) && (output_flag != NULL)) {
+    if ((inputs[4] == NULL) && (output_flag != -1)) {
         printf("No output type specified, assigning default value.\n");
         inputs[8] = ".s";
-    } else if ((inputs[4] != NULL) && (output_flag != NULL)) {
+    } else if ((inputs[4] != NULL) && (output_flag != -1)) {
         int type_flag = (strcmp(inputs[4], "--type") == 0 || strcmp(inputs[4], "-t") == 0);
     }
     printf("Bleh 3\n");
@@ -96,13 +102,13 @@ no_output:
     }
     printf("Bleh 5\n");
 
-    if (output_flag != NULL && output_flag != 1){
+    if (output_flag != -1 && output_flag != 1){
         unknown_argument_error();
         return 1;
     }
     printf("Bleh 6\n");
 
-    if (type_flag != NULL && type_flag != 1) {
+    if (type_flag != -1 && type_flag != 1) {
         unknown_argument_error();
         return 1;
     }
@@ -126,7 +132,7 @@ no_output:
 
     if(type_flag == 1 && inputs[5] != NULL) {
         file_type = inputs[5];
-    } else if ((inputs[5] == NULL) && (type_flag != NULL)) {
+    } else if ((inputs[5] == NULL) && (type_flag != -1)) {
         printf("No output type specified, assuming default output type: \n .s.\n");
         file_type = ".s";
     }

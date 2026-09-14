@@ -30,6 +30,6 @@ void helpscrn() {
 }
 
 int unknown_argument_error() {
-    printf("Unknown argument. Aborting. \n Exit code: 1");
+    printf("Unknown argument. Aborting. \n Exit code: 1\n");
     return 1;
 }
