@@ -103,11 +103,9 @@ no_output:
 
     if(type_flag == 1 && inputs[5] != NULL) {
         file_type = inputs[5];
-        printf("bleh");
     } else if ((inputs[5] == NULL) && (type_flag != NULL)) {
         printf("No output type specified, assuming default output type: \n .s.\n");
         file_type = ".s";
-        printf("bleh 1");
     }
     if (strcmp(inputs[5], "asm")) {
         inputs[7] = ".s";
@@ -116,10 +114,6 @@ no_output:
     } else if(inputs[5] == NULL) {
         printf("No input specified, assigning default value: \n .s\n");
         inputs[7] = ".s";
-    }
-
-    for(int i = 0; i < 8; i++) {
-        printf("%s\n", inputs[i] ? inputs[i] : "NULL");
     }
 
     char *inputs_fin[5] = {NULL};
@@ -146,7 +140,7 @@ no_output:
         printf("%s\n", inputs_fin[i] ? inputs_fin[i] : "NULL");
     }
 
-    lex(inputs_fin, 8);
+    lex(inputs_fin, 5);
 
     return 0;
 }
