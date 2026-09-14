@@ -46,6 +46,8 @@ int main(int argc, char *argv[]) {
         printf("%s\n", inputs[i]);
     }
 
+    printf("Bleh 0");
+
     if (inputs[0] == NULL) {
         goto no_args;
     } else if (strcmp(inputs[0], "--help") == 0 || strcmp(inputs[0], "-h") == 0) {
