@@ -42,6 +42,10 @@ int main(int argc, char *argv[]) {
         inputs[i] = inputs_buffered[i + 1];
     }
 
+    for(int i = 0; i < 8; i++) {
+        printf("%s\n", inputs[i]);
+    }
+
     if (inputs[0] == NULL) {
         goto no_args;
     } else if (strcmp(inputs[0], "--help") == 0 || strcmp(inputs[0], "-h") == 0) {
@@ -55,6 +59,7 @@ int main(int argc, char *argv[]) {
         goto no_output;
     } else if (inputs[2] != NULL && (strcmp(inputs[2],"--output") != 0 || strcmp(inputs[2], "-o") != 0 )) {
         printf("Unknown flag, aborting \n Exit code: 3\n");
+        return 3;
     } else if (inputs[2] != NULL) {
         int output_flag = (strcmp(inputs[2], "--output") == 0 || strcmp(inputs[2], "-o") == 0);
     }
