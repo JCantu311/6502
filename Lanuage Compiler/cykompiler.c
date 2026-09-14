@@ -66,22 +66,18 @@ int main(int argc, char *argv[]) {
         int output_flag = (strcmp(inputs[2], "--output") == 0 || strcmp(inputs[2], "-o") == 0);
     } else if (inputs[2] != NULL && inputs[3] == NULL) {
         printf("No output name specified, assigning default value.\n");
-        printf("Bleh -2");
-        // int output_flag = (strcmp(inputs[2], "--output") == 0 || strcmp(inputs[2], "-o") == 0);
-        printf("Bleh -1");
+        int output_flag = (strcmp(inputs[2], "--output") == 0 || strcmp(inputs[2], "-o") == 0);
     }
-    printf("Bleh 0");
 
-    if ((inputs[4] == NULL) && (output_flag != -1)) {
+    if (inputs[4] == NULL) {
         printf("No output type specified, assigning default value.\n");
-        inputs[8] = ".s";
+        inputs[7] = ".s";
+    } else if ((inputs[4] != NULL) && (output_flag != -1)) {
+        int type_flag = (strcmp(inputs[4], "--type") == 0 || strcmp(inputs[4], "-t") == 0);
     } else if (strcmp(inputs[4], "-t") != 0 && strcmp(inputs[4], "--type") != 0) {
         unknown_argument_error();
         return 1;
-    } else if ((inputs[4] != NULL) && (output_flag != -1)) {
-        int type_flag = (strcmp(inputs[4], "--type") == 0 || strcmp(inputs[4], "-t") == 0);
     }
-    printf("Bleh 1");
 
     if ((input_flag == 1) && (inputs[1] == NULL)) {
     no_input:
@@ -143,6 +139,10 @@ no_output:
         inputs[7] = ".s";
     }
 
+    for(int i = 0; i < 8; i++) {
+        printf("%s\n", inputs[i] ? inputs[i] : "NULL");
+    }
+
     char *inputs_fin[5] = {NULL};
 
     if(inputs[1] != NULL) {
@@ -159,6 +159,12 @@ no_output:
 
     if(inputs[7] != NULL) {
         inputs_fin[3] = inputs[7];
+    }
+
+    if(strcmp(inputs_fin[2], "bin")) {
+        inputs_fin[3] = inputs_fin[2];
+    } else if (strcmp(inputs_fin[2], "asm")) {
+        inputs_fin[3] = inputs_fin[2];
     }
 
     for(int i = 0; i < 5; i++) {
