@@ -66,7 +66,9 @@ int main(int argc, char *argv[]) {
         int output_flag = (strcmp(inputs[2], "--output") == 0 || strcmp(inputs[2], "-o") == 0);
     } else if (inputs[2] != NULL && inputs[3] == NULL) {
         printf("No output name specified, assigning default value.\n");
-        int output_flag = (strcmp(inputs[2], "--output") == 0 || strcmp(inputs[2], "-o") == 0);
+        printf("Bleh -2");
+        // int output_flag = (strcmp(inputs[2], "--output") == 0 || strcmp(inputs[2], "-o") == 0);
+        printf("Bleh -1");
     }
     printf("Bleh 0");
 
