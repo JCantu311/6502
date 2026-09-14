@@ -54,12 +54,14 @@ int main(int argc, char *argv[]) {
     } else if (inputs[0] != NULL) {
         input_flag = (strcmp(inputs[0], "--input") == 0 || strcmp(inputs[0], "-i") == 0);
     }
+    printf("Bleh 1\n");
 
     if (inputs[2] == NULL) {
         goto no_output;
     } else if (inputs[2] != NULL) {
         int output_flag = (strcmp(inputs[2], "--output") == 0 || strcmp(inputs[2], "-o") == 0);
     }
+    printf("Bleh 2\n");
 
     if ((inputs[4] == NULL) && (output_flag != NULL)) {
         printf("No output type specified, assigning default value.\n");
@@ -67,6 +69,7 @@ int main(int argc, char *argv[]) {
     } else if ((inputs[4] != NULL) && (output_flag != NULL)) {
         int type_flag = (strcmp(inputs[4], "--type") == 0 || strcmp(inputs[4], "-t") == 0);
     }
+    printf("Bleh 3\n");
 
     if ((input_flag == 1) && (inputs[1] == NULL)) {
     no_input:
@@ -82,6 +85,7 @@ int main(int argc, char *argv[]) {
         printf("Aborting.");
         return 1;
     }
+    printf("Bleh 4\n");
 
 no_output:
     char *file_extension = ".cyk"; 
@@ -91,14 +95,17 @@ no_output:
     if (input_flag != 1 || help_flag != 1) {
         unknown_argument_error();
     }
+    printf("Bleh 5\n");
 
     if (output_flag != NULL && output_flag != 1){
         unknown_argument_error();
     }
+    printf("Bleh 6\n");
 
     if (type_flag != NULL && type_flag != 1) {
         unknown_argument_error();
     }
+    printf("Bleh 7\n");
     
     if (inputs[1] == NULL) {
         printf("No input file specified, aborting. \n Exit code: 2\n");
