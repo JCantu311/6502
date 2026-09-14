@@ -57,9 +57,6 @@ int main(int argc, char *argv[]) {
 
     if (inputs[2] == NULL) {
         goto no_output;
-    } else if (inputs[2] != NULL && (strcmp(inputs[2],"--output") != 0 || strcmp(inputs[2], "-o") != 0 )) {
-        printf("Unknown flag, aborting \n Exit code: 3\n");
-        return 3;
     } else if (inputs[2] != NULL) {
         int output_flag = (strcmp(inputs[2], "--output") == 0 || strcmp(inputs[2], "-o") == 0);
     }
@@ -73,13 +70,12 @@ int main(int argc, char *argv[]) {
 
     if ((input_flag == 1) && (inputs[1] == NULL)) {
     no_input:
-        printf("No input file specified, aborted. \n Exit code: 1\n");
+        printf("No input file specified, aborting. \n Exit code: 1\n");
         return 1;
     } else if ((input_flag == 1) && (inputs[1] != NULL)) {
         
     } else if ((input_flag != 1) && (help_flag != 1)) {
-        printf("Unknown argument, aborted. \n Exit code: 1\n");
-        return 1;
+        unknown_argument_error();
     } else if ((input_flag != 1) && (help_flag == 1)) {
         helpscrn();
     } else {
@@ -91,6 +87,18 @@ no_output:
     char *file_extension = ".cyk"; 
     char *file_name;
     char *file_type;
+
+    if (input_flag != 1 || help_flag != 1) {
+        unknown_argument_error();
+    }
+
+    if (output_flag != NULL && output_flag != 1){
+        unknown_argument_error();
+    }
+
+    if (type_flag != NULL && type_flag != 1) {
+        unknown_argument_error();
+    }
     
     if (inputs[1] == NULL) {
         printf("No input file specified, aborting. \n Exit code: 2\n");

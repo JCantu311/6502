@@ -28,3 +28,8 @@ void helpscrn() {
     printf("    --type      -t              Output File Type (Assembly or Binary)\n");
     printf("                Output file type must be either 'asm' or 'bin'; if not specified,\n the default output type is 'asm'.\n");
 }
+
+int unknown_argument_error() {
+    printf("Unknown argument. Aborting. \n Exit code: 1");
+    return 1;
+}

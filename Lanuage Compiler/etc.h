@@ -5,4 +5,6 @@ char *strremove(char *str, const char *sub);
 
 void helpscrn();
 
+int unknown_argument_error();
+
 #endif
