@@ -53,6 +53,8 @@ int main(int argc, char *argv[]) {
 
     if (inputs[2] == NULL) {
         goto no_output;
+    } else if (inputs[2] != NULL && (strcmp(inputs[2],"--output") != 0 || strcmp(inputs[2], "-o") != 0 )) {
+        printf("Unknown flag, aborting \n Exit code: 3\n");
     } else if (inputs[2] != NULL) {
         int output_flag = (strcmp(inputs[2], "--output") == 0 || strcmp(inputs[2], "-o") == 0);
     }
