@@ -1,6 +1,9 @@
 # 6502
 Writing code for the W65C02 microprocessor.
 
+## Links
+[Compiler Project](COMPILER.md)
+
 ## Experimentation
 The project root is dedicated to writing code for testing. The Computer Code subdirectory is for designing code for a custom computer I am designing, while the Computer Designs subdirectory is for the computer itself (including peripherals and extra hardware).
 

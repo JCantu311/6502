@@ -21,12 +21,13 @@ int lex(char *inputs[], int size) {
     }
 
     FILE *input_file = fopen(inputs[4], "r");
-    char buffer[256];
+    char buffer[1024];
 
     while (fgets(buffer, sizeof(buffer), input_file) != NULL) {
         remove_spaces(buffer);
         printf("%s", buffer);
     }
+    printf("\n");
 
     fclose(input_file);
 
