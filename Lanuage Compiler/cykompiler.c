@@ -7,6 +7,13 @@
 #include "input.h"
 #include "etc.h"
 
+#ifdef _WIN32
+    #include <io.h>
+    #include <process.h>
+#else
+    #include <unistd.h>
+#endif
+
 int main(int argc, char *argv[]) {
     if (argc > 7) {
         printf("Too many arguments, aborted. \n Exit code: 1\n");
@@ -157,13 +164,34 @@ no_output:
         inputs_fin[3] = inputs[7];
     }
 
-    inputs_fin[3] = inputs_fin[2];
-
-    for(int i = 0; i < 5; i++) {
-        printf("%s\n", inputs_fin[i] ? inputs_fin[i] : "NULL");
+    if (strcmp(inputs[5], "asm") == 0) {
+        inputs_fin[3] = ".s";
+    } else if (strcmp(inputs[5], "bin") == 0) {
+        inputs_fin[3] = ".bin";
     }
 
-    lex(inputs_fin, 5);
+    int lex_success = lex(inputs_fin, 5);
+
+    if (lex_success == 0) {
+        printf("Lexer status: successful.\n");
+    } else {
+        printf("Lexer status: failure.\n Exit code: %d\n", lex_success);
+        return lex_success;
+    }
+
+    int parse_success = parse();
+    if (parse_success == 0) {
+        printf("Parser status: successful.\n");
+    } else {
+        printf("Parser status: failure.\n Exit code: %d\n", parse_success);
+    }
+
+    int emit_success = emit();
+    if (emit_success == 0) {
+        printf("Emit status: successful.\n");
+    } else {
+        printf("Emit status: failure. \n Exit code: %d\n", emit_success);
+    }
 
     return 0;
 }
