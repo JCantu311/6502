@@ -4,7 +4,7 @@ A re-implementation Austin Henley's Teeny Tiny Compiler, designed for a language
 The Compiler is written in C.
 
 ## Credit:
-All credit for the code in this compiler is given to Austin Henley and all associated contributors to the project. 
+All credit for the code in this compiler is given to Austin Henley @AZHenley and all associated contributors to the project. 
 
 Github Repository for the project: https://github.com/AZHenley/teenytinycompiler
 
