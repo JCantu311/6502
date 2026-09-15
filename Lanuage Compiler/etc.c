@@ -33,3 +33,14 @@ int unknown_argument_error() {
     printf("Unknown argument. Aborting. \n Exit code: 1\n");
     return 1;
 }
+
+void remove_spaces(char *str) {
+    int i = 0, j = 0;
+    while (str[i] != '\0') {
+        if (str[i] != ' ') {
+            str[j++] = str[i];
+        }
+        i++;
+    }
+    str[j] = '\0';
+}

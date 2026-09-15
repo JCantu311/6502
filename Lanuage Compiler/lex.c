@@ -19,7 +19,16 @@ int lex(char *inputs[], int size) {
     for(int i = 0; i < size; i++) {
         printf("%s\n", inputs[i] ? inputs[i] : "NULL");
     }
-    
+
+    FILE *input_file = fopen(inputs[4], "r");
+    char buffer[256];
+
+    while (fgets(buffer, sizeof(buffer), input_file) != NULL) {
+        remove_spaces(buffer);
+        printf("%s", buffer);
+    }
+
+    fclose(input_file);
 
     return 0;
 }

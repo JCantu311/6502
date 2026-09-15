@@ -7,4 +7,6 @@ void helpscrn();
 
 int unknown_argument_error();
 
+void remove_spaces(char *str);
+
 #endif
