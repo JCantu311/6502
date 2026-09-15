@@ -6,13 +6,7 @@
 #include "emit.h"
 #include "input.h"
 #include "etc.h"
-
-#ifdef _WIN32
-    #include <io.h>
-    #include <process.h>
-#else
-    #include <unistd.h>
-#endif
+#include <unistd.h>
 
 int main(int argc, char *argv[]) {
     if (argc > 7) {
@@ -169,6 +163,10 @@ no_output:
     } else if (strcmp(inputs[5], "bin") == 0) {
         inputs_fin[3] = ".bin";
     }
+
+    char dir[4352];
+
+    inputs_fin[4] = strcat(strcat(getcwd(dir, sizeof(dir)), "/"), inputs_fin[0]); 
 
     int lex_success = lex(inputs_fin, 5);
 

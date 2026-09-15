@@ -19,5 +19,7 @@ int lex(char *inputs[], int size) {
     for(int i = 0; i < size; i++) {
         printf("%s\n", inputs[i] ? inputs[i] : "NULL");
     }
+    
+
     return 0;
 }
