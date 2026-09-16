@@ -6,7 +6,19 @@
 #include "emit.h"
 #include "input.h"
 #include "etc.h"
-#include <unistd.h>
+
+#ifdef _WIN32
+    #include <windows.h>
+    int sleep() {
+
+    }
+#else 
+    #include <time.h>
+    #include <unistd.h>
+    int sleep() {
+        
+    }
+#endif
 
 int main(int argc, char *argv[]) {
     if (argc > 7) {
