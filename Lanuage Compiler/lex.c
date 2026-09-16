@@ -21,8 +21,8 @@ struct Tokens {
 
 int lex(char *inputs[], int size) {
     struct Tokens bleh = {
-        .names = {"if", "while", "do", "print", "else", "add", "sub", "mult", "div", "read", "output", "input", "addr", ""},
-        .tokens = {}
+        .names = {"if", "while", "do", "print", "else", "add", "sub", "mult", "div", "read", "output", "input", "addr", EOF, ".include", "endif", "endwhile", },
+        .tokens = {201, 202, 203, 301, 204, 101, 102, 111, 112, 205, 206, 207, 103, -1, 302, 208, 209, }
     };
     for(int i = 0; i < size; i++) {
         printf("%s\n", inputs[i] ? inputs[i] : "NULL");
