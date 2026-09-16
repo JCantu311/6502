@@ -14,8 +14,16 @@
     #include <unistd.h>
 #endif
 
+struct Tokens {
+    char *names[20];
+    char *tokens[20];
+};
 
 int lex(char *inputs[], int size) {
+    struct Tokens bleh = {
+        .names = {"if", "while", "do", "print", "else", "add", "sub", "mult", "div", "read", "output", "input", "addr", ""},
+        .tokens = {}
+    };
     for(int i = 0; i < size; i++) {
         printf("%s\n", inputs[i] ? inputs[i] : "NULL");
     }
@@ -24,7 +32,6 @@ int lex(char *inputs[], int size) {
     char buffer[1024];
 
     while (fgets(buffer, sizeof(buffer), input_file) != NULL) {
-        remove_spaces(buffer);
         printf("%s", buffer);
     }
     printf("\n");
