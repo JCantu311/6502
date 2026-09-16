@@ -18891,6 +18891,12 @@
 		(uuid "695ea57c-9d24-45d7-8ce7-0f3f6d14984d")
 	)
 	(junction
+		(at 600.71 339.09)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6a47aa30-31e1-40f2-9639-eb33b3fac67f")
+	)
+	(junction
 		(at 212.09 68.58)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -19159,6 +19165,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ade0578f-0de2-4434-a3b0-2a96f2865268")
+	)
+	(junction
+		(at 600.71 332.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "aebec0f8-de6d-4594-9876-810ea446a3d8")
 	)
 	(junction
 		(at 464.82 182.88)
@@ -22023,6 +22035,16 @@
 	)
 	(wire
 		(pts
+			(xy 546.1 294.64) (xy 546.1 297.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46c5efa8-bb5a-45d1-bf33-96f0e12b7f96")
+	)
+	(wire
+		(pts
 			(xy 476.25 284.48) (xy 476.25 275.59)
 		)
 		(stroke
@@ -24635,6 +24657,16 @@
 	)
 	(wire
 		(pts
+			(xy 541.02 321.31) (xy 541.02 297.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "905f72a0-b6dd-43ea-9f36-c55c0b4742fd")
+	)
+	(wire
+		(pts
 			(xy 684.53 274.32) (xy 683.26 274.32)
 		)
 		(stroke
@@ -25017,6 +25049,17 @@
 	)
 	(wire
 		(pts
+			(xy 600.71 332.74) (xy 575.31 332.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 0 1)
+		)
+		(uuid "9bcb378a-c65d-4bf4-9aee-a6360e945c3e")
+	)
+	(wire
+		(pts
 			(xy 645.16 90.17) (xy 645.16 92.71)
 		)
 		(stroke
@@ -25079,6 +25122,17 @@
 			(color 255 0 0 1)
 		)
 		(uuid "9d4b5a14-d41b-4429-a4df-4943607661b0")
+	)
+	(wire
+		(pts
+			(xy 575.31 332.74) (xy 575.31 330.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 0 1)
+		)
+		(uuid "9d9ccb82-c598-42e6-af2e-17e1772895dd")
 	)
 	(wire
 		(pts
@@ -25216,6 +25270,17 @@
 			(type default)
 		)
 		(uuid "a0b98ae1-e32b-4952-9828-d18bac7fe404")
+	)
+	(wire
+		(pts
+			(xy 572.77 339.09) (xy 600.71 339.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "a1153d44-8227-4772-8d2c-1ef12214ff13")
 	)
 	(wire
 		(pts
@@ -26644,6 +26709,16 @@
 	)
 	(wire
 		(pts
+			(xy 542.29 321.31) (xy 541.02 321.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d505bec8-93f7-4ce3-a1ca-84201c61a8db")
+	)
+	(wire
+		(pts
 			(xy 443.23 177.8) (xy 443.23 116.84)
 		)
 		(stroke
@@ -27122,6 +27197,17 @@
 	)
 	(wire
 		(pts
+			(xy 572.77 330.2) (xy 575.31 330.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 0 1)
+		)
+		(uuid "e21c0120-91ea-4ae1-ba4d-2553ff31e502")
+	)
+	(wire
+		(pts
 			(xy 509.27 88.9) (xy 521.97 88.9)
 		)
 		(stroke
@@ -27442,6 +27528,16 @@
 			(type default)
 		)
 		(uuid "e90f9358-d3de-48e8-9e6e-4de39ba700b5")
+	)
+	(wire
+		(pts
+			(xy 541.02 297.18) (xy 546.1 297.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e9f566a4-e882-40eb-bbd1-3d081841ad3c")
 	)
 	(wire
 		(pts
@@ -41606,6 +41702,82 @@
 				(path "/7319cfd4-b54a-49cd-84bf-92265ba5acc0"
 					(reference "U23")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet
+		(at 542.29 314.96)
+		(size 30.48 46.99)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "7fad9d33-3c79-4e1d-83d5-74d142e92e93")
+		(property "Sheetname" "Variable Clock Module"
+			(at 542.29 314.2484 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "clock.kicad_sch"
+			(at 542.29 362.5346 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "VCC" input
+			(at 572.77 330.2 0)
+			(uuid "b4994555-c75a-4e89-ab17-29005336947d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CLK" output
+			(at 542.29 321.31 180)
+			(uuid "c14c792f-e92c-4621-938b-d0e581bd8d72")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GND" input
+			(at 572.77 339.09 0)
+			(uuid "8038e343-1b47-4caa-94b8-390531500160")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "Cykomputer"
+				(path "/7319cfd4-b54a-49cd-84bf-92265ba5acc0"
+					(page "3")
 				)
 			)
 		)

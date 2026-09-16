@@ -720,6 +720,10 @@
     [
       "94db923e-9f09-4888-9e9d-c984b6a27067",
       "VGA Controller"
+    ],
+    [
+      "7fad9d33-3c79-4e1d-83d5-74d142e92e93",
+      "Variable Clock Module"
     ]
   ],
   "text_variables": {},
