@@ -178,19 +178,12 @@ no_output:
     for(int i = 0; i < 5; i++) {
         printf("%s\n", inputs_fin[i] ? inputs_fin[i] : "NULL");
     }
-    printf("bleh-1\n");
 
     char dir[4352];
 
-    printf("bleh0\n");
-
     inputs_fin[4] = strcat(strcat(getcwd(dir, sizeof(dir)), "/"), inputs_fin[0]); 
 
-    printf("bleh1\n");
-
     int lex_success = lex(inputs_fin, 5);
-
-    printf("bleh2\n");
 
     if (lex_success == 0) {
         printf("Lexer status: successful.\n");
