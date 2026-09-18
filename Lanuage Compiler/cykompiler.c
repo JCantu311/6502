@@ -176,7 +176,7 @@ no_output:
     }
 
     for(int i = 0; i < 5; i++) {
-        printf("%s\n", inputs_fin[i]);
+        printf("%s\n", inputs_fin[i] ? inputs_fin[i] : "NULL");
     }
     printf("bleh-1\n");
 
