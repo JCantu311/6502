@@ -175,10 +175,6 @@ no_output:
         inputs_fin[3] = ".bin";
     }
 
-    for(int i = 0; i < 5; i++) {
-        printf("%s\n", inputs_fin[i] ? inputs_fin[i] : "NULL");
-    }
-
     char dir[4352];
 
     inputs_fin[4] = strcat(strcat(getcwd(dir, sizeof(dir)), "/"), inputs_fin[0]); 
