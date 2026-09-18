@@ -15,14 +15,14 @@
 #endif
 
 struct Tokens {
-    char *names[20];
-    int tokens[20];
+    char *names[30];
+    int tokens[30];
 };
 
 int lex(char *inputs[], int size) {
     struct Tokens bleh = {
-        .names = {"if", "while", "do", "print", "else", "add", "sub", "mult", "div", "read", "output", "input", "addr", "EOF", ".include", "endif", "endwhile", ".start"},
-        .tokens = {201, 202, 203, 301, 204, 101, 102, 111, 112, 205, 206, 207, 103, -1, 302, 208, 209, 010}
+        .names = {"if", "while", "do", "print", "else", "add", "sub", "mult", "div", "read", "output", "input", "addr", "EOF", ".include", "endif", "endwhile", ".start", "int", "char", "bool", "str", "store", },
+        .tokens = {201, 202, 203, 301, 204, 101, 102, 111, 112, 205, 206, 207, 103, -1, 302, 208, 209, 010, 113, 114, 115, 116, 103, }
     };
     for(int i = 0; i < size; i++) {
         printf("%s\n", inputs[i] ? inputs[i] : "NULL");
@@ -30,11 +30,12 @@ int lex(char *inputs[], int size) {
 
     FILE *input_file = fopen(inputs[4], "r");
     char buffer[1024];
+    FILE *tmp_buffer = fopen("tmp.txt", "w");
     FILE *outfile = fopen("a.o", "w");
 
     while (fgets(buffer, sizeof(buffer), input_file) != NULL) {
         space_to_newline(buffer);
-        printf("%s", buffer);
+        fprintf(tmp_buffer, buffer);
     }
     printf("\n");
 
