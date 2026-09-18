@@ -32,6 +32,7 @@ int lex(char *inputs[], int size) {
     char buffer[1024];
     char buffer2[2048];
     FILE *outfile = fopen("a.o", "w");
+    printf("Bleh0\n");
 
     while (fgets(buffer, sizeof(buffer), input_file) != NULL) {
         space_to_newline(buffer);
