@@ -30,12 +30,20 @@ int lex(char *inputs[], int size) {
 
     FILE *input_file = fopen(inputs[4], "r");
     char buffer[1024];
-    FILE *tmp_buffer = fopen("tmp.txt", "w");
+    char buffer2[512];
+    FILE *tmp_buffer = fopen("tmp.txt", "w+");
     FILE *outfile = fopen("a.o", "w");
 
     while (fgets(buffer, sizeof(buffer), input_file) != NULL) {
         space_to_newline(buffer);
         fprintf(tmp_buffer, buffer);
+    }
+    while (fgets(buffer2, sizeof(buffer2), tmp_buffer) != NULL) {
+        for(int i = 0; i < sizeof(bleh.names); i++) {
+            if(strcmp(bleh.names[i], buffer2) == 0) {
+                fprintf(outfile, bleh.tokens[i]);
+            }
+        }
     }
     printf("\n");
 
