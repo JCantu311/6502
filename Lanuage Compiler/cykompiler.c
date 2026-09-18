@@ -175,8 +175,6 @@ no_output:
         inputs_fin[3] = ".bin";
     }
 
-    printf("bleh3\n");
-
     for(int i = 0; i < 5; i++) {
         printf("%s\n", inputs_fin[i]);
     }
@@ -185,7 +183,11 @@ no_output:
 
     inputs_fin[4] = strcat(strcat(getcwd(dir, sizeof(dir)), "/"), inputs_fin[0]); 
 
+    printf("bleh1\n");
+
     int lex_success = lex(inputs_fin, 5);
+
+    printf("bleh2\n");
 
     if (lex_success == 0) {
         printf("Lexer status: successful.\n");
