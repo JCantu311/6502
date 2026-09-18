@@ -149,8 +149,6 @@ no_output:
         inputs[7] = ".s";
     }
 
-    printf("Bleh1\n");
-
     char *inputs_fin[5] = {NULL};
 
     if(inputs[1] != NULL) {
@@ -169,13 +167,13 @@ no_output:
         inputs_fin[3] = inputs[7];
     }
 
-    printf("Bleh2\n");
-
     if (strcmp(inputs[5], "asm") == 0) {
         inputs_fin[3] = ".s";
     } else if (strcmp(inputs[5], "bin") == 0) {
         inputs_fin[3] = ".bin";
     }
+
+    printf("bleh3\n");
 
     for(int i = 0; i < 5; i++) {
         printf("%s\n", inputs_fin[i]);
