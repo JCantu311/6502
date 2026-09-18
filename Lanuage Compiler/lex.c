@@ -36,7 +36,7 @@ int lex(char *inputs[], int size) {
 
     while (fgets(buffer, sizeof(buffer), input_file) != NULL) {
         space_to_newline(buffer);
-        fprintf(tmp_buffer, buffer);
+        fprintf(tmp_buffer, "%s", buffer);
     }
     while (fgets(buffer2, sizeof(buffer2), tmp_buffer) != NULL) {
         for(int i = 0; i < 30; i++) {
