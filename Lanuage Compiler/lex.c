@@ -43,9 +43,9 @@ int lex(char *inputs[], int size) {
             if(bleh.names[i] == NULL) {
                 break;
             } else if(strcmp(bleh.names[i], buffer2) == 0) {
-                fprintf(outfile, bleh.tokens[i]);
+                fprintf(outfile, "%d", bleh.tokens[i]);
             } else {
-                fprintf(outfile, buffer2);
+                fprintf(outfile, "%s", buffer2);
             }
         }
     }
