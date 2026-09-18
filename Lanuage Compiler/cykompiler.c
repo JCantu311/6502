@@ -169,6 +169,8 @@ no_output:
         inputs_fin[3] = inputs[7];
     }
 
+    printf("Bleh2\n");
+
     if (strcmp(inputs[5], "asm") == 0) {
         inputs_fin[3] = ".s";
     } else if (strcmp(inputs[5], "bin") == 0) {
@@ -180,8 +182,6 @@ no_output:
     }
 
     char dir[4352];
-
-    printf("bleh2\n");
 
     inputs_fin[4] = strcat(strcat(getcwd(dir, sizeof(dir)), "/"), inputs_fin[0]); 
 
