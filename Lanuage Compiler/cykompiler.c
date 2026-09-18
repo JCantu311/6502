@@ -149,6 +149,8 @@ no_output:
         inputs[7] = ".s";
     }
 
+    printf("Bleh1\n");
+
     char *inputs_fin[5] = {NULL};
 
     if(inputs[1] != NULL) {
