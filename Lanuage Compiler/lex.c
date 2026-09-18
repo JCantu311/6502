@@ -16,7 +16,7 @@
 
 struct Tokens {
     char *names[20];
-    char *tokens[20];
+    int *tokens[20];
 };
 
 int lex(char *inputs[], int size) {
