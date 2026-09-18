@@ -138,12 +138,7 @@ no_output:
 
     if(type_flag == 1 && inputs[5] != NULL) {
         file_type = inputs[5];
-    } else if ((inputs[5] == NULL) && (type_flag != -1)) {
-        printf("No output type specified, assuming default output type: \n .s.\n");
-        file_type = ".s";
     }
-
-    printf("bleh1\n");
 
     if (inputs[5] == NULL) {
         printf("No output type specified, assigning default value: \n .s\n");
