@@ -178,6 +178,7 @@ no_output:
     for(int i = 0; i < 5; i++) {
         printf("%s\n", inputs_fin[i]);
     }
+    printf("bleh-1\n");
 
     char dir[4352];
 
