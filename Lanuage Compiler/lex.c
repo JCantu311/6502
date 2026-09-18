@@ -41,6 +41,7 @@ int lex(char *inputs[], int size) {
     while (fgets(buffer2, sizeof(buffer2), tmp_buffer) != NULL) {
         if(buffer2[0] == '\0') {
             fprintf(outfile, '\n');
+            printf('\n');
         }
         int found = 0;
         for (int i = 0; i < 31; i++) {
@@ -50,13 +51,13 @@ int lex(char *inputs[], int size) {
 
             if (strcmp(bleh.names[i], buffer2) == 0) {
                 fprintf(outfile, "%d\n", bleh.tokens[i]);
-                printf(outfile, "%d\n", bleh.tokens[i]);
+                printf("%d\n", bleh.tokens[i]);
             }
         }
 
         if (!found) {
             fprintf(outfile, "%s\n", buffer2);
-            printf(outfile, "%s\n", buffer2);
+            printf("%s\n", buffer2);
         }
     }
 
