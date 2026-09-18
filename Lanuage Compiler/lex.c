@@ -51,6 +51,8 @@ int lex(char *inputs[], int size) {
     }
 
     fclose(input_file);
+    fclose(tmp_buffer);
+    fclose(outfile);
 
     return 0;
 }
