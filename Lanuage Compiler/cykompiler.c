@@ -181,6 +181,8 @@ no_output:
 
     char dir[4352];
 
+    printf("bleh2\n");
+
     inputs_fin[4] = strcat(strcat(getcwd(dir, sizeof(dir)), "/"), inputs_fin[0]); 
 
     int lex_success = lex(inputs_fin, 5);
