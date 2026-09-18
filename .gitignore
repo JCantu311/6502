@@ -4,3 +4,6 @@
 **.kicad_pro.lck
 **.o
 **.cyk
+**/bin/*
+*.cyk
+*.o
