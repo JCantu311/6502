@@ -143,7 +143,7 @@ no_output:
     output_type:
     if (inputs[5] == NULL) {
         printf("No output type specified, assigning default value: \n .s\n");
-        inputs[5] = "asm"
+        inputs[5] = "asm";
         goto output_type;
     } else if(strcmp(inputs[5], "bin")) {
         inputs[7] = ".bin";
