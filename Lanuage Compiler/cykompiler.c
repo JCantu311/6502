@@ -182,6 +182,10 @@ no_output:
 
     int lex_success = lex(inputs_fin, 5);
 
+    for(int i = 0; i < 5; i++) {
+        printf("%s\n", inputs_fin[i]);
+    }
+
     if (lex_success == 0) {
         printf("Lexer status: successful.\n");
     } else {
