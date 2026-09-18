@@ -181,6 +181,8 @@ no_output:
 
     char dir[4352];
 
+    printf("bleh0\n");
+
     inputs_fin[4] = strcat(strcat(getcwd(dir, sizeof(dir)), "/"), inputs_fin[0]); 
 
     printf("bleh1\n");
