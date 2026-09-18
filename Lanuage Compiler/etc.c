@@ -44,3 +44,13 @@ void remove_spaces(char *str) {
     }
     str[j] = '\0';
 }
+
+void space_to_newline(char *str) {
+    int i = 0;
+    while (str[i] != '\0') {
+        if(str[i] == ' ') {
+            str[i] = '\n';
+        }
+        i++;
+    }
+}

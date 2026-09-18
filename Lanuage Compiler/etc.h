@@ -9,4 +9,6 @@ int unknown_argument_error();
 
 void remove_spaces(char *str);
 
+void space_to_newline(char *str);
+
 #endif
