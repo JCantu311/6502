@@ -39,7 +39,7 @@ int lex(char *inputs[], int size) {
         fprintf(tmp_buffer, buffer);
     }
     while (fgets(buffer2, sizeof(buffer2), tmp_buffer) != NULL) {
-        for(int i = 0; i < sizeof(bleh.names); i++) {
+        for(int i = 0; i < 30; i++) {
             if(bleh.names[i] == NULL) {
                 break;
             } else if(strcmp(bleh.names[i], buffer2) == 0) {
