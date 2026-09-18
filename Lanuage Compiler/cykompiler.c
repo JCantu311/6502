@@ -9,15 +9,15 @@
 
 #ifdef _WIN32
     #include <windows.h>
-    int sleep() {
+    // int sleep() {
 
-    }
+    // }
 #else 
     #include <time.h>
     #include <unistd.h>
-    int sleep() {
-        
-    }
+    // int sleep() {
+
+    // }
 #endif
 
 int main(int argc, char *argv[]) {
