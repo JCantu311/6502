@@ -49,7 +49,6 @@ int lex(char *inputs[], int size) {
             }
         }
     }
-    printf("\n");
 
     fclose(input_file);
 
