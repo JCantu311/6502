@@ -6,6 +6,7 @@
 #include "emit.h"
 #include "input.h"
 #include "etc.h"
+#include <ctype.h>
 
 #ifdef _WIN32
     #include <windows.h>
@@ -188,7 +189,7 @@ no_output:
         return lex_success;
     }
 
-    int parse_success = parse();
+    int parse_success = parse("a.o");
     if (parse_success == 0) {
         printf("Parser status: successful.\n");
     } else {

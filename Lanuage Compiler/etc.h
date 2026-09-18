@@ -11,4 +11,6 @@ void remove_spaces(char *str);
 
 void space_to_newline(char *str);
 
+int is_blank(const char *line);
+
 #endif

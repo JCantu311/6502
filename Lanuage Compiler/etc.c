@@ -1,7 +1,13 @@
-#include "etc.h"
-#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include "lex.h"
+#include "parse.h"
+#include "emit.h"
+#include "input.h"
+#include "etc.h"
+#include <ctype.h>
+
 
 char *strremove(char *str, const char *sub) {
     char *buffer = malloc(strlen(str) + 1);
@@ -53,4 +59,14 @@ void space_to_newline(char *str) {
         }
         i++;
     }
+}
+
+int is_blank(const char *line) {
+    while (*line) {
+        if (!isspace((unsigned char)*line)) {
+            return 0;
+        }
+        line++;
+    }
+    return 1;
 }
