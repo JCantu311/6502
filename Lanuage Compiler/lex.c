@@ -39,9 +39,9 @@ int lex(char *inputs[], int size) {
         fprintf(tmp_buffer, "%s", buffer);
     }
     while (fgets(buffer2, sizeof(buffer2), tmp_buffer) != NULL) {
-        if(buffer2[0] == '\0') {
-            fprintf(outfile, '\n');
-            printf('\n');
+        if(buffer2[0] == "\0") {
+            fprintf(outfile, "\n");
+            printf("\n");
         }
         int found = 0;
         for (int i = 0; i < 31; i++) {
