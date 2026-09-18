@@ -15,14 +15,14 @@
 #endif
 
 struct Tokens {
-    char *names[30];
-    int tokens[30];
+    char *names[31];
+    int tokens[31];
 };
 
 int lex(char *inputs[], int size) {
     struct Tokens bleh = {
-        .names = {"if", "while", "do", "print", "else", "add", "sub", "mult", "div", "read", "output", "input", "addr", "EOF", ".include", "endif", "endwhile", ".start", "int", "char", "bool", "str", "store"},
-        .tokens = {201, 202, 203, 301, 204, 101, 102, 111, 112, 205, 206, 207, 103, -1, 302, 208, 209, 010, 113, 114, 115, 116, 103}
+        .names = {"if", "while", "do", "print", "else", "add", "sub", "mult", "div", "read", "output", "input", "addr", "EOF", ".include", "endif", "endwhile", ".start", "int", "char", "bool", "str", "store", "load", "reg", "mod", "floor", "not", "equal", "goto", "label"},
+        .tokens = {201, 202, 203, 301, 204, 101, 102, 111, 112, 205, 206, 207, 103, -1, 302, 208, 209, 010, 113, 114, 115, 116, 103, 104, 011, 113, 114, 012, 013, 014, 1}
     };
     for(int i = 0; i < size; i++) {
         printf("%s\n", inputs[i] ? inputs[i] : "NULL");
