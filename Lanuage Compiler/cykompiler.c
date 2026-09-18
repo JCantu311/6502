@@ -176,15 +176,15 @@ no_output:
         inputs_fin[3] = ".bin";
     }
 
+    for(int i = 0; i < 5; i++) {
+        printf("%s\n", inputs_fin[i]);
+    }
+
     char dir[4352];
 
     inputs_fin[4] = strcat(strcat(getcwd(dir, sizeof(dir)), "/"), inputs_fin[0]); 
 
     int lex_success = lex(inputs_fin, 5);
-
-    for(int i = 0; i < 5; i++) {
-        printf("%s\n", inputs_fin[i]);
-    }
 
     if (lex_success == 0) {
         printf("Lexer status: successful.\n");
