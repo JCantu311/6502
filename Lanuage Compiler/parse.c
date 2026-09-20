@@ -14,6 +14,22 @@
     #include <unistd.h>
 #endif
 
+void (*token_function)();
+
+void if_function() {
+    // something
+}
+
+void for_function() {
+    // something
+}
+
+void while_function() {
+    // something
+}
+
+void 
+
 int parse(char *input_file_name) {
     FILE *input = fopen(input_file_name, "r");
     char buffer[1024];
