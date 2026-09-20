@@ -50,7 +50,7 @@ int parse(char *input_file_name) {
 
     while(fgets(buffer, sizeof(buffer), input) != NULL) {
         printf("%s", buffer);
-        if (buffer[0] == "t") {
+        if (buffer[0] == 't') {
             printf("%s", &buffer[1]);
         }
     }
