@@ -60,7 +60,7 @@ int parse(char *input_file_name) {
 
     rewind(tmp);
 
-    printf("\n\n");
+    fprintf(tmp, "\n\n");
 
     while(fgets(buffer, sizeof(buffer), input) != NULL) {
         if (buffer[0] == 't') {
