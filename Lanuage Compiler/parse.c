@@ -28,7 +28,9 @@ void while_function() {
     // something
 }
 
-void 
+void variable_assignment() {
+    // something
+}
 
 int parse(char *input_file_name) {
     FILE *input = fopen(input_file_name, "r");
