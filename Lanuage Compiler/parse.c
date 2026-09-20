@@ -56,6 +56,8 @@ int parse(char *input_file_name) {
         } 
     }
 
+    rewind(input);
+
     rewind(tmp);
 
     while(fgets(buffer, sizeof(buffer), input) != NULL) {
