@@ -54,7 +54,7 @@ int lex(char *inputs[], int size) {
             }
 
             if (strcmp(bleh.names[i], buffer2) == 0) {
-                fprintf(outfile, "%d\n", bleh.tokens[i]);
+                fprintf(outfile, "t%d\n", bleh.tokens[i]);
                 found = 1;
                 break;
             }
