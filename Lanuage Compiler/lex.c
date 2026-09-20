@@ -8,7 +8,11 @@
 #include "etc.h"
 #include <ctype.h>
 
-#include <unistd.h>
+#ifdef _WIN32
+    // something idk
+#else
+    #include <unistd.h>
+#endif
 
 struct Tokens {
     char *names[41];

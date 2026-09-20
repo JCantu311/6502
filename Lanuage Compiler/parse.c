@@ -8,11 +8,21 @@
 #include "etc.h"
 #include <ctype.h>
 
+#ifdef _WIN32
+    // something idk
+#else
+    #include <unistd.h>
+#endif
+
 int parse(char *input_file_name) {
     FILE *input = fopen(input_file_name, "r");
     char buffer[1024];
 
-    
+    FILE *output = fopen("a.obj", "w+");
+
+    while(fgets(buffer, sizeof(buffer), input) != NULL) {
+        printf("%s", buffer);
+    }
 
     return 0;
 }
