@@ -48,7 +48,7 @@ int lex(char *inputs[], int size) {
         }
 
         int found = 0;
-        for (int i = 0; i < 36; i++) {
+        for (int i = 0; i < 44; i++) {
             if (bleh.names[i] == NULL) {
                 break;
             }
