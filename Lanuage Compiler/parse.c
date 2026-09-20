@@ -48,11 +48,20 @@ int parse(char *input_file_name) {
 
     FILE *output = fopen("a.obj", "w+");
 
+    FILE *tmp = fopen("a.txt", "w+");
+
     while(fgets(buffer, sizeof(buffer), input) != NULL) {
-        printf("%s", buffer);
+        if (buffer[0] != 't') {
+            fprintf("%s", buffer);
+        } 
+    }
+
+    rewind(tmp);
+
+    while(fgets(buffer, sizeof(buffer), input) != NULL) {
         if (buffer[0] == 't') {
-            printf("%s", &buffer[1]);
-        }
+            fprintf("%s", &buffer[1]);
+        } 
     }
 
     return 0;
