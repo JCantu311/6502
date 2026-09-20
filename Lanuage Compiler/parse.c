@@ -55,6 +55,7 @@ int parse(char *input_file_name) {
             fprintf(tmp, "%s", buffer);
         } 
     }
+    rewind(tmp);
 
     fprintf(tmp, "\n\n");
 
