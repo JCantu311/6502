@@ -56,11 +56,11 @@ int parse(char *input_file_name) {
         } 
     }
 
+    fprintf(tmp, "\n\n");
+
     rewind(input);
 
     rewind(tmp);
-
-    fprintf(tmp, "\n\n");
 
     while(fgets(buffer, sizeof(buffer), input) != NULL) {
         if (buffer[0] == 't') {
