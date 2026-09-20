@@ -52,7 +52,7 @@ int parse(char *input_file_name) {
 
     while(fgets(buffer, sizeof(buffer), input) != NULL) {
         if (buffer[0] != 't') {
-            fprintf("%s", buffer);
+            fprintf(tmp, "%s", buffer);
         } 
     }
 
@@ -60,7 +60,7 @@ int parse(char *input_file_name) {
 
     while(fgets(buffer, sizeof(buffer), input) != NULL) {
         if (buffer[0] == 't') {
-            fprintf("%s", &buffer[1]);
+            fprintf(tmp, "%s", &buffer[1]);
         } 
     }
 
