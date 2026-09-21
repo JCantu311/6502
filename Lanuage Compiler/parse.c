@@ -87,11 +87,11 @@ int parse(char *input_file_name) {
         printf("%d\n", token_segment);
         printf("%d\n", parameter_segment);
 
-        if (buffer == "1000") {
+        if (buffer == 1000) {
             token_segment = 1;
         } else if (token_segment == 1) {
             parse_token(input, tmp);
-        } else if (buffer == "1001") {
+        } else if (buffer == 1001) {
             token_segment = 0;
             parameter_segment = 1;
         } else if (parameter_segment = 1) {
