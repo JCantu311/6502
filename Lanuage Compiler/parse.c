@@ -53,7 +53,7 @@ int parse_token(FILE *input, FILE *tmp, char *buffer) {
         buffer2 = strtol(buffer, &endptr, 10);
     }
     for(int i = 0; i < 44; i++) {
-        if (buffer == bleh.tokens[i]) {
+        if (buffer2 == bleh.tokens[i]) {
             printf("Token: %d\n", bleh.tokens[i]);
         }
     }
