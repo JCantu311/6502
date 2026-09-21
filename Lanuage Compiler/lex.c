@@ -31,6 +31,11 @@ int lex(char *inputs[], int size) {
     FILE *tmp_buffer = fopen("tmp.o", "w+");
     FILE *outfile = fopen("a.o", "w");
 
+    if (input_file == NULL) {
+        printf("File access error. Aborting \n");
+        return 2;
+    }
+
     while (fgets(buffer, sizeof(buffer), input_file) != NULL) {
         space_to_newline(buffer);
         fprintf(tmp_buffer, "%s", buffer);
