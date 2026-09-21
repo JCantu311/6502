@@ -34,11 +34,11 @@ void variable_assignment() {
     // something
 }
 
-int parse_token() {
+int parse_token(FILE *input, FILE *tmp) {
     // something
 }
 
-int parse_parameter() {
+int parse_parameter(FILE *input, FILE *tmp) {
     // something
 }
 
@@ -85,12 +85,12 @@ int parse(char *input_file_name) {
         if (buffer == "1000") {
             token_segment = 1;
         } else if (token_segment == 1) {
-            parse_token();
+            parse_token(input, tmp);
         } else if (buffer == "1001") {
             token_segment = 0;
             parameter_segment = 1;
         } else if (parameter_segment = 1) {
-            parse_parameter();
+            parse_parameter(input, tmp);
         }
     }
 
