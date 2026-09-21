@@ -95,12 +95,12 @@ int parse(char *input_file_name) {
     int token_segment = 0;
     int parameter_segment = 0;
 
-    printf("%d\n", token_segment);
-    printf("%d\n", parameter_segment);
+    // printf("%d\n", token_segment);
+    // printf("%d\n", parameter_segment);
 
     while(fgets(buffer, sizeof(buffer), tmp) != NULL) {
-        printf("%d\n", token_segment);
-        printf("%d\n", parameter_segment);
+        // printf("%d\n", token_segment);
+        // printf("%d\n", parameter_segment);
 
         if (strcmp(buffer, "1000\n") == 0) {
             token_segment = 1;
