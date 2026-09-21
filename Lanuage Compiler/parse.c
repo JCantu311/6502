@@ -67,7 +67,7 @@ int parse_token(FILE *input, FILE *tmp, char *buffer) {
     for(int i = 0; i < 44; i++) {
         if (buffer2 == bleh.tokens[i]) {
             strcat(function_point[0], buffer);
-            token_function = function_point;
+            // token_function = function_point;
             printf("Token: %d\n", bleh.tokens[i]);
         }
     }
