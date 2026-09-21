@@ -64,7 +64,7 @@ int parse(char *input_file_name) {
     rewind(tmp);
 
     while(fgets(buffer, sizeof(buffer), input) != NULL) {
-        if (buffer[0] == 't') {
+        if ((buffer[0] == 't') && isdigit(buffer[1])) {
             fprintf(tmp, "%s", &buffer[1]);
         } 
     }
