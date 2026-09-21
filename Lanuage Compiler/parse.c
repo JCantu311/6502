@@ -25,7 +25,12 @@ struct Tokens bleh = {
 
 char buffer[1024];
 
-void (*token_function)();
+typedef void (*FuncPtr)(void);
+
+typedef struct {
+    const char *name;
+    FuncPtr func;
+} FunctionMapping;
 
 void _201() {
     printf("if token");
@@ -55,6 +60,53 @@ void _102() {
     printf("subtract token");
 }
 
+FunctionMapping lookup_table[] = {
+    {"201", _201},
+    {"202", _202},
+    {"203", _203},
+    {"301", _301},
+    {"204", _204},
+    {"101", _101},
+    {"102", _102},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+};
+
 int parse_token(FILE *input, FILE *tmp, char *buffer) {
     long buffer2;
     char *endptr;
@@ -66,7 +118,7 @@ int parse_token(FILE *input, FILE *tmp, char *buffer) {
     }
     for(int i = 0; i < 44; i++) {
         if (buffer2 == bleh.tokens[i]) {
-            // strcat(function_point[0], buffer);
+            strcat(function_point[0], buffer);
             // token_function = function_point;
             printf("Token: %d\n", bleh.tokens[i]);
         }
