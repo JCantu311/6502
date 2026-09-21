@@ -49,7 +49,7 @@ int lex(char *inputs[], int size) {
             fprintf(outfile, "\n");
             continue;
         } else if(buffer2[0] == '\n') {
-            //
+            // a
         }
 
         int found = 0;
