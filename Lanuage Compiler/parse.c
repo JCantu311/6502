@@ -48,12 +48,15 @@ void variable_assignment() {
 int parse_token(FILE *input, FILE *tmp, char *buffer) {
     long buffer2;
     char *endptr;
+    char *function_point[4] = "_";
 
     if (isdigit(buffer[0])) {
         buffer2 = strtol(buffer, &endptr, 10);
     }
     for(int i = 0; i < 44; i++) {
         if (buffer2 == bleh.tokens[i]) {
+            strcat(function_point, buffer);
+            token_function = function_point;
             printf("Token: %d\n", bleh.tokens[i]);
         }
     }
@@ -113,8 +116,8 @@ int parse(char *input_file_name) {
             parse_parameter(input, tmp);
         }
 
-        printf("%d\n", token_segment);
-        printf("%d\n", parameter_segment);
+        // printf("%d\n", token_segment);
+        // printf("%d\n", parameter_segment);
     }
 
     fclose(input);
