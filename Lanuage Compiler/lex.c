@@ -49,10 +49,10 @@ int lex(char *inputs[], int size) {
             fprintf(outfile, "\n");
             continue;
         } else if(buffer2[0] == '\n') {
-            fprintf(outfile, "\0");
+            fprintf(outfile, "%c", '\0');
         }
 
-        int found = 0;
+        int found = 0;"
         for (int i = 0; i < 44; i++) {
             if (bleh.names[i] == NULL) {
                 break;
