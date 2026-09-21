@@ -55,7 +55,7 @@ int parse(char *input_file_name) {
             fprintf(tmp, "%s", buffer);
         } 
     }
-    
+
     rewind(tmp);
     fprintf(tmp, "\n\n");
 
@@ -68,6 +68,10 @@ int parse(char *input_file_name) {
             fprintf(tmp, "%s", &buffer[1]);
         } 
     }
+
+    fclose(input);
+    fclose(output);
+    fclose(tmp);
 
     return 0;
 }
