@@ -48,7 +48,8 @@ void variable_assignment() {
 int parse_token(FILE *input, FILE *tmp, char *buffer) {
     long buffer2;
     char *endptr;
-    char *function_point[4] = "_";
+    char *function_point[4]; 
+    function_point[0] = "_";
 
     if (isdigit(buffer[0])) {
         buffer2 = strtol(buffer, &endptr, 10);
