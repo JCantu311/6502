@@ -51,21 +51,18 @@ int parse(char *input_file_name) {
     FILE *tmp = fopen("a.txt", "w+");
 
     while(fgets(buffer, sizeof(buffer), input) != NULL) {
-        if (buffer[0] != 't') {
-            fprintf(tmp, "%s", buffer);
+        if ((buffer[0] == 't') && isdigit(buffer[1])) {
+            fprintf(tmp, "%s\n", &buffer[1]);
         } 
     }
-
-    rewind(tmp);
+    
     fprintf(tmp, "\n\n");
 
     rewind(input);
 
-    rewind(tmp);
-
     while(fgets(buffer, sizeof(buffer), input) != NULL) {
-        if ((buffer[0] == 't') && isdigit(buffer[1])) {
-            fprintf(tmp, "%s\n", &buffer[1]);
+        if (buffer[0] != 't') {
+            fprintf(tmp, "%s", buffer);
         } 
     }
 
