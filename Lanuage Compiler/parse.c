@@ -92,11 +92,11 @@ int parse(char *input_file_name) {
 
         if (strcmp(buffer, "1000\n") == 0) {
             token_segment = 1;
-        } else if (token_segment == 1) {
-            parse_token(input, tmp);
         } else if (strcmp(buffer, "1001\n") == 0) {
             token_segment = 0;
             parameter_segment = 1;
+        } else if (token_segment == 1) {
+            parse_token(input, tmp);
         } else if (parameter_segment == 1) {
             parse_parameter(input, tmp);
         }
