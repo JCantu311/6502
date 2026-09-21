@@ -25,24 +25,34 @@ struct Tokens bleh = {
 
 char buffer[1024];
 
-char *token_function_name[4];
-
 void (*token_function)();
 
 void _201() {
-    // something
+    printf("if token");
 }
 
-void _() {
-    // something
+void _202() {
+    printf("while token");
 }
 
-void while_function() {
-    // something
+void _203() {
+    printf("do token");
 }
 
-void variable_assignment() {
-    // something
+void _301() {
+    printf("print token");
+}
+
+void _204() {
+    printf("else token");
+}
+
+void _101() {
+    printf("add token");
+}
+
+void _102() {
+    printf("subtract token");
 }
 
 int parse_token(FILE *input, FILE *tmp, char *buffer) {
@@ -66,8 +76,6 @@ int parse_token(FILE *input, FILE *tmp, char *buffer) {
 int parse_parameter(FILE *input, FILE *tmp) {
     printf("PARAMETER PARSED\n");
 }
-
-
 
 int parse(char *input_file_name) {
     FILE *input = fopen(input_file_name, "r");
