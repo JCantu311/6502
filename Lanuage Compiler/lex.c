@@ -52,7 +52,7 @@ int lex(char *inputs[], int size) {
             fprintf(outfile, "%c", '\0');
         }
 
-        int found = 0;"
+        int found = 0;
         for (int i = 0; i < 44; i++) {
             if (bleh.names[i] == NULL) {
                 break;
