@@ -110,16 +110,18 @@ FunctionMapping lookup_table[] = {
 int parse_token(FILE *input, FILE *tmp, char *buffer) {
     long buffer2;
     char *endptr;
-    char *function_point[4]; 
-    function_point[0] = "_";
+    char *function_point; 
+    function_point[0] = '_';
 
     if (isdigit(buffer[0])) {
         buffer2 = strtol(buffer, &endptr, 10);
     }
     for(int i = 0; i < 44; i++) {
         if (buffer2 == bleh.tokens[i]) {
-            strcat(function_point[0], buffer);
-            // token_function = function_point;
+            strcat(function_point, buffer);
+            for (int i = 0; i < 44; i++) {
+                lookup_table[i].func();
+            }
             printf("Token: %d\n", bleh.tokens[i]);
         }
     }
