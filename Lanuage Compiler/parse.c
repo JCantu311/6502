@@ -35,11 +35,11 @@ void variable_assignment() {
 }
 
 int parse_token(FILE *input, FILE *tmp) {
-    // something
+    printf("TOKEN PARSED\n");
 }
 
 int parse_parameter(FILE *input, FILE *tmp) {
-    // something
+    printf("PARAMETER PARSED\n");
 }
 
 struct Tokens {
