@@ -21,7 +21,7 @@ struct Tokens {
 
 int lex(char *inputs[], int size) {
     struct Tokens bleh = {
-        .names = {"if", "while", "do", "print", "else", "add", "sub", "mult", "div", "read", "output", "input", "addr", "EOF", ".include", "endif", "endwhile", ".start", "int", "char", "bool", "str", "store", "load", "reg", "mod", "floor", "not", "equal", "goto", "label", "==", "=", ".end", ".function", "return", "!=", "<", ">", "<=", ">=", ".irq", ".nmi", ".endinterrupt"},
+        .names = {"if", "while", "do", "print", "else", "add", "sub", "mult", "div", "read", ".vars", ".endvars", "addr", "EOF", ".include", "endif", "endwhile", ".start", "int", "char", "bool", "str", "store", "load", "reg", "mod", "floor", "not", "equal", "goto", "label", "==", "=", ".end", ".function", "return", "!=", "<", ">", "<=", ">=", ".irq", ".nmi", ".endinterrupt"},
         .tokens = {201, 202, 203, 301, 204, 101, 102, 111, 112, 205, 206, 207, 103, 0, 3, 208, 209, 2, 113, 114, 115, 116, 105, 104, 100, 117, 118, 012, 013, 014, 1, 210, 211, 119, 120, 121, 212, 213, 214, 215, 216, 4, 5, 6}
     };
     
