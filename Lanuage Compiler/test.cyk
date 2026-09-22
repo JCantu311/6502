@@ -1,0 +1,11 @@
+.start
+    add 1, 0
+    store int sum
+    print sum
+.end
+
+.irq
+.endinterrupt
+
+.nmi
+.endinterrupt
