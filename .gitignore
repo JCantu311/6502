@@ -9,3 +9,5 @@
 *.o
 *.txt
 **.txt
+*.obj
+**.obj
