@@ -1,5 +1,5 @@
 .vars
-    int sum
+    int sum 1
 .endvars
 
 .start
