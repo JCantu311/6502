@@ -27,6 +27,8 @@ char buffer[1024];
 
 typedef void (*FuncPtr)(void);
 
+FILE *output = NULL;
+
 typedef struct {
     const char *name;
     FuncPtr func;
@@ -286,7 +288,7 @@ int parse_parameter(FILE *input, FILE *tmp, char *buffer) {
 int parse(char *input_file_name) {
     FILE *input = fopen(input_file_name, "r");
 
-    FILE *output = fopen("a.obj", "w+");
+    output = fopen("a.obj", "w+");
 
     FILE *tmp = fopen("a.txt", "w+");
 
