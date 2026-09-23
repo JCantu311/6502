@@ -29,12 +29,18 @@ typedef void (*FuncPtr)(void);
 
 FILE *output = NULL;
 
+FILE *input = NULL;
+
+FILE *tmp = NULL;
+
 typedef struct {
     const char *name;
     FuncPtr func;
 } FunctionMapping;
 
 unsigned long parameter_location;
+
+unsigned long previous_location;
 
 void _201() {
     printf("if token\n");
@@ -78,6 +84,7 @@ void _205() {
 
 void _206() {
     fprintf(output, ".segment 'ZEROPAGE'\n");
+    previous_location = ftell()
 }
 
 void _207() {
@@ -288,11 +295,11 @@ int parse_parameter(FILE *input, FILE *tmp, char *buffer) {
 }
 
 int parse(char *input_file_name) {
-    FILE *input = fopen(input_file_name, "r");
+    input = fopen(input_file_name, "r");
 
     output = fopen("a.obj", "w+");
 
-    FILE *tmp = fopen("a.txt", "w+");
+    tmp = fopen("a.txt", "w+");
 
     fprintf(tmp, "1000\n");
 
