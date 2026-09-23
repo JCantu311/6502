@@ -75,11 +75,11 @@ void _205() {
 }
 
 void _206() {
-    printf("variable space token\n");
+    fprintf(output, ".segment ZEROPAGE\n");
 }
 
 void _207() {
-    fprintf(output, ".segment ZEROPAGE\n");
+    printf("end variable space token\n");
 }
 
 void _103() {
