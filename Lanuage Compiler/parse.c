@@ -84,7 +84,7 @@ void _205() {
 
 void _206() {
     fprintf(output, ".segment 'ZEROPAGE'\n");
-    previous_location = ftell()
+    previous_location = ftell(tmp);
 }
 
 void _207() {
