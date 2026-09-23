@@ -308,7 +308,7 @@ int parse(char *input_file_name) {
 
     parameter_location = ftell(tmp);
 
-    printf("%1.2f\n", parameter_location);
+    printf("%lu\n", parameter_location);
 
     while(fgets(buffer, sizeof(buffer), input) != NULL) {
         if (buffer[0] != 't' || (buffer[0] == 't') && !isdigit(buffer[1])) {
