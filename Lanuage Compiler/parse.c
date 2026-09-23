@@ -75,7 +75,7 @@ void _205() {
 }
 
 void _206() {
-    fprintf(output, ".segment ZEROPAGE\n");
+    fprintf(output, ".segment 'ZEROPAGE'\n");
 }
 
 void _207() {
