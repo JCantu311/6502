@@ -1,6 +1,10 @@
+.vars
+    int sum
+.endvars
+
 .start
     add 1, 0
-    store int sum
+    store sum
     print sum
 .end
 
