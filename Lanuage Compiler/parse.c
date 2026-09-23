@@ -34,7 +34,7 @@ typedef struct {
     FuncPtr func;
 } FunctionMapping;
 
-long parameter_location;
+unsigned long parameter_location;
 
 void _201() {
     printf("if token\n");
