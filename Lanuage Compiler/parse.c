@@ -33,12 +33,14 @@ FILE *input = NULL;
 
 FILE *tmp = NULL;
 
+int end_of_file = 0;
+
 typedef struct {
     const char *name;
     FuncPtr func;
 } FunctionMapping;
 
-unsigned long parameter_location;
+unsigned long parameter_index;
 
 unsigned long previous_location;
 
@@ -85,6 +87,7 @@ void _205() {
 void _206() {
     fprintf(output, ".segment 'ZEROPAGE'\n");
     previous_location = ftell(tmp);
+
 }
 
 void _207() {
@@ -97,6 +100,10 @@ void _103() {
 
 void EOF_func() {
     printf("end of file token\n");
+    fclose(tmp);
+    fclose(input);
+    fclose(output);
+    end_of_file = 1;
 }
 
 void _3() {
@@ -313,9 +320,9 @@ int parse(char *input_file_name) {
 
     fprintf(tmp, "1001\n");
 
-    parameter_location = ftell(tmp);
+    parameter_index = ftell(tmp);
 
-    printf("%lu\n", parameter_location);
+    printf("%lu\n", parameter_index);
 
     while(fgets(buffer, sizeof(buffer), input) != NULL) {
         if (buffer[0] != 't' || (buffer[0] == 't') && !isdigit(buffer[1])) {
@@ -329,6 +336,9 @@ int parse(char *input_file_name) {
     int parameter_segment = 0;
 
     while(fgets(buffer, sizeof(buffer), tmp) != NULL) {
+        if (end_of_file == 1) {
+            return 0;
+        }
         if (strcmp(buffer, "1000\n") == 0) {
             token_segment = 1;
         } else if (strcmp(buffer, "1001\n") == 0) {
@@ -343,9 +353,11 @@ int parse(char *input_file_name) {
         }
     }
 
-    fclose(input);
-    fclose(output);
-    fclose(tmp);
+    if (end_of_file == 0) {
+        close(input);
+        fclose(output);
+        fclose(tmp);
+    }
 
     return 0;
 }
