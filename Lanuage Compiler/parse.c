@@ -337,7 +337,7 @@ int parse(char *input_file_name) {
 
     while(fgets(buffer, sizeof(buffer), tmp) != NULL) {
         if (end_of_file == 1) {
-            return 0;
+            // return 0;
         }
         if (strcmp(buffer, "1000\n") == 0) {
             token_segment = 1;
