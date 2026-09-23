@@ -354,7 +354,7 @@ int parse(char *input_file_name) {
     }
 
     if (end_of_file == 0) {
-        close(input);
+        fclose(input);
         fclose(output);
         fclose(tmp);
     }
