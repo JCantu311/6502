@@ -1,15 +1,15 @@
 .vars
-    int sum 1
+    int sum 1       /* Declare "sum" variable with type "int" and allocate 1 byte of memory" */
 .endvars
 
 .start
-    add 1 1
-    store sum
-    print sum
+    add 1 2         /* Add 1 and 2 together */
+    store sum       /* Store the result of the previous operation to the sum variable */
+    print sum       /* Print the answer to the terminal */
 .end
 
-.irq
+.irq                /* IRQ Vector */
 .endinterrupt
 
-.nmi
+.nmi                /* NMI Vector */
 .endinterrupt

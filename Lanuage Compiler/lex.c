@@ -18,7 +18,6 @@
     #include <pthread.h>
 #endif
 
-
 struct Tokens {
     char *names[44];
     int tokens[44];
@@ -48,6 +47,9 @@ int lex(char *inputs[], int size) {
     }
 
     rewind(tmp_buffer);
+
+    int start_comment = 0;
+
     while (fgets(buffer2, sizeof(buffer2), tmp_buffer) != NULL) {
         buffer2[strcspn(buffer2, "\n")] = '\0';
 
@@ -59,19 +61,31 @@ int lex(char *inputs[], int size) {
         }
 
         int found = 0;
-        for (int i = 0; i < 44; i++) {
-            if (bleh.names[i] == NULL) {
-                break;
-            }
+        if (strcmp(buffer2, "/*") == 0) {
+            start_comment = 1;
+            found = 1;
+        } else if (strcmp(buffer2, "*/") == 0) {
+            start_comment = 0;
+            found = 1;
+        } else if (start_comment == 0) {
+            for (int i = 0; i < 44; i++) {
+                if (bleh.names[i] == NULL) {
+                    break;
+                }
 
-            if (strcmp(bleh.names[i], buffer2) == 0) {
-                fprintf(outfile, "t%d\n", bleh.tokens[i]);
-                found = 1;
-                break;
+                if (strcmp(bleh.names[i], buffer2) == 0) {
+                    if (start_comment == 0) {
+                        fprintf(outfile, "t%d\n", bleh.tokens[i]);
+                        found = 1;
+                        break;
+                    }
+                }
             }
+        } else {
+            found = 1;
         }
 
-        if (!found) {
+        if (!found && start_comment == 0) {
             fprintf(outfile, "%s\n", buffer2);
         }
     }
