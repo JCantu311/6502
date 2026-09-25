@@ -14,11 +14,9 @@
     // This is purely to help prevent errors from appearing in VS Code on non-POSIX systems (such as Windows).
     // There are currently no plans to implement any systems to allow this code to compile on non-POSIX systems.
 #else 
-    #include <time.h>
     #include <unistd.h>
     #include <pthread.h>
 #endif
-
 int emit() {
     return 0;
 }
