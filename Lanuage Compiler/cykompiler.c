@@ -42,6 +42,11 @@ void* spinner_thread_func(void* arg) {
     return NULL;
 }
 
+struct timespec {
+    time_t tv_sec;
+    long tv_nsec;
+};
+
 int main(int argc, char *argv[]) {
     srand(time(NULL));
 
@@ -214,6 +219,14 @@ no_output:
         rand_usleep(250000, 999999);
         return 1;
     }
+
+    struct timespec req;
+    struct timespec rem;
+
+    req.tv_sec = (rand() % (5 - 3 + 1)) + 3;
+    req.tv_nsec = (rand() % 500000000 - 250000000 + 1) + 250000000;
+
+    nanosleep(&req, &rem);
 
     char dir[4352];
 
