@@ -1,5 +1,6 @@
 .vars
     int sum 1       /* Declare "sum" variable with type "int" and allocate 1 byte of memory */
+    int time 2
 .endvars
 
 /* 
@@ -13,6 +14,12 @@
     add 1 2         /* Add 1 and 2 together */
     store sum       /* Store the result of the previous operation to the sum variable */
     print sum       /* Print the answer to the terminal */
+    load reg A 20   /* Load A register with number '20' */
+    store time + 1  /* Store in time + 1 */
+    load reg A 15   /* Load A register with number '15' */
+    store time      /* Store in time */
+    print time + 1  /* Print time + 1 */
+    print time      /* Print time */
 .end
 
 .irq                /* IRQ Vector */
