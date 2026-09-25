@@ -1,5 +1,5 @@
 .vars
-    int sum 1       /* Declare "sum" variable with type "int" and allocate 1 byte of memory" */
+    int sum 1       /* Declare "sum" variable with type "int" and allocate 1 byte of memory */
 .endvars
 
 .start
