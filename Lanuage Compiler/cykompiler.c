@@ -41,15 +41,19 @@ void* spinner_thread_func(void* arg) {
     return NULL;
 }
 
-struct timespec {
-    time_t tv_sec;
-    long tv_nsec;
-};
+// struct timespec {
+//     time_t tv_sec;
+//     long tv_nsec;
+// };
 
 int main(int argc, char *argv[]) {
     srand(time(NULL));
 
-    pthread_t spinner_thread;
+    #ifdef _WIN32
+        // Nothing
+    #else
+        pthread_t spinner_thread;
+    #endif
 
     if (argc > 7) {
         printf("Too many arguments, aborted. \n Exit code: 1\n");
@@ -213,11 +217,15 @@ no_output:
         inputs_fin[3] = ".bin";
     }
 
-    if(pthread_create(&spinner_thread, NULL, spinner_thread_func, NULL) != 0) {
-        printf("Error creating thread\n");
-        rand_usleep(250000, 999999);
-        return 1;
-    }
+    #ifdef _WIN32
+        // Nothing
+    #else
+        if(pthread_create(&spinner_thread, NULL, spinner_thread_func, NULL) != 0) {
+            printf("Error creating thread\n");
+            rand_usleep(250000, 999999);
+            return 1;
+        }
+    #endif
 
     struct timespec req;
     struct timespec rem;
@@ -259,7 +267,11 @@ no_output:
 
     keep_spinning = false;
 
-    pthread_join(spinner_thread, NULL);
+    #ifdef _WIN32
+        // Nothing
+    #else
+        pthread_join(spinner_thread, NULL);
+    #endif
 
     printf("Successfully Compiled\n");
     rand_usleep(250000, 999999);
