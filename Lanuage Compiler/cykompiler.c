@@ -265,5 +265,8 @@ no_output:
     printf("Successfully Compiled\n");
     rand_usleep(250000, 999999);
 
+    printf("Cleaning up...\n");
+    rand_usleep(250000, 999999);
+
     return 0;
 }
