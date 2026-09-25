@@ -7,12 +7,18 @@
 #include "input.h"
 #include "etc.h"
 #include <ctype.h>
+#include <stdbool.h>
+#include <time.h>
 
 #ifdef _WIN32
-    // something idk
-#else
+    // This is purely to help prevent errors from appearing in VS Code on non-POSIX systems (such as Windows).
+    // There are currently no plans to implement any systems to allow this code to compile on non-POSIX systems.
+#else 
+    #include <time.h>
     #include <unistd.h>
+    #include <pthread.h>
 #endif
+
 
 struct Tokens {
     int tokens[44];
@@ -45,43 +51,43 @@ unsigned long parameter_index;
 unsigned long previous_location;
 
 void _201() {
-    printf("if token\n");
+    // printf("if token\n");
 }
 
 void _202() {
-    printf("while token\n");
+    // printf("while token\n");
 }
 
 void _203() {
-    printf("do token\n");
+    // printf("do token\n");
 }
 
 void _301() {
-    printf("print token\n");
+    // printf("print token\n");
 }
 
 void _204() {
-    printf("else token\n");
+    // printf("else token\n");
 }
 
 void _101() {
-    printf("add token\n");
+    // printf("add token\n");
 }
 
 void _102() {
-    printf("subtract token\n");
+    // printf("subtract token\n");
 }
 
 void _111() {
-    printf("multiply token\n");
+    // printf("multiply token\n");
 }
 
 void _112() {
-    printf("divide token\n");
+    // printf("divide token\n");
 }
 
 void _205() {
-    printf("read token\n");
+    // printf("read token\n");
 }
 
 void _206() {
@@ -91,15 +97,15 @@ void _206() {
 }
 
 void _207() {
-    printf("end variable space token\n");
+    // printf("end variable space token\n");
 }
 
 void _103() {
-    printf("address var type token\n");
+    // printf("address var type token\n");
 }
 
 void EOF_func() {
-    printf("end of file token\n");
+    // printf("end of file token\n");
     fclose(tmp);
     fclose(input);
     fclose(output);
@@ -107,123 +113,123 @@ void EOF_func() {
 }
 
 void _3() {
-    printf("include token\n");
+    // printf("include token\n");
 }
 
 void _208() {
-    printf("endif token\n");
+    // printf("endif token\n");
 }
 
 void _209() {
-    printf("endwhile token\n");
+    // printf("endwhile token\n");
 }
 
 void _2() {
-    printf("start token\n");
+    // printf("start token\n");
 }
 
 void _113() {
-    printf("int var type token\n");
+    // printf("int var type token\n");
 }
 
 void _114() {
-    printf("char var type token\n");
+    // printf("char var type token\n");
 }
 
 void _115() {
-    printf("bool var type token\n");
+    // printf("bool var type token\n");
 }
 
 void _116() {
-    printf("string var type token\n");
+    // printf("string var type token\n");
 }
 
 void _105() {
-    printf("store token\n");
+    // printf("store token\n");
 }
 
 void _104() {
-    printf("load token\n");
+    // printf("load token\n");
 }
 
 void _100() {
-    printf("register token\n");
+    // printf("register token\n");
 }
 
 void _117() {
-    printf("modulus token\n");
+    // printf("modulus token\n");
 }
 
 void _118() {
-    printf("floor divide token\n");
+    // printf("floor divide token\n");
 }
 
 void _012() {
-    printf("not token\n");
+    // printf("not token\n");
 }
 
 void _013() {
-    printf("equals token\n");
+    // printf("equals token\n");
 }
 
 void _014() {
-    printf("goto token\n");
+    // printf("goto token\n");
 }
 
 void _1() {
-    printf("label token\n");
+    // printf("label token\n");
 }
 
 void _210() {
-    printf("== token");
+    // printf("== token");
 }
 
 void _211() {
-    printf("= token");
+    // printf("= token");
 }
 
 void _119() {
-    printf("end token\n");
+    // printf("end token\n");
 }
 
 void _120() {
-    printf("function token\n");
+    // printf("function token\n");
 }
 
 void _121() {
-    printf("return token");
+    // printf("return token");
 }
 
 void _212() {
-    printf("!= token\n");
+    // printf("!= token\n");
 }
 
 void _213() {
-    printf("< token\n");
+    // printf("< token\n");
 }
 
 void _214() {
-    printf("> token\n");
+    // printf("> token\n");
 }
 
 void _215() {
-    printf("<= token\n");
+    // printf("<= token\n");
 }
 
 void _216() {
-    printf(">= token\n");
+    // printf(">= token\n");
 }
 
 void _4() {
-    printf("irq token\n");
+    // printf("irq token\n");
 }
 
 void _5() {
-    printf("nmi token\n");
+    // printf("nmi token\n");
 }
 
 void _6() {
-    printf("end interrupt token\n");
+    // printf("end interrupt token\n");
 }
 
 FunctionMapping lookup_table[] = {
@@ -298,7 +304,7 @@ int parse_token(FILE *input, FILE *tmp, char *buffer) {
 }
 
 int parse_parameter(FILE *input, FILE *tmp, char *buffer) {
-    printf("%s", buffer);
+    // printf("%s", buffer);
 }
 
 int parse(char *input_file_name) {
@@ -322,7 +328,7 @@ int parse(char *input_file_name) {
 
     parameter_index = ftell(tmp);
 
-    printf("%lu\n", parameter_index);
+    // printf("%lu\n", parameter_index);
 
     while(fgets(buffer, sizeof(buffer), input) != NULL) {
         if (buffer[0] != 't' || (buffer[0] == 't') && !isdigit(buffer[1])) {

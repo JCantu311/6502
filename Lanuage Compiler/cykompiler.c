@@ -7,23 +7,49 @@
 #include "input.h"
 #include "etc.h"
 #include <ctype.h>
+#include <stdbool.h>
+#include <time.h>
 
 #ifdef _WIN32
-    #include <windows.h>
-    // int sleep() {
-
-    // }
+    // This is purely to help prevent errors from appearing in VS Code on non-POSIX systems (such as Windows).
+    // There are currently no plans to implement any systems to allow this code to compile on non-POSIX systems.
 #else 
     #include <time.h>
     #include <unistd.h>
-    // int sleep() {
-
-    // }
+    #include <pthread.h>
 #endif
 
+volatile bool keep_spinning = true;
+
+void* spinner_thread_func(void* arg) {
+    char spinner[] = {'|', '/', '-', '\\'};
+    int num_chars = sizeof(spinner) / sizeof(spinner[0]);
+    int i = 0;
+
+    printf("\e[?25l"); 
+
+    while (keep_spinning) {
+        printf("\rProcessing... %c", spinner[i % num_chars]);
+        fflush(stdout);
+        i++;
+        usleep(100000);
+    }
+
+    printf("\rProcessing... Done!\n");
+    printf("\e[?25h"); 
+    fflush(stdout);
+
+    return NULL;
+}
+
 int main(int argc, char *argv[]) {
+    srand(time(NULL));
+
+    pthread_t spinner_thread;
+
     if (argc > 7) {
         printf("Too many arguments, aborted. \n Exit code: 1\n");
+        rand_usleep(250000, 999999);
         return 1;
     } else if (argc < 2) {
     no_args:
@@ -68,6 +94,7 @@ int main(int argc, char *argv[]) {
         input_flag = (strcmp(inputs[0], "--input") == 0 || strcmp(inputs[0], "-i") == 0);
     } else if (inputs[0] != NULL && inputs[1] == NULL) {
         printf("No input file, aborting. \n Exit code: 1\n");
+        rand_usleep(250000, 999999);
         return 1;
     }
 
@@ -80,11 +107,13 @@ int main(int argc, char *argv[]) {
         int output_flag = (strcmp(inputs[2], "--output") == 0 || strcmp(inputs[2], "-o") == 0);
     } else if (inputs[2] != NULL && inputs[3] == NULL) {
         printf("No output name specified, assigning default value.\n");
+        rand_usleep(250000, 999999);
         int output_flag = (strcmp(inputs[2], "--output") == 0 || strcmp(inputs[2], "-o") == 0);
     }
 
     if (inputs[4] == NULL) {
         printf("No output type specified, assigning default value.\n");
+        rand_usleep(250000, 999999);
         inputs[7] = ".s";
     } else if ((inputs[4] != NULL) && (output_flag != -1)) {
         int type_flag = (strcmp(inputs[4], "--type") == 0 || strcmp(inputs[4], "-t") == 0);
@@ -96,6 +125,7 @@ int main(int argc, char *argv[]) {
     if ((input_flag == 1) && (inputs[1] == NULL)) {
     no_input:
         printf("No input file specified, aborting. \n Exit code: 1\n");
+        rand_usleep(250000, 999999);
         return 1;
     } else if ((input_flag != 1) && (help_flag == 1)) {
         helpscrn();
@@ -123,6 +153,7 @@ no_output:
     
     if (inputs[1] == NULL) {
         printf("No input file specified, aborting. \n Exit code: 2\n");
+        rand_usleep(250000, 999999);
         return 2;
     } else if (inputs[1] != NULL && inputs[3] == NULL) {
         inputs[6] = strremove(inputs[1], file_extension);
@@ -135,6 +166,7 @@ no_output:
         file_name = inputs[6];
     } else if (inputs[3] == NULL) {
         printf("No output specified, assigning default:\n %s\n", inputs[6]);
+        rand_usleep(250000, 999999);
     }
 
     if(type_flag == 1 && inputs[5] != NULL) {
@@ -144,6 +176,7 @@ no_output:
     output_type:
     if (inputs[5] == NULL) {
         printf("No output type specified, assigning default value: \n .s\n");
+        rand_usleep(250000, 999999);
         inputs[5] = "asm";
         goto output_type;
     } else if(strcmp(inputs[5], "bin")) {
@@ -176,6 +209,12 @@ no_output:
         inputs_fin[3] = ".bin";
     }
 
+    if(pthread_create(&spinner_thread, NULL, spinner_thread_func, NULL) != 0) {
+        printf("Error creating thread\n");
+        rand_usleep(250000, 999999);
+        return 1;
+    }
+
     char dir[4352];
 
     inputs_fin[4] = strcat(strcat(getcwd(dir, sizeof(dir)), "/"), inputs_fin[0]); 
@@ -183,25 +222,35 @@ no_output:
     int lex_success = lex(inputs_fin, 5);
 
     if (lex_success == 0) {
-        printf("Lexer status: successful.\n");
+        // printf("Lexer status: successful.\n");
     } else {
         printf("Lexer status: failure.\n Exit code: %d\n", lex_success);
+        rand_usleep(250000, 999999);
         return lex_success;
     }
 
     int parse_success = parse("a.o");
     if (parse_success == 0) {
-        printf("Parser status: successful.\n");
+        // printf("Parser status: successful.\n");
     } else {
         printf("Parser status: failure.\n Exit code: %d\n", parse_success);
+        rand_usleep(250000, 999999);
     }
 
     int emit_success = emit();
     if (emit_success == 0) {
-        printf("Emit status: successful.\n");
+        // printf("Emit status: successful.\n");
     } else {
         printf("Emit status: failure. \n Exit code: %d\n", emit_success);
+        rand_usleep(250000, 999999);
     }
+
+    keep_spinning = false;
+
+    pthread_join(spinner_thread, NULL);
+
+    printf("Successfully Compiled\n");
+    rand_usleep(250000, 999999);
 
     return 0;
 }

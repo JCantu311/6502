@@ -7,7 +7,17 @@
 #include "input.h"
 #include "etc.h"
 #include <ctype.h>
+#include <stdbool.h>
+#include <time.h>
 
+#ifdef _WIN32
+    // This is purely to help prevent errors from appearing in VS Code on non-POSIX systems (such as Windows).
+    // There are currently no plans to implement any systems to allow this code to compile on non-POSIX systems.
+#else 
+    #include <time.h>
+    #include <unistd.h>
+    #include <pthread.h>
+#endif
 
 char *strremove(char *str, const char *sub) {
     char *buffer = malloc(strlen(str) + 1);
@@ -69,4 +79,12 @@ int is_blank(const char *line) {
         line++;
     }
     return 1;
+}
+
+void rand_usleep(int min, int max) {
+    int random_delay = min + rand() % (max - min + 1);
+    fflush(stdout);
+
+    usleep(random_delay);
+    random_delay = 0;
 }

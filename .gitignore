@@ -11,3 +11,5 @@
 **.txt
 *.obj
 **.obj
+*/*.txt
+*/**.txt

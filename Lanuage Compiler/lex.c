@@ -7,12 +7,18 @@
 #include "input.h"
 #include "etc.h"
 #include <ctype.h>
+#include <stdbool.h>
+#include <time.h>
 
 #ifdef _WIN32
-    // something idk
-#else
+    // This is purely to help prevent errors from appearing in VS Code on non-POSIX systems (such as Windows).
+    // There are currently no plans to implement any systems to allow this code to compile on non-POSIX systems.
+#else 
+    #include <time.h>
     #include <unistd.h>
+    #include <pthread.h>
 #endif
+
 
 struct Tokens {
     char *names[44];
@@ -33,6 +39,7 @@ int lex(char *inputs[], int size) {
 
     if (input_file == NULL) {
         printf("File access error. Aborting \n");
+        rand_usleep(250000, 999999);
         return 2;
     }
 

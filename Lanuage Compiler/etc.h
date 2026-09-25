@@ -13,4 +13,6 @@ void space_to_newline(char *str);
 
 int is_blank(const char *line);
 
+void rand_usleep(int min, int max);
+
 #endif
