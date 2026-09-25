@@ -14,4 +14,4 @@ Further updates in the future could possibly result in a for-production product.
 
 The Computer Code subdirectory contains the source code for the version of MS Basic designed for the computer, the operating system/kernel, and wozmon as a system monitor.
 
-I would not recommend using any of my source code as its very sloppy and written with little competence. 
+I would not recommend using any of my source code as its very sloppy and written with little competence, however, if you do, you know where to find the terms of the license.
