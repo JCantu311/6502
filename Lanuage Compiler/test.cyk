@@ -2,6 +2,13 @@
     int sum 1       /* Declare "sum" variable with type "int" and allocate 1 byte of memory */
 .endvars
 
+/* 
+    Testing 
+    Multi
+    Line
+    Comments
+*/
+
 .start
     add 1 2         /* Add 1 and 2 together */
     store sum       /* Store the result of the previous operation to the sum variable */
