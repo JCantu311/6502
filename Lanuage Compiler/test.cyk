@@ -1,5 +1,5 @@
 .vars
-    int sum 1           /* Declare "sum" variable with type "int" and allocate 1 byte of memory */
+    bleh sum 1           /* Declare "sum" variable with type "int" and allocate 1 byte of memory */
     int time 2
 .endvars
 

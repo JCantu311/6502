@@ -31,7 +31,7 @@ char buffer[1024];
 
 char buffer2[1024];
 
-typedef void (*FuncPtr)(void);
+typedef int (*FuncPtr)(void);
 
 FILE *output = NULL;
 
@@ -40,6 +40,8 @@ FILE *input = NULL;
 FILE *tmp = NULL;
 
 int line_number = 0;
+
+int exit_code;
 
 int end_of_file = 0;
 
@@ -52,50 +54,50 @@ unsigned long parameter_index;
 
 unsigned long previous_location;
 
-void _201();
-void _202();
-void _203();
-void _301();
-void _204();
-void _101();
-void _102();
-void _111();
-void _112();
-void _205();
-void _206();
-void _207();
-void _103();
-void EOF_func();
-void _3();
-void _208();
-void _209();
-void _2();
-void _113();
-void _114();
-void _115();
-void _116();
-void _105();
-void _104();
-void _100();
-void _117();
-void _118();
-void _012();
-void _013();
-void _014();
-void _1();
-void _210();
-void _211();
-void _119();
-void _120();
-void _121();
-void _212();
-void _213();
-void _214();
-void _215();
-void _216();
-void _4();
-void _5();
-void _6();
+int _201();
+int _202();
+int _203();
+int _301();
+int _204();
+int _101();
+int _102();
+int _111();
+int _112();
+int _205();
+int _206();
+int _207();
+int _103();
+int EOF_func();
+int _3();
+int _208();
+int _209();
+int _2();
+int _113();
+int _114();
+int _115();
+int _116();
+int _105();
+int _104();
+int _100();
+int _117();
+int _118();
+int _012();
+int _013();
+int _014();
+int _1();
+int _210();
+int _211();
+int _119();
+int _120();
+int _121();
+int _212();
+int _213();
+int _214();
+int _215();
+int _216();
+int _4();
+int _5();
+int _6();
 
 FunctionMapping lookup_table[] = {
     {"201", _201},
@@ -144,54 +146,47 @@ FunctionMapping lookup_table[] = {
     {"6", _6},
 };
 
-void _201() {
+int _201() {
     // printf("if token\n");
 }
 
-void _202() {
+int _202() {
     // printf("while token\n");
 }
 
-void _203() {
+int _203() {
     // printf("do token\n");
 }
 
-void _301() {
+int _301() {
     // printf("print token\n");
 }
 
-void _204() {
+int _204() {
     // printf("else token\n");
 }
 
-void _101() {
+int _101() {
     // printf("add token\n");
 }
 
-void _102() {
+int _102() {
     // printf("subtract token\n");
 }
 
-void _111() {
+int _111() {
     // printf("multiply token\n");
 }
 
-void _112() {
+int _112() {
     // printf("divide token\n");
 }
 
-void _205() {
+int _205() {
     // printf("read token\n");
 }
 
-void _206() {
-    FunctionMapping bleh[] = {
-        {"103", _103},
-        {"113", _113},
-        {"114", _114},
-        {"115", _115},
-        {"116", _116},
-    };
+int _206() {
 
     strcpy(buffer2, buffer);
     fgets(buffer, sizeof(buffer), tmp);
@@ -222,15 +217,15 @@ void _206() {
 
 }
 
-void _207() {
+int _207() {
     // printf("end variable space token\n");
 }
 
-void _103() {
+int _103() {
     // printf("address var type token\n");
 }
 
-void EOF_func() {
+int EOF_func() {
     // printf("end of file token\n");
     fclose(tmp);
     fclose(input);
@@ -238,123 +233,123 @@ void EOF_func() {
     end_of_file = 1;
 }
 
-void _3() {
+int _3() {
     // printf("include token\n");
 }
 
-void _208() {
+int _208() {
     // printf("endif token\n");
 }
 
-void _209() {
+int _209() {
     // printf("endwhile token\n");
 }
 
-void _2() {
+int _2() {
     // printf("start token\n");
 }
 
-void _113() {
+int _113() {
     // printf("int var type token\n");
 }
 
-void _114() {
+int _114() {
     // printf("char var type token\n");
 }
 
-void _115() {
+int _115() {
     // printf("bool var type token\n");
 }
 
-void _116() {
+int _116() {
     // printf("string var type token\n");
 }
 
-void _105() {
+int _105() {
     // printf("store token\n");
 }
 
-void _104() {
+int _104() {
     // printf("load token\n");
 }
 
-void _100() {
+int _100() {
     // printf("register token\n");
 }
 
-void _117() {
+int _117() {
     // printf("modulus token\n");
 }
 
-void _118() {
+int _118() {
     // printf("floor divide token\n");
 }
 
-void _012() {
+int _012() {
     // printf("not token\n");
 }
 
-void _013() {
+int _013() {
     // printf("equals token\n");
 }
 
-void _014() {
+int _014() {
     // printf("goto token\n");
 }
 
-void _1() {
+int _1() {
     // printf("label token\n");
 }
 
-void _210() {
+int _210() {
     // printf("== token");
 }
 
-void _211() {
+int _211() {
     // printf("= token");
 }
 
-void _119() {
+int _119() {
     // printf("end token\n");
 }
 
-void _120() {
+int _120() {
     // printf("function token\n");
 }
 
-void _121() {
+int _121() {
     // printf("return token");
 }
 
-void _212() {
+int _212() {
     // printf("!= token\n");
 }
 
-void _213() {
+int _213() {
     // printf("< token\n");
 }
 
-void _214() {
+int _214() {
     // printf("> token\n");
 }
 
-void _215() {
+int _215() {
     // printf("<= token\n");
 }
 
-void _216() {
+int _216() {
     // printf(">= token\n");
 }
 
-void _4() {
+int _4() {
     // printf("irq token\n");
 }
 
-void _5() {
+int _5() {
     // printf("nmi token\n");
 }
 
-void _6() {
+int _6() {
     // printf("end interrupt token\n");
 }
 
@@ -362,13 +357,18 @@ int parse_token(FILE *input, FILE *tmp, char *buffer) {
     long buffer2;
     char *endptr;
 
+    int returned;
+
     if (isdigit(buffer[0])) {
         buffer2 = strtol(buffer, &endptr, 10);
         for(int i = 0; i < 44; i++) {
             if (buffer2 == bleh.tokens[i]) {
                 for (int j = 0; j < 44; j++) {
                     if (buffer2 == strtol(lookup_table[j].name, NULL, 10)) {
-                        lookup_table[j].func();
+                        returned = lookup_table[j].func();
+                        if (returned != 0) {
+                            return returned;
+                        }
                         break;
                     }
                 }
