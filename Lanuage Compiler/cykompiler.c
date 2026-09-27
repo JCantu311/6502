@@ -275,7 +275,7 @@ no_output:
     #ifdef _WIN32
         // Nothing
     #else
-        pthread_join(spinner_thread, NULL);
+        // pthread_join(spinner_thread, NULL);
     #endif
 
     printf("Compilation %s\n", success_status);
