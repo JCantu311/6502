@@ -215,6 +215,9 @@ int _206() {
 
     previous_location = ftell(tmp);
 
+
+
+    return 0;
 }
 
 int _207() {
