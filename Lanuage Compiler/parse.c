@@ -196,6 +196,9 @@ int _206() {
     for (int i = 0; i < 5; i++) {
         if(strcmp(buffer, types[i]) == 0) {
             strcpy(token_buffer, types[i]);
+            flockfile(stdout);
+            printf("bleh\n");
+            funlockfile(stdout);
             this_found = 1;
         }
     }
