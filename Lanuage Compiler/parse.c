@@ -191,7 +191,7 @@ int _206() {
     fgets(buffer, sizeof(buffer), tmp);
     char token_buffer[16];
 
-    char *types[5] = {"103", "113", "114", "115", "116"};
+    char *types[5] = {"103\n", "113\n", "114\n", "115\n", "116\n"};
     int this_found = 0;
     for (int i = 0; i < 5; i++) {
         if(strcmp(buffer, types[i]) == 0) {
