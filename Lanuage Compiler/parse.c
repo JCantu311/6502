@@ -191,7 +191,7 @@ int _206() {
     fgets(buffer, sizeof(buffer), tmp);
     char token_buffer[16];
 
-    char *types[5] = {"103\n", "113\n", "114\n", "115\n", "116\n"};
+    char *types[5] = {"103", "113", "114", "115", "116"};
     int this_found = 0;
     for (int i = 0; i < 5; i++) {
         if(strcmp(buffer, types[i]) == 0) {
@@ -200,7 +200,7 @@ int _206() {
         }
     }
 
-    if (this_found = 1) {
+    if (this_found == 1) {
         for (int j = 0; j < 44; j++) {
             if (strtol(token_buffer, NULL, 10) == strtol(lookup_table[j].name, NULL, 10)) {
                 lookup_table[j].func();
