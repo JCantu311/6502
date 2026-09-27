@@ -51,6 +51,51 @@ unsigned long parameter_index;
 
 unsigned long previous_location;
 
+void _201();
+void _202();
+void _203();
+void _301();
+void _204();
+void _101();
+void _102();
+void _111();
+void _112();
+void _205();
+void _206();
+void _207();
+void _103();
+void EOF_func();
+void _3();
+void _208();
+void _209();
+void _2();
+void _113();
+void _114();
+void _115();
+void _116();
+void _105();
+void _104();
+void _100();
+void _117();
+void _118();
+void _012();
+void _013();
+void _014();
+void _1();
+void _210();
+void _211();
+void _119();
+void _120();
+void _121();
+void _212();
+void _213();
+void _214();
+void _215();
+void _216();
+void _4();
+void _5();
+void _6();
+
 void _201() {
     // printf("if token\n");
 }
