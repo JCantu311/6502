@@ -94,17 +94,24 @@ void _205() {
 void _206() {
     strcpy(buffer2, buffer);
     fgets(buffer, sizeof(buffer), tmp);
+    char *token_buffer[16];
 
     char *types[5] = {"103", "113", "114", "115", "116"};
     int this_found = 0;
     for (int i = 0; i < 5; i++) {
         if(strcmp(buffer, types[i]) == 0) {
+            strcpy(token_buffer, types[i]);
             this_found = 1;
         }
     }
 
     if (this_found = 1) {
-        
+        for (int j = 0; j < 44; j++) {
+            if (strtol(token_buffer, NULL, 10) == strtol(lookup_table[j].name, NULL, 10)) {
+                lookup_table[j].func();
+                break;
+            }
+        }
     }
 
     previous_location = ftell(tmp);
