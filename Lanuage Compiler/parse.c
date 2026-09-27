@@ -210,6 +210,7 @@ int _206() {
         }
     } else {
         printf("Syntax Error in .vars: unknown type \n Exit code %d\n", 3);
+        fflush(stdout);
         return 3;
     }
 
