@@ -147,7 +147,7 @@ void _206() {
 
     strcpy(buffer2, buffer);
     fgets(buffer, sizeof(buffer), tmp);
-    char *token_buffer[16];
+    char token_buffer[16];
 
     char *types[5] = {"103", "113", "114", "115", "116"};
     int this_found = 0;
