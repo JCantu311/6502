@@ -148,42 +148,52 @@ FunctionMapping lookup_table[] = {
 
 int _201() {
     // printf("if token\n");
+    return 0;
 }
 
 int _202() {
     // printf("while token\n");
+    return 0;
 }
 
 int _203() {
     // printf("do token\n");
+    return 0;
 }
 
 int _301() {
     // printf("print token\n");
+    return 0;
 }
 
 int _204() {
     // printf("else token\n");
+    return 0;
 }
 
 int _101() {
     // printf("add token\n");
+    return 0;
 }
 
 int _102() {
     // printf("subtract token\n");
+    return 0;
 }
 
 int _111() {
     // printf("multiply token\n");
+    return 0;
 }
 
 int _112() {
     // printf("divide token\n");
+    return 0;
 }
 
 int _205() {
     // printf("read token\n");
+    return 0;
 }
 
 int _206() {
@@ -196,9 +206,6 @@ int _206() {
     for (int i = 0; i < 5; i++) {
         if(strcmp(buffer, types[i]) == 0) {
             strcpy(token_buffer, types[i]);
-            flockfile(stdout);
-            printf("bleh\n");
-            funlockfile(stdout);
             this_found = 1;
         }
     }
@@ -225,10 +232,12 @@ int _206() {
 
 int _207() {
     // printf("end variable space token\n");
+    return 0;
 }
 
 int _103() {
     // printf("address var type token\n");
+    return 0;
 }
 
 int EOF_func() {
@@ -237,126 +246,157 @@ int EOF_func() {
     fclose(input);
     fclose(output);
     end_of_file = 1;
+    return 0;
 }
 
 int _3() {
     // printf("include token\n");
+    return 0;
 }
 
 int _208() {
     // printf("endif token\n");
+    return 0;
 }
 
 int _209() {
     // printf("endwhile token\n");
+    return 0;
 }
 
 int _2() {
     // printf("start token\n");
+    return 0;
 }
 
 int _113() {
     // printf("int var type token\n");
+    return 0;
 }
 
 int _114() {
     // printf("char var type token\n");
+    return 0;
 }
 
 int _115() {
     // printf("bool var type token\n");
+    return 0;
 }
 
 int _116() {
     // printf("string var type token\n");
+    return 0;
 }
 
 int _105() {
     // printf("store token\n");
+    return 0;
 }
 
 int _104() {
     // printf("load token\n");
+    return 0;
 }
 
 int _100() {
     // printf("register token\n");
+    return 0;
 }
 
 int _117() {
     // printf("modulus token\n");
+    return 0;
 }
 
 int _118() {
     // printf("floor divide token\n");
+    return 0;
 }
 
 int _012() {
     // printf("not token\n");
+    return 0;
 }
 
 int _013() {
     // printf("equals token\n");
+    return 0;
 }
 
 int _014() {
     // printf("goto token\n");
+    return 0;
 }
 
 int _1() {
     // printf("label token\n");
+    return 0;
 }
 
 int _210() {
     // printf("== token");
+    return 0;
 }
 
 int _211() {
     // printf("= token");
+    return 0;
 }
 
 int _119() {
     // printf("end token\n");
+    return 0;
 }
 
 int _120() {
     // printf("function token\n");
+    return 0;
 }
 
 int _121() {
     // printf("return token");
+    return 0;
 }
 
 int _212() {
     // printf("!= token\n");
+    return 0;
 }
 
 int _213() {
     // printf("< token\n");
+    return 0;
 }
 
 int _214() {
     // printf("> token\n");
+    return 0;
 }
 
 int _215() {
     // printf("<= token\n");
+    return 0;
 }
 
 int _216() {
     // printf(">= token\n");
+    return 0;
 }
 
 int _4() {
     // printf("irq token\n");
+    return 0;
 }
 
 int _5() {
     // printf("nmi token\n");
+    return 0;
 }
 
 int _6() {
     // printf("end interrupt token\n");
+    return 0;
 }
 
 int parse_token(FILE *input, FILE *tmp, char *buffer) {
