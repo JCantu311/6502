@@ -241,27 +241,32 @@ no_output:
 
     int lex_success = lex(inputs_fin, 5);
 
+    char success_status[32];
+
     if (lex_success == 0) {
-        // printf("Lexer status: successful.\n");
+        strncpy(success_status, "succeeded", sizeof(success_status) - 1);
     } else {
         printf("Lexer status: failure.\n Exit code: %d\n", lex_success);
+        strncpy(success_status, "failed", sizeof(success_status) - 1);
         rand_usleep(250000, 999999);
         return lex_success;
     }
 
     int parse_success = parse("a.o");
     if (parse_success == 0) {
-        // printf("Parser status: successful.\n");
+        strncpy(success_status, "succeeded", sizeof(success_status) - 1);
     } else {
         printf("Parser status: failure.\n Exit code: %d\n", parse_success);
+        strncpy(success_status, "failed", sizeof(success_status) - 1);
         rand_usleep(250000, 999999);
     }
 
     int emit_success = emit();
     if (emit_success == 0) {
-        // printf("Emit status: successful.\n");
+        strncpy(success_status, "succeeded", sizeof(success_status) - 1);
     } else {
         printf("Emit status: failure. \n Exit code: %d\n", emit_success);
+        strncpy(success_status, "failed", sizeof(success_status) - 1);
         rand_usleep(250000, 999999);
     }
 
@@ -273,7 +278,7 @@ no_output:
         pthread_join(spinner_thread, NULL);
     #endif
 
-    printf("Successfully Compiled\n");
+    printf("Compilation %s\n", success_status);
     rand_usleep(250000, 999999);
 
     printf("Cleaning up...\n");
