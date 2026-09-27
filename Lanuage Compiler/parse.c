@@ -218,8 +218,10 @@ int _206() {
             }
         }
     } else {
+        flockfile(stdout);
         printf("Syntax Error in .vars: unknown type \n Exit code %d\n", 3);
         fflush(stdout);
+        funlockfile(stdout);
         return 3;
     }
 
