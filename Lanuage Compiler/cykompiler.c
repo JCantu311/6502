@@ -220,11 +220,11 @@ no_output:
     #ifdef _WIN32
         // Nothing
     #else
-        if(pthread_create(&spinner_thread, NULL, spinner_thread_func, NULL) != 0) {
-            printf("Error creating thread\n");
-            rand_usleep(250000, 999999);
-            return 1;
-        }
+        // if(pthread_create(&spinner_thread, NULL, spinner_thread_func, NULL) != 0) {
+        //     printf("Error creating thread\n");
+        //     rand_usleep(250000, 999999);
+        //     return 1;
+        // }
     #endif
 
     struct timespec req;
@@ -275,7 +275,7 @@ no_output:
     #ifdef _WIN32
         // Nothing
     #else
-        // pthread_join(spinner_thread, NULL);
+        pthread_join(spinner_thread, NULL);
     #endif
 
     printf("Compilation %s\n", success_status);
