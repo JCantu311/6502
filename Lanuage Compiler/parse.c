@@ -18,7 +18,6 @@
     #include <pthread.h>
 #endif
 
-
 struct Tokens {
     int tokens[44];
 };
@@ -39,6 +38,8 @@ FILE *output = NULL;
 FILE *input = NULL;
 
 FILE *tmp = NULL;
+
+int line_number = 0;
 
 int end_of_file = 0;
 
@@ -212,6 +213,9 @@ void _206() {
                 break;
             }
         }
+    } else {
+        printf("Syntax Error in .vars: unknown type \n Exit code %d\n", 3);
+        return 3;
     }
 
     previous_location = ftell(tmp);
