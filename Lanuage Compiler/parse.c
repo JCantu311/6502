@@ -25,10 +25,12 @@ struct Tokens {
 
 struct Tokens bleh = {
     //         "if", "while", "do", "print", "else", "add", "sub", "mult", "div", "read", ".vars", ".endvars", "addr", "EOF", ".include", "endif", "endwhile", ".start", "int", "char", "bool", "str", "store", "load", "reg", "mod", "floor", "not", "equal", "goto", "label", "==", "=", ".end", ".function", "return", "!=", "<", ">", "<=", ">=", ".irq", ".nmi", ".endinterrupt"
-    .tokens = {201,   202,     203,  301,     204,    101,   102,   111,    112,   205,    206,      207,     103,    0,     3,         208,     209,         2,       113,   114,    115,    116,   105,     104,    100,   117,   118,     012,   013,     014,    1,       210,  211,  119,    120,        121,      212,  213, 214, 215,  216,   4,      5,      6}
+    .tokens = {201,   202,     203,  301,     204,    101,   102,   111,    112,   205,    206,      207,       103,    0,     3,          208,     209,         2,       113,   114,    115,    116,   105,     104,    100,   117,   118,     012,   013,     014,    1,       210,  211,  119,    120,        121,      212,  213, 214, 215,  216,   4,      5,      6}
 };
 
 char buffer[1024];
+
+char buffer2[1024];
 
 typedef void (*FuncPtr)(void);
 
@@ -90,7 +92,21 @@ void _205() {
 }
 
 void _206() {
-    fprintf(output, ".segment 'ZEROPAGE'\n");
+    strcpy(buffer2, buffer);
+    fgets(buffer, sizeof(buffer), tmp);
+
+    char *types[5] = {"103", "113", "114", "115", "116"};
+    int this_found = 0;
+    for (int i = 0; i < 5; i++) {
+        if(strcmp(buffer, types[i]) == 0) {
+            this_found = 1;
+        }
+    }
+
+    if (this_found = 1) {
+        
+    }
+
     previous_location = ftell(tmp);
 
 }
