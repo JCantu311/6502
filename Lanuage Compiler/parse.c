@@ -209,6 +209,8 @@ int _206() {
         if (strcmp(buffer3, "t207\n") == 0) {
             var_space = false;
             break;
+        } else if (strcmp(buffer3, "t206\n") == 0) {
+            fgets(buffer3, sizeof(buffer3), input);
         }
 
         char *unparsed_types[5] = {"t103\n", "t113\n", "t114\n", "t115\n", "t115\n"};
