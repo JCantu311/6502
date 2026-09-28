@@ -1,5 +1,6 @@
 if [ ! -d ./bin ]; then
     mkdir ./bin
+    ./make.sh
 else 
     if command -v gcc >/dev/null 2>&1; then
         gcc -static cykompiler.c lex.c parse.c emit.c etc.c input.c -o ./bin/cykompiler
