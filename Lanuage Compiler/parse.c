@@ -233,7 +233,7 @@ int _206() {
                 } else {
                     flockfile(stdout);
                     printf("No size allocated error, aborting \n Exit code: 4\n");
-                    printf(TEXT_YELLOW "   Note: " TEXT_RESET "variable syntax is " TEXT_BLUE "[type] " TEXT_GREEN "[name] " TEXT_YELLOW "[allocated bytes]\n");
+                    printf(TEXT_YELLOW "   Note: " TEXT_RESET "variable syntax is " TEXT_BLUE "[type] " TEXT_GREEN "[name] " TEXT_YELLOW "[allocated bytes]\n" TEXT_RESET);
                     funlockfile(stdout);
                     return 4;
                 }
