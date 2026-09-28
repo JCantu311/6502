@@ -210,7 +210,7 @@ int _206() {
             var_space = false;
             break;
         } else if (strcmp(buffer3, "t206\n") == 0) {
-            fgets(buffer3, sizeof(buffer3), input);
+            // fgets(buffer3, sizeof(buffer3), input);
         }
 
         char *unparsed_types[5] = {"t103\n", "t113\n", "t114\n", "t115\n", "t115\n"};
@@ -229,7 +229,7 @@ int _206() {
         } else {
             flockfile(stdout);
             printf("Unknown type error in .vars, aborting \n Exit code: 3\n");
-            printf("%s\n", buffer3);
+            printf("%s", buffer3);
             fflush(stdout);
             funlockfile(stdout);
             return 3;
