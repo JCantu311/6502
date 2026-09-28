@@ -227,6 +227,7 @@ int _206() {
         } else {
             flockfile(stdout);
             printf("Unknown type error in .vars, aborting \n Exit code: 3\n");
+            printf("%s\n", buffer3);
             fflush(stdout);
             funlockfile(stdout);
             return 3;
