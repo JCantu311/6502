@@ -212,6 +212,7 @@ int _206() {
     rewind(input);
 
     while(fgets(buffer3, sizeof(buffer3), input) != NULL && var_space == true) {
+        fprintf(output, "%s", strremove(buffer3, "t"));
         if (strcmp(buffer3, "t207\n") == 0) {
             var_space = false;
             break;
@@ -227,8 +228,10 @@ int _206() {
             if(strcmp(buffer3, unparsed_types[i]) == 0) {
                 dif_found = 1;
                 fgets(buffer3, sizeof(buffer3), input);
+                fprintf(output, buffer3);
                 fgets(buffer3, sizeof(buffer3), input);
                 if(isdigit(buffer3[0])) {
+                    fprintf(output, buffer3);
                     continue;
                 } else {
                     flockfile(stdout);
@@ -280,8 +283,6 @@ int _206() {
     }
 
     previous_location = ftell(tmp);
-
-
 
     return 0;
 }
