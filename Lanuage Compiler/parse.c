@@ -41,6 +41,8 @@ FILE *input = NULL;
 
 FILE *tmp = NULL;
 
+bool var_space = true;
+
 int line_number = 0;
 
 int exit_code;
@@ -203,8 +205,6 @@ int _206() {
     fgets(buffer, sizeof(buffer), tmp);
     rewind(input);
 
-    bool var_space = true;
-
     while(fgets(buffer3, sizeof(buffer3), input) != NULL && var_space == true) {
         if (strcmp(buffer3, "t207\n") == 0) {
             var_space = false;
@@ -220,7 +220,16 @@ int _206() {
         for(int i = 0; i < 5; i++) {
             if(strcmp(buffer3, unparsed_types[i]) == 0) {
                 dif_found = 1;
-                break;
+                fgets(buffer3, sizeof(buffer3), input);
+                fgets(buffer3, sizeof(buffer3), input);
+                if(isdigit(buffer3[0])) {
+                    continue;
+                } else {
+                    flockfile(stdout);
+                    printf("No size allocated error, aborting \n Exit code: 4\n");
+                    funlockfile(stdout);
+                    return 4;
+                }
             }
         }
 
