@@ -18,6 +18,12 @@
     #include <pthread.h>
 #endif
 
+#define TEXT_YELLOW "\x1b[33m"
+#define TEXT_RESET "\x1b[0m"
+#define TEXT_GREEN "\x1b[32m"
+#define TEXT_RED "\x1b[31m"
+#define TEXT_BLUE "\x1b[34m"
+
 struct Tokens {
     int tokens[44];
 };
@@ -227,6 +233,7 @@ int _206() {
                 } else {
                     flockfile(stdout);
                     printf("No size allocated error, aborting \n Exit code: 4\n");
+                    printf(TEXT_YELLOW "   Note: " TEXT_RESET "variable syntax is " TEXT_BLUE "[type] " TEXT_GREEN "[name] " TEXT_YELLOW "[allocated bytes]\n");
                     funlockfile(stdout);
                     return 4;
                 }
