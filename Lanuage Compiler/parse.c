@@ -246,7 +246,7 @@ int _206() {
             flockfile(stdout);
             printf("Unknown type error in .vars, aborting \n Exit code: 3\n");
             printf("%s", buffer3);
-            printf(TEXT_YELLOW "   Note: " TEXT_RESET "variable syntax is " TEXT_BLUE "[type] " TEXT_GREEN "[name] " TEXT_YELLOW "[allocated bytes]\n");
+            printf(TEXT_YELLOW "   Note: " TEXT_RESET "variable syntax is " TEXT_BLUE "[type] " TEXT_GREEN "[name] " TEXT_YELLOW "[allocated bytes]\n" TEXT_RESET);
             fflush(stdout);
             funlockfile(stdout);
             return 3;
