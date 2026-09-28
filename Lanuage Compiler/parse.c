@@ -225,7 +225,7 @@ int _206() {
         }
 
         if (dif_found == 1) {
-            continue;
+            break;
         } else {
             flockfile(stdout);
             printf("Unknown type error in .vars, aborting \n Exit code: 3\n");
