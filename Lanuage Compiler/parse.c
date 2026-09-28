@@ -203,7 +203,7 @@ int _206() {
     fgets(buffer, sizeof(buffer), tmp);
     rewind(input);
 
-    bool var_space;
+    bool var_space = true;
 
     while(fgets(buffer3, sizeof(buffer3), input) != NULL && var_space == true) {
         if (strcmp(buffer3, "t207\n") == 0) {
