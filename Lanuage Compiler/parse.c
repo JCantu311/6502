@@ -31,6 +31,8 @@ char buffer[1024];
 
 char buffer2[1024];
 
+char buffer3[1024];
+
 typedef int (*FuncPtr)(void);
 
 FILE *output = NULL;
@@ -199,6 +201,38 @@ int _205() {
 int _206() {
     strcpy(buffer2, buffer);
     fgets(buffer, sizeof(buffer), tmp);
+    rewind(input);
+
+    bool var_space = true;
+
+    while(fgets(buffer3, sizeof(buffer3), input) != NULL && var_space == true) {
+        if (strcmp(buffer3, "t207\n") == 0) {
+            var_space = false;
+            break;
+        }
+
+        char *unparsed_types[5] = {"t103\n", "t113\n", "t114\n", "t115\n", "t115\n"};
+
+        int dif_found = 0;
+
+        for(int i = 0; i < 5; i++) {
+            if(strcmp(buffer3, unparsed_types[i]) == 0) {
+                dif_found = 1;
+                break;
+            }
+        }
+
+        if (dif_found == 1) {
+            continue;
+        } else {
+            flockfile(stdout);
+            printf("Unknown type error in .vars, aborting \n Exit code: 3\n");
+            fflush(stdout);
+            funlockfile(stdout);
+            return 3;
+        }
+    }
+
     char token_buffer[16];
 
     char *types[5] = {"103\n", "113\n", "114\n", "115\n", "116\n"};
