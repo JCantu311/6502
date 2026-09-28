@@ -203,14 +203,14 @@ int _206() {
     fgets(buffer, sizeof(buffer), tmp);
     rewind(input);
 
-    bool var_space = true;
+    bool var_space;
 
     while(fgets(buffer3, sizeof(buffer3), input) != NULL && var_space == true) {
         if (strcmp(buffer3, "t207\n") == 0) {
             var_space = false;
             break;
         } else if (strcmp(buffer3, "t206\n") == 0) {
-            // fgets(buffer3, sizeof(buffer3), input);
+            continue;
         }
 
         char *unparsed_types[5] = {"t103\n", "t113\n", "t114\n", "t115\n", "t115\n"};
