@@ -323,6 +323,15 @@ int _209() {
 
 int _2() {
     // printf("start token\n");
+    int start_space = 1;
+    while (start_space) {
+        while(fgets(buffer, sizeof(buffer), input) != NULL) {
+            for(int i = 0; i < 44; i++) {
+                
+            }
+        }
+    }
+
     return 0;
 }
 
