@@ -212,7 +212,7 @@ int _206() {
     rewind(input);
 
     while(fgets(buffer3, sizeof(buffer3), input) != NULL && var_space == true) {
-        fprintf(output, "%s", strremove(buffer3, "t"));
+        fprintf(output, buffer3);
         if (strcmp(buffer3, "t207\n") == 0) {
             var_space = false;
             break;
