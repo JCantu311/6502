@@ -174,7 +174,7 @@ int _203() {
 }
 
 int _301() { // Print Character/string handling
-    fprintf(output, "%s", buffer);\
+    fprintf(output, "%s", buffer);
     
     return 0;
 }
