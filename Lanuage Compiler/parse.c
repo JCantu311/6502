@@ -208,71 +208,71 @@ int _101() { // Addition Handling
 }
 
 int _102() {
-    fprintf(output, "%s", buffer);
-    for (int i = 0; i < 2; i++) {
-        if(fgets(buffer, sizeof(buffer), input) == NULL && start_space == 1) {
-            flockfile(stdout);
-            printf(TEXT_RED "Error: " TEXT_RESET "premature end of file, aborting \n Exit code: -1\n");
-            funlockfile(stdout);
-            return -1;
-        }
-        if(isdigit((unsigned char)buffer[0]) || isalpha((unsigned char)buffer[0])) {
-            fprintf(output, "%s", buffer);
-            continue;
-        } else {
-            flockfile(stdout);
-            printf(TEXT_RED "Error: " TEXT_RESET "unknown parameter in 'add', aborting \n Exit code: 6");
-            printf(TEXT_YELLOW "Note: " TEXT_RESET "addition syntax is " TEXT_BLUE "add " TEXT_GREEN "[number or variable] " TEXT_YELLOW "[number or variable] ");
-            funlockfile(stdout);
-            return 6;
-        }
-    }
+    // fprintf(output, "%s", buffer);
+    // for (int i = 0; i < 2; i++) {
+    //     if(fgets(buffer, sizeof(buffer), input) == NULL && start_space == 1) {
+    //         flockfile(stdout);
+    //         printf(TEXT_RED "Error: " TEXT_RESET "premature end of file, aborting \n Exit code: -1\n");
+    //         funlockfile(stdout);
+    //         return -1;
+    //     }
+    //     if(isdigit((unsigned char)buffer[0]) || isalpha((unsigned char)buffer[0])) {
+    //         fprintf(output, "%s", buffer);
+    //         continue;
+    //     } else {
+    //         flockfile(stdout);
+    //         printf(TEXT_RED "Error: " TEXT_RESET "unknown parameter in 'add', aborting \n Exit code: 6");
+    //         printf(TEXT_YELLOW "Note: " TEXT_RESET "addition syntax is " TEXT_BLUE "add " TEXT_GREEN "[number or variable] " TEXT_YELLOW "[number or variable] ");
+    //         funlockfile(stdout);
+    //         return 6;
+    //     }
+    // }
     return 0;
 }
 
 int _111() {
-    fprintf(output, "%s", buffer);
-    for (int i = 0; i < 2; i++) {
-        if(fgets(buffer, sizeof(buffer), input) == NULL && start_space == 1) {
-            flockfile(stdout);
-            printf(TEXT_RED "Error: " TEXT_RESET "premature end of file, aborting \n Exit code: -1\n");
-            funlockfile(stdout);
-            return -1;
-        }
-        if(isdigit((unsigned char)buffer[0]) || isalpha((unsigned char)buffer[0])) {
-            fprintf(output, "%s", buffer);
-            continue;
-        } else {
-            flockfile(stdout);
-            printf(TEXT_RED "Error: " TEXT_RESET "unknown parameter in 'add', aborting \n Exit code: 6");
-            printf(TEXT_YELLOW "Note: " TEXT_RESET "addition syntax is " TEXT_BLUE "add " TEXT_GREEN "[number or variable] " TEXT_YELLOW "[number or variable] ");
-            funlockfile(stdout);
-            return 6;
-        }
-    }
+    // fprintf(output, "%s", buffer);
+    // for (int i = 0; i < 2; i++) {
+    //     if(fgets(buffer, sizeof(buffer), input) == NULL && start_space == 1) {
+    //         flockfile(stdout);
+    //         printf(TEXT_RED "Error: " TEXT_RESET "premature end of file, aborting \n Exit code: -1\n");
+    //         funlockfile(stdout);
+    //         return -1;
+    //     }
+    //     if(isdigit((unsigned char)buffer[0]) || isalpha((unsigned char)buffer[0])) {
+    //         fprintf(output, "%s", buffer);
+    //         continue;
+    //     } else {
+    //         flockfile(stdout);
+    //         printf(TEXT_RED "Error: " TEXT_RESET "unknown parameter in 'add', aborting \n Exit code: 6");
+    //         printf(TEXT_YELLOW "Note: " TEXT_RESET "addition syntax is " TEXT_BLUE "add " TEXT_GREEN "[number or variable] " TEXT_YELLOW "[number or variable] ");
+    //         funlockfile(stdout);
+    //         return 6;
+    //     }
+    // }
     return 0;
 }
 
 int _112() {
-    fprintf(output, "%s", buffer);
-    for (int i = 0; i < 2; i++) {
-        if(fgets(buffer, sizeof(buffer), input) == NULL && start_space == 1) {
-            flockfile(stdout);
-            printf(TEXT_RED "Error: " TEXT_RESET "premature end of file, aborting \n Exit code: -1\n");
-            funlockfile(stdout);
-            return -1;
-        }
-        if(isdigit((unsigned char)buffer[0]) || isalpha((unsigned char)buffer[0])) {
-            fprintf(output, "%s", buffer);
-            continue;
-        } else {
-            flockfile(stdout);
-            printf(TEXT_RED "Error: " TEXT_RESET "unknown parameter in 'add', aborting \n Exit code: 6");
-            printf(TEXT_YELLOW "Note: " TEXT_RESET "addition syntax is " TEXT_BLUE "add " TEXT_GREEN "[number or variable] " TEXT_YELLOW "[number or variable] ");
-            funlockfile(stdout);
-            return 6;
-        }
-    }
+    // fprintf(output, "%s", buffer);
+    // for (int i = 0; i < 2; i++) {
+    //     if(fgets(buffer, sizeof(buffer), input) == NULL && start_space == 1) {
+    //         flockfile(stdout);
+    //         printf(TEXT_RED "Error: " TEXT_RESET "premature end of file, aborting \n Exit code: -1\n");
+    //         funlockfile(stdout);
+    //         return -1;
+    //     }
+    //     if(isdigit((unsigned char)buffer[0]) || isalpha((unsigned char)buffer[0])) {
+    //         fprintf(output, "%s", buffer);
+    //         continue;
+    //     } else {
+    //         flockfile(stdout);
+    //         printf(TEXT_RED "Error: " TEXT_RESET "unknown parameter in 'add', aborting \n Exit code: 6");
+    //         printf(TEXT_YELLOW "Note: " TEXT_RESET "addition syntax is " TEXT_BLUE "add " TEXT_GREEN "[number or variable] " TEXT_YELLOW "[number or variable] ");
+    //         funlockfile(stdout);
+    //         return 6;
+    //     }
+    // }
     return 0;
 }
 
@@ -568,7 +568,6 @@ int parse_token() {
             tmp_buf[i - 1] = buffer[i];
         }
     }
-    
 
     if (isdigit(tmp_buf[0])) {
         buffer2 = strtol(tmp_buf, &endptr, 10);
@@ -599,9 +598,6 @@ int parse(char *input_file_name) {
     output = fopen("a.obj", "w+");
 
     rewind(input);
-
-    int token_segment = 0;
-    int parameter_segment = 0;
 
     while(fgets(buffer, sizeof(buffer), input) != NULL) {
         if (end_of_file == 1) {
