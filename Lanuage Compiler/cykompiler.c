@@ -245,6 +245,7 @@ no_output:
 
     if (lex_success == 0) {
         strncpy(success_status, "succeeded", sizeof(success_status) - 1);
+        printf("Lexer status: success.\n");
     } else {
         printf("Lexer status: failure.\n Exit code: %d\n", lex_success);
         strncpy(success_status, "failed", sizeof(success_status) - 1);
@@ -255,6 +256,7 @@ no_output:
     int parse_success = parse("a.o");
     if (parse_success == 0 && lex_success == 0) {
         strncpy(success_status, "succeeded", sizeof(success_status) - 1);
+        printf("Parser status: success.\n");
     } else {
         printf("Parser status: failure.\n Exit code: %d\n", parse_success);
         strncpy(success_status, "failed", sizeof(success_status) - 1);
@@ -264,6 +266,7 @@ no_output:
     int emit_success = emit();
     if (emit_success == 0 && parse_success == 0 && lex_success == 0) {
         strncpy(success_status, "succeeded", sizeof(success_status) - 1);
+        printf("Emit status: success. \n");
     } else {
         printf("Emit status: failure. \n Exit code: %d\n", emit_success);
         strncpy(success_status, "failed", sizeof(success_status) - 1);
