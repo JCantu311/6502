@@ -401,22 +401,22 @@ int _209() {
 int _2() {
     // printf("start token\n");
     fprintf(output, "%s", buffer);
-    start_space = 1;
-    while (start_space) {
-        while(fgets(buffer, sizeof(buffer), input) != NULL) {
-            if (strcmp(buffer, "t119\n") == 0) {
-                start_space = 0;
-                break;
-            }
+    // start_space = 1;
+    // while (start_space) {
+    //     while(fgets(buffer, sizeof(buffer), input) != NULL) {
+    //         if (strcmp(buffer, "t119\n") == 0) {
+    //             start_space = 0;
+    //             break;
+    //         }
 
-            for(int i = 0; i < 44; i++) {
-                if(strcmp(buffer, lookup_table[i].name) == 0) {
-                    lookup_table[i].func();
-                    break;
-                }
-            }
-        }
-    }
+    //         for(int i = 0; i < 44; i++) {
+    //             if(strcmp(buffer, lookup_table[i].name) == 0) {
+    //                 lookup_table[i].func();
+    //                 break;
+    //             }
+    //         }
+    //     }
+    // }
     return 0;
 }
 
