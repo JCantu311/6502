@@ -442,6 +442,13 @@ int _116() {
 
 int _105() {
     // printf("store token\n");
+    fprintf(output, "%s", buffer);
+    if(fgets(buffer, sizeof(buffer), input) == NULL) {
+        flockfile(stdout);
+        printf(TEXT_RED "Error: " TEXT_RESET "premature end of file, aborting \n Exit code: -1\n");
+        funlockfile(stdout);
+        return -1;
+    }
     return 0;
 }
 
