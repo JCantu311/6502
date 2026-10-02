@@ -587,7 +587,7 @@ int parse_token() {
             }
         }
     } else {
-        printf("Shits fucked at %s\n", tmp_buf);
+        printf("Shits fucked at %lu\n", buffer2);
         return 1;
     }
     return 0;
