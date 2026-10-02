@@ -16,10 +16,10 @@
     store sum           /* Store the result of the previous operation to the sum variable */
     print sum           /* Print the answer to the terminal */
     load reg A 20       /* Load A register with number '20' */
-    store time add 1    /* Store in time + 1 */
+    store time + 1      /* Store in time + 1 */
     load reg A 15       /* Load A register with number '15' */
     store time          /* Store in time */
-    print time add 1    /* Print time + 1 */
+    print time + 1      /* Print time + 1 */
     print time          /* Print time */
 .end
 

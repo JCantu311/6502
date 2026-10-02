@@ -39,13 +39,13 @@ char buffer2[1024];
 
 char buffer3[1024];
 
+char inputfilebuffer[1024];
+
 typedef int (*FuncPtr)(void);
 
 FILE *output = NULL;
 
 FILE *input = NULL;
-
-FILE *tmp = NULL;
 
 bool var_space = true;
 
@@ -54,6 +54,8 @@ int line_number = 0;
 int exit_code;
 
 int end_of_file = 0;
+
+int start_space = 0;
 
 typedef struct {
     const char *name;
@@ -171,8 +173,9 @@ int _203() {
     return 0;
 }
 
-int _301() {
-    // printf("print token\n");
+int _301() { // Print Character/string handling
+    fprintf(output, "%s", buffer);\
+    
     return 0;
 }
 
@@ -181,23 +184,95 @@ int _204() {
     return 0;
 }
 
-int _101() {
-    // printf("add token\n");
+int _101() { // Addition Handling
+    fprintf(output, "%s", buffer);
+    for (int i = 0; i < 2; i++) {
+        if(fgets(buffer, sizeof(buffer), input) == NULL && start_space == 1) {
+            flockfile(stdout);
+            printf(TEXT_RED "Error: " TEXT_RESET "premature end of file, aborting \n Exit code: -1\n");
+            funlockfile(stdout);
+            return -1;
+        }
+        if(isdigit((unsigned char)buffer[0]) || isalpha((unsigned char)buffer[0])) {
+            fprintf(output, "%s", buffer);
+            continue;
+        } else {
+            flockfile(stdout);
+            printf(TEXT_RED "Error: " TEXT_RESET "unknown parameter in 'add', aborting \n Exit code: 6");
+            printf(TEXT_YELLOW "Note: " TEXT_RESET "addition syntax is " TEXT_BLUE "add " TEXT_GREEN "[number or variable] " TEXT_YELLOW "[number or variable] ");
+            funlockfile(stdout);
+            return 6;
+        }
+    }
     return 0;
 }
 
 int _102() {
-    // printf("subtract token\n");
+    fprintf(output, "%s", buffer);
+    for (int i = 0; i < 2; i++) {
+        if(fgets(buffer, sizeof(buffer), input) == NULL && start_space == 1) {
+            flockfile(stdout);
+            printf(TEXT_RED "Error: " TEXT_RESET "premature end of file, aborting \n Exit code: -1\n");
+            funlockfile(stdout);
+            return -1;
+        }
+        if(isdigit((unsigned char)buffer[0]) || isalpha((unsigned char)buffer[0])) {
+            fprintf(output, "%s", buffer);
+            continue;
+        } else {
+            flockfile(stdout);
+            printf(TEXT_RED "Error: " TEXT_RESET "unknown parameter in 'add', aborting \n Exit code: 6");
+            printf(TEXT_YELLOW "Note: " TEXT_RESET "addition syntax is " TEXT_BLUE "add " TEXT_GREEN "[number or variable] " TEXT_YELLOW "[number or variable] ");
+            funlockfile(stdout);
+            return 6;
+        }
+    }
     return 0;
 }
 
 int _111() {
-    // printf("multiply token\n");
+    fprintf(output, "%s", buffer);
+    for (int i = 0; i < 2; i++) {
+        if(fgets(buffer, sizeof(buffer), input) == NULL && start_space == 1) {
+            flockfile(stdout);
+            printf(TEXT_RED "Error: " TEXT_RESET "premature end of file, aborting \n Exit code: -1\n");
+            funlockfile(stdout);
+            return -1;
+        }
+        if(isdigit((unsigned char)buffer[0]) || isalpha((unsigned char)buffer[0])) {
+            fprintf(output, "%s", buffer);
+            continue;
+        } else {
+            flockfile(stdout);
+            printf(TEXT_RED "Error: " TEXT_RESET "unknown parameter in 'add', aborting \n Exit code: 6");
+            printf(TEXT_YELLOW "Note: " TEXT_RESET "addition syntax is " TEXT_BLUE "add " TEXT_GREEN "[number or variable] " TEXT_YELLOW "[number or variable] ");
+            funlockfile(stdout);
+            return 6;
+        }
+    }
     return 0;
 }
 
 int _112() {
-    // printf("divide token\n");
+    fprintf(output, "%s", buffer);
+    for (int i = 0; i < 2; i++) {
+        if(fgets(buffer, sizeof(buffer), input) == NULL && start_space == 1) {
+            flockfile(stdout);
+            printf(TEXT_RED "Error: " TEXT_RESET "premature end of file, aborting \n Exit code: -1\n");
+            funlockfile(stdout);
+            return -1;
+        }
+        if(isdigit((unsigned char)buffer[0]) || isalpha((unsigned char)buffer[0])) {
+            fprintf(output, "%s", buffer);
+            continue;
+        } else {
+            flockfile(stdout);
+            printf(TEXT_RED "Error: " TEXT_RESET "unknown parameter in 'add', aborting \n Exit code: 6");
+            printf(TEXT_YELLOW "Note: " TEXT_RESET "addition syntax is " TEXT_BLUE "add " TEXT_GREEN "[number or variable] " TEXT_YELLOW "[number or variable] ");
+            funlockfile(stdout);
+            return 6;
+        }
+    }
     return 0;
 }
 
@@ -206,13 +281,11 @@ int _205() {
     return 0;
 }
 
-int _206() {
+int _206() {  // Variable Space Handling
     strcpy(buffer2, buffer);
-    fgets(buffer, sizeof(buffer), tmp);
-    rewind(input);
 
     while(fgets(buffer3, sizeof(buffer3), input) != NULL && var_space == true) {
-        fprintf(output, buffer3);
+        fprintf(output, "%s", buffer3);
         if (strcmp(buffer3, "t207\n") == 0) {
             var_space = false;
             break;
@@ -220,7 +293,7 @@ int _206() {
             continue;
         }
 
-        char *unparsed_types[5] = {"t103\n", "t113\n", "t114\n", "t115\n", "t115\n"};
+        char *unparsed_types[5] = {"t103\n", "t113\n", "t114\n", "t115\n", "t116\n"};
 
         int dif_found = 0;
 
@@ -228,15 +301,16 @@ int _206() {
             if(strcmp(buffer3, unparsed_types[i]) == 0) {
                 dif_found = 1;
                 fgets(buffer3, sizeof(buffer3), input);
-                fprintf(output, buffer3);
+                fprintf(output, "%s", buffer3);
                 fgets(buffer3, sizeof(buffer3), input);
-                if(isdigit(buffer3[0])) {
-                    fprintf(output, buffer3);
-                    continue;
+                if(isdigit((unsigned char)buffer3[0])) {
+                    fprintf(output, "%s", buffer3);
+                    break;
                 } else {
                     flockfile(stdout);
                     printf("No size allocated error, aborting \n Exit code: 4\n");
                     printf(TEXT_YELLOW "   Note: " TEXT_RESET "variable syntax is " TEXT_BLUE "[type] " TEXT_GREEN "[name] " TEXT_YELLOW "[allocated bytes]\n" TEXT_RESET);
+                    printf(TEXT_YELLOW "   Note: " TEXT_RESET " Variable names have a maximum size of 64 bytes\n");
                     funlockfile(stdout);
                     return 4;
                 }
@@ -250,10 +324,15 @@ int _206() {
             printf("Unknown type error in .vars, aborting \n Exit code: 3\n");
             printf("%s", buffer3);
             printf(TEXT_YELLOW "   Note: " TEXT_RESET "variable syntax is " TEXT_BLUE "[type] " TEXT_GREEN "[name] " TEXT_YELLOW "[allocated bytes]\n" TEXT_RESET);
+            printf(TEXT_YELLOW "   Note: " TEXT_RESET " Variable names have a maximum size of 64 bytes\n");
             fflush(stdout);
             funlockfile(stdout);
             return 3;
         }
+    }
+
+    if (var_space == false) {
+        return 0;
     }
 
     char token_buffer[16];
@@ -261,7 +340,7 @@ int _206() {
     char *types[5] = {"103\n", "113\n", "114\n", "115\n", "116\n"};
     int this_found = 0;
     for (int i = 0; i < 5; i++) {
-        if(strcmp(buffer, types[i]) == 0) {
+        if(strcmp(buffer3, types[i]) == 0) {
             strcpy(token_buffer, types[i]);
             this_found = 1;
         }
@@ -277,12 +356,11 @@ int _206() {
     } else {
         flockfile(stdout);
         printf("Syntax Error in .vars: unknown type \n Exit code %d\n", 3);
+        printf("%s\n", token_buffer);
         fflush(stdout);
         funlockfile(stdout);
         return 3;
     }
-
-    previous_location = ftell(tmp);
 
     return 0;
 }
@@ -299,7 +377,6 @@ int _103() {
 
 int EOF_func() {
     // printf("end of file token\n");
-    fclose(tmp);
     fclose(input);
     fclose(output);
     end_of_file = 1;
@@ -323,15 +400,23 @@ int _209() {
 
 int _2() {
     // printf("start token\n");
-    int start_space = 1;
-    while (start_space) {
-        while(fgets(buffer, sizeof(buffer), input) != NULL) {
-            for(int i = 0; i < 44; i++) {
-                
-            }
-        }
-    }
+    fprintf(output, "%s", buffer);
+    start_space = 1;
+    // while (start_space) {
+    //     while(fgets(buffer, sizeof(buffer), input) != NULL) {
+    //         if (strcmp(buffer, "t119\n") == 0) {
+    //             start_space = 0;
+    //             break;
+    //         }
 
+    //         for(int i = 0; i < 44; i++) {
+    //             if(strcmp(buffer, lookup_table[i].name) == 0) {
+    //                 lookup_table[i].func();
+    //                 break;
+    //             }
+    //         }
+    //     }
+    // }
     return 0;
 }
 
@@ -412,6 +497,8 @@ int _211() {
 
 int _119() {
     // printf("end token\n");
+    fprintf(output, "%s", buffer);
+    start_space = 0;
     return 0;
 }
 
@@ -465,14 +552,26 @@ int _6() {
     return 0;
 }
 
-int parse_token(FILE *input, FILE *tmp, char *buffer) {
+int parse_token() {
     long buffer2;
     char *endptr;
 
     int returned;
 
-    if (isdigit(buffer[0])) {
-        buffer2 = strtol(buffer, &endptr, 10);
+    char tmp_buf[1024]; // All buffers share this same size, don't get on my ass
+
+    tmp_buf[0] = '\0';
+
+    if (buffer[0] == 't' && isdigit((unsigned char)buffer[1])) {
+        int len = strlen(buffer);
+        for(int i = 1; i <= len; i++) {
+            tmp_buf[i - 1] = buffer[i];
+        }
+    }
+    
+
+    if (isdigit(tmp_buf[0])) {
+        buffer2 = strtol(tmp_buf, &endptr, 10);
         for(int i = 0; i < 44; i++) {
             if (buffer2 == bleh.tokens[i]) {
                 for (int j = 0; j < 44; j++) {
@@ -494,66 +593,27 @@ int parse_token(FILE *input, FILE *tmp, char *buffer) {
     return 0;
 }
 
-int parse_parameter(FILE *input, FILE *tmp, char *buffer) {
-    // printf("%s", buffer);
-}
-
 int parse(char *input_file_name) {
     input = fopen(input_file_name, "r");
 
     output = fopen("a.obj", "w+");
 
-    tmp = fopen("a.txt", "w+");
-
-    fprintf(tmp, "1000\n");
-
-    while(fgets(buffer, sizeof(buffer), input) != NULL) {
-        if ((buffer[0] == 't') && isdigit(buffer[1])) {
-            fprintf(tmp, "%s", &buffer[1]);
-        } 
-    }
-
     rewind(input);
-
-    fprintf(tmp, "1001\n");
-
-    parameter_index = ftell(tmp);
-
-    // printf("%lu\n", parameter_index);
-
-    while(fgets(buffer, sizeof(buffer), input) != NULL) {
-        if (buffer[0] != 't' || (buffer[0] == 't') && !isdigit(buffer[1])) {
-            fprintf(tmp, "%s", buffer);
-        } 
-    }
-
-    rewind(tmp);
 
     int token_segment = 0;
     int parameter_segment = 0;
 
-    while(fgets(buffer, sizeof(buffer), tmp) != NULL) {
+    while(fgets(buffer, sizeof(buffer), input) != NULL) {
         if (end_of_file == 1) {
             return 0;
-        }
-        if (strcmp(buffer, "1000\n") == 0) {
-            token_segment = 1;
-        } else if (strcmp(buffer, "1001\n") == 0) {
-            token_segment = 0;
-            parameter_segment = 1;
-        } else if (token_segment == 1) {
-            if (parse_token(input, tmp, buffer) != 0) {
+        } else if (parse_token() != 0) {
                 return 3;
             }
-        } else if (parameter_segment == 1) {
-            parse_parameter(input, tmp, buffer);
         }
-    }
 
     if (end_of_file == 0) {
         fclose(input);
         fclose(output);
-        fclose(tmp);
     }
 
     return 0;
