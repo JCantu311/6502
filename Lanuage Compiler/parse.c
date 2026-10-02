@@ -207,7 +207,7 @@ int _101() { // Addition Handling
     return 0;
 }
 
-int _102() {
+int _102() { // Subtraction Handling
     fprintf(output, "%s", buffer);
     for (int i = 0; i < 2; i++) {
         if(fgets(buffer, sizeof(buffer), input) == NULL && start_space == 1) {
@@ -221,8 +221,8 @@ int _102() {
             continue;
         } else {
             flockfile(stdout);
-            printf(TEXT_RED "Error: " TEXT_RESET "unknown parameter in 'add', aborting \n Exit code: 6");
-            printf(TEXT_YELLOW "Note: " TEXT_RESET "addition syntax is " TEXT_BLUE "add " TEXT_GREEN "[number or variable] " TEXT_YELLOW "[number or variable] ");
+            printf(TEXT_RED "Error: " TEXT_RESET "unknown parameter in 'sub', aborting \n Exit code: 6");
+            printf(TEXT_YELLOW "Note: " TEXT_RESET "subtraction syntax is " TEXT_BLUE "sub " TEXT_GREEN "[number or variable] " TEXT_YELLOW "[number or variable] ");
             funlockfile(stdout);
             return 6;
         }
@@ -230,7 +230,7 @@ int _102() {
     return 0;
 }
 
-int _111() {
+int _111() { // Multiplication Handling
     fprintf(output, "%s", buffer);
     for (int i = 0; i < 2; i++) {
         if(fgets(buffer, sizeof(buffer), input) == NULL && start_space == 1) {
@@ -244,8 +244,8 @@ int _111() {
             continue;
         } else {
             flockfile(stdout);
-            printf(TEXT_RED "Error: " TEXT_RESET "unknown parameter in 'add', aborting \n Exit code: 6");
-            printf(TEXT_YELLOW "Note: " TEXT_RESET "addition syntax is " TEXT_BLUE "add " TEXT_GREEN "[number or variable] " TEXT_YELLOW "[number or variable] ");
+            printf(TEXT_RED "Error: " TEXT_RESET "unknown parameter in 'mult', aborting \n Exit code: 6");
+            printf(TEXT_YELLOW "Note: " TEXT_RESET "multiplication syntax is " TEXT_BLUE "mult " TEXT_GREEN "[number or variable] " TEXT_YELLOW "[number or variable] ");
             funlockfile(stdout);
             return 6;
         }
@@ -253,7 +253,7 @@ int _111() {
     return 0;
 }
 
-int _112() {
+int _112() { // Division Handling
     fprintf(output, "%s", buffer);
     for (int i = 0; i < 2; i++) {
         if(fgets(buffer, sizeof(buffer), input) == NULL && start_space == 1) {
@@ -267,8 +267,8 @@ int _112() {
             continue;
         } else {
             flockfile(stdout);
-            printf(TEXT_RED "Error: " TEXT_RESET "unknown parameter in 'add', aborting \n Exit code: 6");
-            printf(TEXT_YELLOW "Note: " TEXT_RESET "addition syntax is " TEXT_BLUE "add " TEXT_GREEN "[number or variable] " TEXT_YELLOW "[number or variable] ");
+            printf(TEXT_RED "Error: " TEXT_RESET "unknown parameter in 'div', aborting \n Exit code: 6");
+            printf(TEXT_YELLOW "Note: " TEXT_RESET "division syntax is " TEXT_BLUE "div " TEXT_GREEN "[number or variable] " TEXT_YELLOW "[number or variable] ");
             funlockfile(stdout);
             return 6;
         }
@@ -558,7 +558,7 @@ int parse_token() {
 
     int returned;
 
-    char tmp_buf[1024]; // All buffers share this same size, don't get on my ass
+    char tmp_buf[1024];
 
     tmp_buf[0] = '\0';
 
