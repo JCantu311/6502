@@ -41,7 +41,7 @@ void helpscrn() {
     printf("    --output    -o              Name output file (always .s or .bin)\n");
     printf("                Output name must not have any file extension; the compiler will \n                add it for you\n");
     printf("    --type      -t              Output File Type (Assembly or Binary)\n");
-    printf("                Output file type must be either 'asm' or 'bin'; if not specified,\n               the default output type is 'asm'.\n");
+    printf("                Output file type must be either 'asm' or 'bin'; if not specified,\n                the default output type is 'asm'.\n");
 }
 
 int unknown_argument_error() {
