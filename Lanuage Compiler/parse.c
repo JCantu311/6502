@@ -175,6 +175,14 @@ int _203() {
 
 int _301() { // Print Character/string handling
     fprintf(output, "%s", buffer);
+    if(fgets(buffer, sizeof(buffer), input) == NULL && start_space == 1) {
+        flockfile(stdout);
+        printf(TEXT_RED "Error: " TEXT_RESET "premature end of file, aborting \n Exit code: -1\n");
+        funlockfile(stdout);
+        return -1;
+    } else {
+        
+    }
     
     return 0;
 }
