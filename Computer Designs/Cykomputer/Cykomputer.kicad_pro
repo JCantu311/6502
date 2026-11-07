@@ -469,7 +469,6 @@
       "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
-      "same_local_global_power": "warning",
       "similar_label_and_power": "warning",
       "similar_labels": "warning",
       "similar_power": "warning",
@@ -517,8 +516,8 @@
     "meta": {
       "version": 5
     },
-    "net_colors": {},
-    "netclass_assignments": {},
+    "net_colors": null,
+    "netclass_assignments": null,
     "netclass_patterns": []
   },
   "pcbnew": {
@@ -710,7 +709,7 @@
         "uuid": "7319cfd4-b54a-49cd-84bf-92265ba5acc0"
       }
     ],
-    "used_designators": "#FLG1-6,5V 5A Wall AC/DC Adapter1-2,C1-14,D1-2,J1-22,L1,P1,Q1,R1-5,R7-9,SW1-3,U1-30,Y1-9",
+    "used_designators": "L1,U1-30,Q1,Y1-9,SW1-3,J1-22,R1-5,R7-9,#FLG1-6,P1,5V 5A Wall AC/DC Adapter1-2,C1-14,D1-2",
     "variants": []
   },
   "sheets": [
